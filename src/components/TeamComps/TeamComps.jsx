@@ -1,7 +1,7 @@
 import classes from "./TeamComps.module.scss";
-import comps from "../data/comps";
+import comps from "../../data/comps";
 import { useState } from "react";
-import Champions from "./Champions/Champions";
+import Champions from "../Champions/Champions";
 
 const TeamComps = () => {
   const [hoveredChampion, setHoveredChampion] = useState(null);
