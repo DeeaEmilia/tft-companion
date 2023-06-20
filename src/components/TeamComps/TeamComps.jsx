@@ -27,7 +27,7 @@ const TeamComps = () => {
                 <strong>Playstyle: </strong> {comp.playstyle}
               </p>{" "}
               <p>
-                <strong>Condition:</strong> {comp.conditions.join(", ")}
+                <strong>Condition:</strong> {comp.conditions}
               </p>
             </div>
           </div>

@@ -25,7 +25,7 @@ const Champions = ({
 
           return (
             <ChampionCard
-              key={comp.name}
+              key={`${comp.name}-${champion.name}`}
               champion={champion}
               setHoveredChampion={setHoveredChampion}
               setHoveredItem={setHoveredItem}
@@ -38,8 +38,8 @@ const Champions = ({
         })}
       </div>
       <div className={classes.btnContainer}>
-        <button>&rarr;</button>
-        <label htmlFor="button">See in builder</label>
+        <button id="builderButton">&rarr;</button>
+        <label htmlFor="builderButton">See in builder</label>
       </div>
     </div>
   );
