@@ -1,7 +1,7 @@
 const traits = [
   {
     name: "Bastion",
-    emblem: "assets/emblems/bastion.svg",
+    emblem: "/assets/emblems/bastion.svg",
     description:
       "Bastion champions gain Armor and Magic Resist. This is increased by 100% for the first 10 seconds of combat.",
     scaling: [
@@ -14,7 +14,7 @@ const traits = [
   },
   {
     name: "Bruiser",
-    emblem: "assets/emblems/bruiser.svg",
+    emblem: "/assets/emblems/bruiser.svg",
     description: "Your units gain 100 Health. Bruisers get even more.",
     scaling: [
       ["2", "+15%"],
@@ -25,7 +25,7 @@ const traits = [
   },
   {
     name: "Challenger",
-    emblem: "public/assets/emblems/challenger.svg",
+    emblem: "/assets/emblems/challenger.svg",
     description:
       "Challengers gain bonus Attack Speed. When their target dies, Challengers dash to a new target and increase their Attack Speed bonus by 50% for 2.5 seconds.",
     scaling: [
@@ -38,7 +38,7 @@ const traits = [
   },
   {
     name: "Darkin",
-    emblem: "public/assets/emblems/darkin.svg",
+    emblem: "/assets/emblems/darkin.svg",
     description:
       "When Aatrox or the holder of the Darkin Blade dies, the Darkin Blade is equipped to the nearest ally champion, granting them 500 Health and 20% Omnivamp. After being equipped to a champion for 4 seconds, Aatrox will revive upon their death instead.",
     scaling: [["1", "Bonus Effect"]],
@@ -46,7 +46,7 @@ const traits = [
   },
   {
     name: "Deadeye",
-    emblem: "public/assets/emblems/deadeye.svg",
+    emblem: "/assets/emblems/deadeye.svg",
     description:
       "Innate: gain Bonus Range. Every 3 seconds, Deadeyes attack the enemy with the highest percent Health and deal bonus damage.",
     scaling: [
@@ -58,7 +58,7 @@ const traits = [
   },
   {
     name: "Demacia",
-    emblem: "public/assets/emblems/demacia.svg",
+    emblem: "/assets/emblems/demacia.svg",
     description:
       "During planning phase, your strongest Demacians become Elite and equip a random Radiant Item for the next combat. Elites grant Armor and Magic Resist to themselves and adjacent allies, but this does not stack. Radiant items are upgraded versions of completed items.",
     scaling: [
@@ -71,7 +71,7 @@ const traits = [
   },
   {
     name: "Empress",
-    emblem: "public/assets/emblems/empress.svg",
+    emblem: "/assets/emblems/empress.svg",
     description:
       "When Bel'Veth kills an enemy, they leave behind Void Coral that she will consume. The first Coral increases her max Health by 50%, while further Coral heals her 20% max Health. When a Void Coral is consumed, she deals 10% max Health as magic damage to enemies within 2 hexes.",
     scaling: ["1", "Bonus Effect"],
@@ -79,7 +79,7 @@ const traits = [
   },
   {
     name: "Freljord",
-    emblem: "public/assets/emblems/freljord.svg",
+    emblem: "/assets/emblems/freljord.svg",
     description:
       "After 5 seconds, an ice storm strikes the battlefield. Enemies take a percentage of their maximum Health as true damage and gain debuffs for 15 seconds. Sunder: Reduce Armor. Shred: Reduce Magic Resist. Mana Reave: Increase max Mana until the next cast",
     scaling: [
@@ -91,7 +91,7 @@ const traits = [
   },
   {
     name: "Gunner",
-    emblem: "public/assets/emblems/gunner.svg",
+    emblem: "/assets/emblems/gunner.svg",
     description:
       "When Gunner champions attack, they gain bonus Attack Damage, up to 8 stacks.",
     scaling: [
@@ -103,7 +103,7 @@ const traits = [
   },
   {
     name: "Invoker",
-    emblem: "public/assets/emblems/invoker.svg",
+    emblem: "/assets/emblems/invoker.svg",
     description: "Allies restore Mana every 3 seconds.",
     scaling: [
       ["2", "5 Mana per all allies"],
@@ -114,7 +114,7 @@ const traits = [
   },
   {
     name: "Ionia",
-    emblem: "public/assets/emblems/ionia.svg",
+    emblem: "/assets/emblems/ionia.svg",
     description:
       "Every 4 seconds, your strongest Ionians are enlightened to their spirit form and gain 20 Mana. Each Ionian has a unique bonus within their ability, which doubles when in spirit form.",
     scaling: [
@@ -126,7 +126,7 @@ const traits = [
   },
   {
     name: "Juggernaut",
-    emblem: "public/assets/emblems/juggernaut.svg",
+    emblem: "/assets/emblems/juggernaut.svg",
     description:
       "Juggernaut champions take less damage as their Health decreases.",
     scaling: [
@@ -139,7 +139,7 @@ const traits = [
 
   {
     name: "Multicaster",
-    emblem: "public/assets/emblems/multicaster.svg",
+    emblem: "/assets/emblems/multicaster.svg",
     description:
       "Multicasters cast their Ability multiple times. Bonus casts have 50% reduced effectiveness.",
     scaling: [
@@ -150,7 +150,7 @@ const traits = [
   },
   {
     name: "Noxus",
-    emblem: "public/assets/emblems/noxus.svg",
+    emblem: "/assets/emblems/noxus.svg",
     description:
       "Noxus units gain Health, Ability Power and Attack Damage. This is increased by 10% for each different opponent that either you have conquered in combat or is dead.",
     scaling: [
@@ -162,7 +162,7 @@ const traits = [
   },
   {
     name: "Piltover",
-    emblem: "public/assets/emblems/piltover.svg",
+    emblem: "/assets/emblems/piltover.svg",
     description:
       "Gain the T-Hex. Every time you lose a player combat, the T-Hex gains Charges. Winning converts the Charges to Power for the T-Hex. You may also sell the T-Hex if it has any Power, resetting the T-Hex and converting its Power to loot.",
     scaling: [
@@ -173,7 +173,7 @@ const traits = [
   },
   {
     name: "Redeemer",
-    emblem: "public/assets/emblems/redeemer.svg",
+    emblem: "/assets/emblems/redeemer.svg",
     description:
       "Whenever an ally gains a Shield, grant them 7% stacking Attack Speed for the rest of combat.",
     scaling: ["1", "Bonus Effect"],
@@ -181,7 +181,7 @@ const traits = [
   },
   {
     name: "Rogue",
-    emblem: "public/assets/emblems/rogue.svg",
+    emblem: "/assets/emblems/rogue.svg",
     description:
       "(2) The first time Rogues fall below %Health they briefly become untargetable and dash towards an enemy within 4 hexes, preferring backliners. (4) Additionally, attacking an enemy for the first time causes that enemy to bleed over 5 seconds.",
     scaling: [
@@ -192,7 +192,7 @@ const traits = [
   },
   {
     name: "Shadow Isles",
-    emblem: "public/assets/emblems/shadow-isles.svg",
+    emblem: "/assets/emblems/shadow-isles.svg",
     description:
       "After dealing or receiving damage 8 times, Shadow Isles units gain a Shield for 8 seconds and become Spectral for the rest of combat. Spectral units gain Mana every second.",
     scaling: [
@@ -204,7 +204,7 @@ const traits = [
   },
   {
     name: "Shurima",
-    emblem: "public/assets/emblems/shurima.svg",
+    emblem: "/assets/emblems/shurima.svg",
     description:
       "Every 4 seconds, Shuriman heal 7% max Health. After 8 seconds, select Shuriman ascend and gain 20% max Health and 50% Attack Speed.",
     scaling: [
@@ -217,7 +217,7 @@ const traits = [
   },
   {
     name: "Slayer",
-    emblem: "public/assets/emblems/slayer.svg",
+    emblem: "/assets/emblems/slayer.svg",
     description:
       "Slayers gain 15% omnivamp. Additionally, Slayers deal bonus damage, doubled against units below 60% health.",
     scaling: [
@@ -231,7 +231,7 @@ const traits = [
   },
   {
     name: "Sorcerer",
-    emblem: "public/assets/emblems/sorcerer.svg",
+    emblem: "/assets/emblems/sorcerer.svg",
     description:
       "When Sorcerers help kill an enemy, they trigger an arcane shock that deals a percent of the enemy's maximum Health to other enemies. Sorcerers also gain bonus Ability Power.",
     scaling: [
@@ -244,7 +244,7 @@ const traits = [
   },
   {
     name: "Strategist",
-    emblem: "public/assets/emblems/strategist.svg",
+    emblem: "/assets/emblems/strategist.svg",
     description:
       "Combat Start: Allies in the front 2 rows gain a shield for 8 seconds. Allies in the back 2 rows gain Ability Power.",
     scaling: [
@@ -257,7 +257,7 @@ const traits = [
   },
   {
     name: "Targon",
-    emblem: "public/assets/emblems/targon.svg",
+    emblem: "/assets/emblems/targon.svg",
     description: "Your healing and shielding is increased.",
     scaling: [
       ["2", "18% increased healing and shielding"],
@@ -268,7 +268,7 @@ const traits = [
   },
   {
     name: "Technogenius",
-    emblem: "public/assets/emblems/technogenius.svg",
+    emblem: "/assets/emblems/technogenius.svg",
     description:
       "Gain a placeable Apex Turret with 3 upgrade slots. Upgrades to the Apex Turret will show up in your shop for 6 gold. You may only have 1 Apex Turret.",
     scaling: [["1", "Bonus Effect"]],
@@ -276,7 +276,7 @@ const traits = [
   },
   {
     name: "Void",
-    emblem: "public/assets/emblems/void.svg",
+    emblem: "/assets/emblems/void.svg",
     description:
       "Get a placeable void egg. At the start of combat, it hatches into an unspeakable horror and knocks up adjacent enemies. Each Void star level increases the horror's Health and Ability Power by 25%.",
     scaling: [
@@ -288,7 +288,7 @@ const traits = [
   },
   {
     name: "Wanderer",
-    emblem: "public/assets/emblems/wanderer.svg",
+    emblem: "/assets/emblems/wanderer.svg",
     description:
       "Ryze's spell changes depending on the Region Portal players voted for at the start of the game.",
     scaling: [["1", "Bonus Effect"]],
@@ -296,7 +296,7 @@ const traits = [
   },
   {
     name: "Yordle",
-    emblem: "public/assets/emblems/yordle.svg",
+    emblem: "/assets/emblems/yordle.svg",
     description:
       "Allies gain 10% Attack Speed per star level. Yordles can become 4 star, gaining a wacky spell upgrade! Ties in items are broken by the Yordle fielded most recently.",
     scaling: [
@@ -310,7 +310,7 @@ const traits = [
   },
   {
     name: "Zaun",
-    emblem: "public/assets/emblems/zaun.svg",
+    emblem: "/assets/emblems/zaun.svg",
     description:
       "Zaun champions create random chem-mods that only they can use. Champions can be modded once, and mods can only be removed by selling the champion.",
     scaling: [
