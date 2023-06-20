@@ -1,0 +1,203 @@
+@import url(../styles/_colors.scss);
+
+.wrapper {
+  padding: 1rem 3rem;
+}
+
+.compsWrapper {
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  background-color: var(--secondary);
+  border: 1px solid grey;
+}
+
+.flexComp {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+
+  strong {
+    color: var(--primary);
+  }
+
+  h3,
+  p {
+    margin: 0 0.5rem;
+  }
+
+  h3:hover {
+    color: var(--primary);
+    cursor: pointer;
+  }
+}
+
+.compsFigureContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.champions {
+  display: flex;
+  position: relative;
+
+  .itemHolder {
+    position: relative;
+
+    .championIcon {
+      margin: 1rem;
+      border-radius: 50%;
+      height: 100px;
+      border: 3px solid grey;
+    }
+
+    :hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.tooltipChamp {
+  visibility: visible;
+  background-color: #555;
+  color: #fff;
+  padding: 5px 0;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 200;
+  bottom: 40%;
+  left: 50%;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  justify-items: center;
+  width: 240px;
+  gap: 0.5rem;
+  padding: 0.5rem;
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .tooltipChampIcon {
+    width: 60px;
+    height: auto;
+    border-radius: 2px;
+    border: 2px solid #caac6f;
+  }
+
+  h3 {
+    grid-column: span 3;
+  }
+}
+
+// .tooltipContainer:hover .tooltipComponent {
+//   visibility: visible;
+//   opacity: 1;
+// }
+
+.tooltipComponent {
+  visibility: visible;
+  background-color: #555;
+  color: #fff;
+  padding: 5px 0;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 250;
+  bottom: 40%;
+  left: 50%;
+  opacity: 1;
+  overflow: visible;
+
+  // &.visible {
+  //   visibility: visible;
+  //   opacity: 1;
+  // }
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-items: end;
+  gap: 1rem;
+
+  .traitName {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .costWrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+
+    .goldIcon {
+      width: 1em;
+      height: auto;
+    }
+  }
+}
+
+.tooltipChampItem {
+  grid-column: span 3;
+  display: flex;
+}
+
+// .itemHolder:hover .tooltipChamp {
+//   visibility: visible;
+//   opacity: 1;
+// }
+
+.itemWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 5;
+  bottom: 1.7rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.square {
+  height: 25px;
+  width: 25px;
+  border: 2px solid #caac6f;
+  position: relative;
+}
+
+// .square:hover .tooltipComponent {
+//   visibility: visible;
+//   opacity: 1;
+// }
+.championName {
+  text-align: center;
+}
+// champion cost classes
+// apply the border to the image itself
+
+.btnContainer {
+  display: flex;
+  flex-direction: column;
+
+  button {
+    font-size: 2rem;
+    font-weight: 700;
+    background-color: transparent;
+
+    &:hover {
+      cursor: pointer;
+      color: var(--primary);
+    }
+  }
+
+  label {
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,19 @@
+@import 'reset';
+@import 'colors';
+@import 'btn';
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'Raleway', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+}
+
+h1 {
+    text-align: center;
+    padding: 2rem 0;
+}

@@ -1,0 +1,15 @@
+.btn {
+    background-color: rgb(85, 85, 135);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.6rem 2rem;
+    border: 3px solid transparent;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(109, 109, 169);
+    }
+}
