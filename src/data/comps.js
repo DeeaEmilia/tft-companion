@@ -252,7 +252,7 @@ export default [
       },
       {
         name: "Sion",
-        items: [],
+        items: ["zeke"],
       },
     ],
     playstyle: "Fast 7/8",

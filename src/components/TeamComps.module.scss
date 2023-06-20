@@ -39,93 +39,71 @@
   flex-wrap: wrap;
 }
 
-.champions {
-  display: flex;
+.championsWrapper {
   position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 
-  .itemHolder {
-    position: relative;
-
-    .championIcon {
-      margin: 1rem;
-      border-radius: 50%;
-      height: 100px;
-      border: 3px solid grey;
-    }
-
-    :hover {
+  .championIcon {
+    margin: 1rem;
+    border-radius: 50%;
+    height: 100px;
+    border: 3px solid grey;
+    &:hover {
       cursor: pointer;
+      box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 15px #caac6f,
+        0 0 20px #caac6f;
     }
   }
 }
+.itemHolder {
+  position: relative;
+  display: flex;
+}
 
 .tooltipChamp {
-  visibility: visible;
+  visibility: hidden;
   background-color: #555;
   color: #fff;
   padding: 5px 0;
   border-radius: 5px;
   position: absolute;
-  z-index: 200;
-  bottom: 40%;
+  z-index: 10;
   left: 50%;
-  opacity: 1;
+  bottom: 40%;
+  opacity: 0;
   transition: opacity 0.3s ease-in-out;
   transform: translate(-50%, -50%);
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-items: center;
   justify-items: center;
-  width: 240px;
+  width: 300px;
   gap: 0.5rem;
   padding: 0.5rem;
 
-  &.visible {
-    opacity: 1;
-    visibility: visible;
-  }
-
   .tooltipChampIcon {
+    grid-row: span 2;
+    grid-column: 1;
+    display: flex;
     width: 60px;
     height: auto;
     border-radius: 2px;
     border: 2px solid #caac6f;
   }
 
-  h3 {
-    grid-column: span 3;
+  &.visible {
+    opacity: 1;
+    visibility: visible;
   }
-}
-
-// .tooltipContainer:hover .tooltipComponent {
-//   visibility: visible;
-//   opacity: 1;
-// }
-
-.tooltipComponent {
-  visibility: visible;
-  background-color: #555;
-  color: #fff;
-  padding: 5px 0;
-  border-radius: 5px;
-  position: absolute;
-  z-index: 250;
-  bottom: 40%;
-  left: 50%;
-  opacity: 1;
-  overflow: visible;
-
-  // &.visible {
-  //   visibility: visible;
-  //   opacity: 1;
-  // }
 }
 
 .details {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   justify-items: end;
-  gap: 1rem;
+  gap: 2rem;
 
   .traitName {
     display: flex;
@@ -144,15 +122,9 @@
   }
 }
 
-.tooltipChampItem {
-  grid-column: span 3;
-  display: flex;
+.championName {
+  text-align: center;
 }
-
-// .itemHolder:hover .tooltipChamp {
-//   visibility: visible;
-//   opacity: 1;
-// }
 
 .itemWrapper {
   display: flex;
@@ -162,6 +134,7 @@
   z-index: 5;
   bottom: 1.7rem;
   left: 50%;
+  bottom: 10%;
   transform: translateX(-50%);
 }
 
@@ -170,17 +143,68 @@
   width: 25px;
   border: 2px solid #caac6f;
   position: relative;
+  z-index: 10;
+
+  &:hover {
+    box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 15px #caac6f;
+    cursor: pointer;
+  }
 }
 
-// .square:hover .tooltipComponent {
-//   visibility: visible;
-//   opacity: 1;
-// }
-.championName {
+.tooltipComponent {
+  visibility: hidden;
+  background-color: var(--secondary);
   text-align: center;
+  padding: 5px 0;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 20;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: start;
+  width: 240px;
+  gap: 0.5rem;
+  padding: 0.5rem;
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  h4 {
+    grid-column: span 2;
+    color: var(--accent);
+  }
+  p {
+    grid-column: span 2;
+    text-align: start;
+  }
 }
-// champion cost classes
-// apply the border to the image itself
+
+.componentsHolder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+
+  img {
+    width: 35px;
+  }
+  h5 {
+    font-size: 0.75rem;
+    color: var(--accent);
+    font-weight: 400;
+  }
+  p {
+    font-size: 0.75rem;
+    text-align: center;
+  }
+}
 
 .btnContainer {
   display: flex;
