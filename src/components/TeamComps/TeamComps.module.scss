@@ -39,11 +39,20 @@ $border: 0.125rem solid var(--accent);
   }
 }
 
-.compTitle {
-  display: flex;
-  align-items: center;
-}
-
 .tierImage {
   height: 2rem;
+}
+
+.flexWrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  p {
+    font-size: 1.25rem;
+  }
+}
+
+.emblem {
+  height: 1.25rem;
 }

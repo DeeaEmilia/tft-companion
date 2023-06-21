@@ -1,8 +1,9 @@
-import classes from "./TeamComps.module.scss";
-import comps from "../../data/comps";
 import { useEffect, useState } from "react";
+import comps from "../../data/comps";
+import traits from "../../data/traits";
 import Champions from "../Champions/Champions";
 import CompSearchBar from "../CompSearchBar/CompSearchBar";
+import classes from "./TeamComps.module.scss";
 
 const TeamComps = () => {
   const [hoveredChampion, setHoveredChampion] = useState(null);
@@ -72,19 +73,29 @@ const TeamComps = () => {
   };
 
   const countTraits = (champions) => {
-    const traitsCounts = {};
+    const traitCounts = {};
 
     champions.forEach((champion) => {
       champion.traits.forEach((trait) => {
-        if (!traitsCounts[trait]) {
-          traitsCounts[trait] = 1;
+        if (!traitCounts[trait]) {
+          traitCounts[trait] = 1;
         } else {
-          traitsCounts[trait] += 1;
+          traitCounts[trait] += 1;
         }
       });
     });
 
-    return traitsCounts;
+    const filteredTraitCounts = {};
+
+    for (let trait in traitCounts) {
+      const traitData = traits.find((t) => t.name === trait);
+      const firstTier = parseInt(traitData.scaling[0][0]);
+      if (traitCounts[trait] >= firstTier) {
+        filteredTraitCounts[trait] = traitCounts[trait];
+      }
+    }
+
+    return filteredTraitCounts;
   };
 
   return (
@@ -106,26 +117,35 @@ const TeamComps = () => {
         return (
           <section className={classes.compsWrapper} key={comp.name}>
             <div className={classes.flexComp}>
-              <div className={classes.compTitle}>
+              <div className={classes.flexWrapper}>
                 <img
                   src={comp.tierImage}
                   alt={`${comp.tier} tier`}
                   className={classes.tierImage}
                 />
                 <h3>{comp.name}</h3>
-                {Object.entries(traitCounts).map(([trait, count]) => (
-                  <p key={trait}>
-                    {trait}: {count}
-                  </p>
-                ))}
               </div>
-              <div>
+              <div className={classes.flexWrapper}>
+                <div className={classes.flexWrapper}>
+                  {Object.entries(traitCounts).map(([trait, count]) => {
+                    const traitData = traits.find((t) => t.name === trait);
+                    return (
+                      <div key={trait} className={classes.flexWrapper}>
+                        <img
+                          src={traitData.emblem}
+                          alt={`${trait} emblem`}
+                          className={classes.emblem}
+                        />
+                        <p>
+                          {trait}: {count}
+                        </p>
+                      </div>
+                    );
+                  })}
+                </div>
                 <p>
                   <strong>Playstyle: </strong> {comp.playstyle}
                 </p>{" "}
-                <p>
-                  <strong>Condition:</strong> {comp.conditions}
-                </p>
               </div>
             </div>
 

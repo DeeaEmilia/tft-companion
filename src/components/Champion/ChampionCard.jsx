@@ -62,60 +62,6 @@ const ChampionCard = ({
             {champion.cost}
           </div>
         </div>
-
-        <div className={classes.tooltipItem}>
-          {championComp.items.map((itemId, index) => {
-            const item = items.find((item) => item.id === itemId);
-            if (item) {
-              return (
-                <div key={itemId + index}>
-                  <div className={classes.tooltipContainer}>
-                    <img
-                      src={item.icon}
-                      alt={item.name}
-                      className={classes.square}
-                      onMouseEnter={() => {
-                        setHoveredItem(
-                          `${comp.name}-${champion.name}-${itemId}`
-                        );
-                      }}
-                      onMouseLeave={() => {
-                        setHoveredItem(null);
-                      }}
-                    />
-                    <div
-                      className={`${classes.tooltipComponent} ${
-                        hoveredItem === itemId ? classes.visible : ""
-                      }`}>
-                      <h4>{item.name}</h4>
-                      <p>{item.description}</p>
-                      {item.components.map((componentId, index) => {
-                        const component = componentsData.find(
-                          (comp) => comp.id === componentId
-                        );
-                        if (component) {
-                          return (
-                            <div key={component.id + "-" + index}>
-                              <img src={component.icon} alt={component.name} />
-                              <p>{component.name}</p>
-                              <p>{component.description}</p>
-                            </div>
-                          );
-                        }
-                        return null;
-                      })}
-                    </div>
-                  </div>
-                </div>
-              );
-            } else {
-              console.error(
-                `Item with id ${itemId} not found for champion ${champion.name}.`
-              );
-              return null;
-            }
-          })}
-        </div>
       </div>
       <div className={classes.itemHolder}>
         <img
@@ -150,7 +96,10 @@ const ChampionCard = ({
                         : ""
                     }`}>
                     <h4>{item.name}</h4>
-                    <p>{item.description}</p>
+                    <p>
+                      {" "}
+                      <strong> Description:</strong> {item.description}
+                    </p>
                     {item.components.map((componentId, index) => {
                       const component = componentsData.find(
                         (comp) => comp.id === componentId
@@ -160,7 +109,11 @@ const ChampionCard = ({
                           <div
                             key={component.id + "-" + index}
                             className={classes.componentsHolder}>
-                            <img src={component.icon} alt={component.name} />
+                            <img
+                              src={component.icon}
+                              alt={component.name}
+                              className={classes.componentBorder}
+                            />
                             <h5>{component.name}</h5>
                             <p>{component.description}</p>
                           </div>
