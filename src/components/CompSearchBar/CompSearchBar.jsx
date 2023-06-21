@@ -20,6 +20,15 @@ function CompSearchBar({ onSearch, allChampions, allTraits }) {
     onSearch(searchInput);
   };
 
+  const handleReset = (event) => {
+    event.preventDefault();
+    setSearchInput({
+      champion: "",
+      trait: "",
+    });
+    onSearch({ champion: "", trait: "" });
+  };
+
   return (
     <form className={classes.searchForm} onSubmit={handleFormSubmit}>
       <div className={classes.inputContainer}>
@@ -27,6 +36,7 @@ function CompSearchBar({ onSearch, allChampions, allTraits }) {
           list="champions"
           name="champion"
           placeholder="Search by Champion"
+          value={searchInput.champion}
           onChange={handleInputChange}
         />
         <datalist id="champions">
@@ -41,6 +51,7 @@ function CompSearchBar({ onSearch, allChampions, allTraits }) {
           list="traits"
           name="trait"
           placeholder="Search by Trait"
+          value={searchInput.trait}
           onChange={handleInputChange}
         />
         <datalist id="traits">
@@ -52,6 +63,10 @@ function CompSearchBar({ onSearch, allChampions, allTraits }) {
 
       <button type="submit" className={classes.searchButton}>
         Search
+      </button>
+      <button onClick={handleReset} className={classes.searchButton}>
+        {" "}
+        Reset{" "}
       </button>
     </form>
   );

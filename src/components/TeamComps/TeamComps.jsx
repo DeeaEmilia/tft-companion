@@ -26,6 +26,10 @@ const TeamComps = () => {
         }
       }
     }
+    // Sort champions and traits
+    champions.sort();
+    traits.sort();
+
     setAllChampions(champions);
     setAllTraits(traits);
   }, []);
