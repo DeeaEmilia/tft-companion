@@ -8,12 +8,12 @@ const Homepage = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <div className="container">
+      <main className="mainWrapper">
         <Aside></Aside>
         <TeamComps></TeamComps>
         <ChampionsList></ChampionsList>
         <ItemsList></ItemsList>
-      </div>
+      </main>
     </div>
   );
 };
