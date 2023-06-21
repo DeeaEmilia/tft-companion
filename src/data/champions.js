@@ -1,6 +1,6 @@
 const champions = [
   {
-    name: "Atrox",
+    name: "Aatrox",
     traits: ["Darkin", "Slayer", "Juggernaut"],
     cost: 5,
     health: "1200 / 2160 / 3888",

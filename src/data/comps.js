@@ -1,4 +1,6 @@
-export default [
+import champions from "./champions";
+
+const comps = [
   {
     name: "Bastion Sorcerer Lux",
     champions: [
@@ -10,32 +12,32 @@ export default [
       {
         name: "Jarvan IV",
         items: ["vow", "warmog", "spark"],
-        traits: ["Demacia", "Sorcerer"],
+        traits: ["Demacia", "Strategist"],
       },
       {
         name: "Ahri",
         items: [],
-        traits: ["Demacia", "Sorcerer"],
+        traits: ["Ionia", "Sorcerer"],
       },
       {
         name: "Shen",
         items: [],
-        traits: ["Demacia", "Sorcerer"],
+        traits: ["Ionia", "Bastion", "Invoker"],
       },
       {
         name: "Taric",
         items: [],
-        traits: ["Demacia", "Sorcerer"],
+        traits: ["Targon", "Sorcerer", "Bastion"],
       },
       {
         name: "Poppy",
         items: [],
-        traits: ["Demacia", "Sorcerer"],
+        traits: ["Yordle", "Demacia", "Bastion"],
       },
       {
         name: "Kassadin",
         items: [],
-        traits: ["Demacia", "Sorcerer"],
+        traits: ["Void", "Bastion"],
       },
     ],
     playstyle: "Fast 7/8",
@@ -43,8 +45,8 @@ export default [
     notes: [""],
     conditions: ["AP Items"],
     legend: [""],
-    tier: "S",
-    tierImage: "/assets/tier/s-tier.svg",
+    tier: "A",
+    tierImage: "/assets/tier/a-tier.svg",
   },
   {
     name: "7 Demacia Lux",
@@ -57,32 +59,32 @@ export default [
       {
         name: "Sona",
         items: ["shojin", "morello"],
-        traits: ["Demacia", "Sorcerer"],
+        traits: ["Demacia", "Multicaster"],
       },
       {
         name: "Jarvan IV",
         items: ["vow", "warmog"],
-        traits: ["Demacia", "Sorcerer"],
+        traits: ["Demacia", "Strategist"],
       },
       {
         name: "Shen",
         items: ["demacia"],
-        traits: ["Demacia", "Sorcerer"],
+        traits: ["Ionia", "Bastion", "Invoker"],
       },
       {
         name: "Kayle",
         items: [],
-        traits: ["Demacia", "Sorcerer"],
+        traits: ["Demacia", "Slayer"],
       },
       {
         name: "Swain",
         items: [],
-        traits: ["Demacia", "Sorcerer"],
+        traits: ["Noxus", "Strategist", "Sorcerer"],
       },
       {
         name: "Galio",
         items: [],
-        traits: ["Demacia", "Sorcerer"],
+        traits: ["Demacia", "Invoker"],
       },
     ],
     playstyle: "Fast 7/8",
@@ -101,8 +103,8 @@ export default [
     notes: ["No demacia +1 -> drop Shen for Garen or play Bastion Sorc Lux"],
     conditions: ["Demacia +1"],
     legend: ["Veigar"],
-    tier: "S",
-    tierImage: "/assets/tier/s-tier.svg",
+    tier: "B",
+    tierImage: "/assets/tier/b-tier.svg",
   },
 
   {
@@ -111,42 +113,42 @@ export default [
       {
         name: "Zeri",
         items: ["whisper", "rageblade", "ie"],
-        traits: ["Demacia", "Sorcerer"],
+        traits: ["Zaun", "Gunner"],
       },
       {
         name: "Jayce",
         items: ["zeke", "zeke"],
-        traits: ["Demacia", "Sorcerer"],
+        traits: ["Piltover", "Gunner"],
       },
       {
         name: "Sejuani",
         items: ["vow", "warmog", "sunfire"],
-        traits: ["Demacia", "Sorcerer"],
+        traits: ["Freljord", "Bruiser"],
       },
       {
         name: "Jinx",
         items: [],
-        traits: ["Demacia", "Sorcerer"],
+        traits: ["Zaun", "Gunner"],
       },
       {
         name: "Senna",
         items: [],
-        traits: ["Demacia", "Sorcerer"],
+        traits: ["Shadow Isles", "Gunner", "Redeemer"],
       },
       {
         name: "Shen",
         items: [],
-        traits: ["Demacia", "Sorcerer"],
+        traits: ["Ionia", "Bastion", "Invoker"],
       },
       {
         name: "Sion",
         items: [],
-        traits: ["Demacia", "Sorcerer"],
+        traits: ["Noxus", "Bruisers"],
       },
       {
         name: "Lissandra",
         items: [],
-        traits: ["Demacia", "Sorcerer"],
+        traits: ["Freljord", "Invoker"],
       },
     ],
     playstyle: "Fast 7/8",
@@ -177,42 +179,42 @@ export default [
       {
         name: "Azir",
         items: ["rageblade", "shiv", "gunblade"],
-        traits: ["Demacia", "Sorcerer"],
+        traits: ["Shurima", "Strategist"],
       },
       {
         name: "Jarvan IV",
         items: ["vow", "warmog", "sunfire"],
-        traits: ["Demacia", "Sorcerer"],
+        traits: ["Demacia", "Strategist"],
       },
       {
         name: "Akshan",
         items: [],
-        traits: ["Demacia", "Sorcerer"],
+        traits: ["Shurima", "Deadeye"],
       },
       {
         name: "Nasus",
         items: [],
-        traits: ["Demacia", "Sorcerer"],
+        traits: ["Shurima", "Juggernaut"],
       },
       {
         name: "Taliyah",
         items: [],
-        traits: ["Demacia", "Sorcerer"],
+        traits: ["Shurima", "Multicaster"],
       },
       {
         name: "Cassiopeia",
         items: [],
-        traits: ["Demacia", "Sorcerer"],
+        traits: ["Noxus", "Shurima", "Invoker"],
       },
       {
         name: "Renekton",
         items: [],
-        traits: ["Demacia", "Sorcerer"],
+        traits: ["Shurima", "Bruiser"],
       },
       {
         name: "K'Sante",
         items: [],
-        traits: ["Demacia", "Sorcerer"],
+        traits: ["Shurima", "Bastion"],
       },
     ],
     playstyle: "Fast 7/8",
@@ -220,8 +222,8 @@ export default [
     notes: [""],
     conditions: ["Rageblade"],
     legend: [""],
-    tier: "A",
-    tierImage: "/assets/tier/a-tier.svg",
+    tier: "A-",
+    tierImage: "/assets/tier/a-minus-tier.svg",
   },
   {
     name: "Freljord Aphelios",
@@ -271,7 +273,7 @@ export default [
     tierImage: "/assets/tier/s-tier.svg",
   },
   {
-    name: "Deadeye Aphelios + Urgot",
+    name: "Deadeye Aphelios + Urgot Deadeye",
     champions: [
       {
         name: "Aphelios",
@@ -305,7 +307,7 @@ export default [
       },
       {
         name: "Sion",
-        items: ["zeke"],
+        items: [],
         traits: ["Ionia", "Sorcerer"],
       },
     ],
@@ -359,3 +361,19 @@ export default [
 
   //...other comps
 ];
+
+// Map over comps, replacing each champion's traits with the ones from champions.js
+const compsWithTraits = comps.map((comp) => ({
+  ...comp,
+  champions: comp.champions.map((champion) => {
+    const championData = champions.find(
+      (champ) => champ.name === champion.name
+    );
+    return {
+      ...champion,
+      traits: championData ? championData.traits : [],
+    };
+  }),
+}));
+
+export default compsWithTraits;

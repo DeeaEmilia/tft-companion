@@ -32,6 +32,20 @@ const TeamComps = () => {
 
     setAllChampions(champions);
     setAllTraits(traits);
+
+    // Sort comps based on tier
+    const tierValues = {
+      S: 1,
+      A: 2,
+      "A-": 3,
+      B: 4,
+      C: 5,
+      D: 6,
+    };
+    const sortedComps = comps.sort((compA, compB) => {
+      return tierValues[compA.tier] - tierValues[compB.tier];
+    });
+    setFilteredComps(sortedComps);
   }, []);
 
   const handleSearch = (searchInput) => {
@@ -87,6 +101,7 @@ const TeamComps = () => {
                 alt={`${comp.tier} tier`}
                 className={classes.tierImage}
               />
+
               <h3>{comp.name}</h3>
             </div>
             <div>

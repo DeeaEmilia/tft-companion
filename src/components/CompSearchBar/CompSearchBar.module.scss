@@ -1,42 +1,62 @@
+@import url(../../styles/_colors.scss);
+
+$border: 0.125rem solid var(--accent);
+$screen-xl: 1200px;
+
 .searchForm {
   display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  margin-bottom: 30px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem 0;
+  gap: 0.5rem;
+
+  @media screen and (min-width: $screen-xl) {
+    flex-wrap: nowrap;
+  }
 }
 
 .inputContainer {
   position: relative;
-  width: 40%;
+  width: 47%;
+
+  @media screen and (min-width: $screen-xl) {
+    width: 40%;
+  }
 }
 
 .searchButton {
-  width: 15%;
-  height: 35px;
-  background-color: #008cba; /* Blue */
-  border: none;
+  width: 47%;
+  height: 3rem;
+  background-color: var(--secondary);
+  border: 0.125rem solid var(--secondary);
+  border-radius: 0.5rem;
   text-align: center;
   display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
+  transition: all 0.3s;
+
+  @media screen and (min-width: $screen-xl) {
+    width: 15%;
+  }
 
   &:hover {
-    background-color: #4caf50; /* Green */
+    border: $border;
+    cursor: pointer;
   }
 }
 
 input {
+  height: 3rem;
   width: 100%;
   padding: 12px 20px;
-  margin: 8px 0;
   box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
+
   background-color: rgb(91, 91, 91);
-  font-size: 16px;
+  border: 0.125rem solid var(--secondary);
+  border-radius: 0.5rem;
   resize: none;
+
+  &:hover {
+    border: $border;
+  }
 }
