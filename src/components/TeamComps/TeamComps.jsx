@@ -1,11 +1,64 @@
 import classes from "./TeamComps.module.scss";
 import comps from "../../data/comps";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Champions from "../Champions/Champions";
+import CompSearchBar from "../CompSearchBar/CompSearchBar";
 
 const TeamComps = () => {
   const [hoveredChampion, setHoveredChampion] = useState(null);
   const [hoveredItem, setHoveredItem] = useState(null);
+  const [filteredComps, setFilteredComps] = useState(comps); // Initially show all comps
+  const [allChampions, setAllChampions] = useState([]);
+  const [allTraits, setAllTraits] = useState([]);
+
+  useEffect(() => {
+    let champions = [];
+    let traits = [];
+    for (let comp of comps) {
+      for (let champion of comp.champions) {
+        if (!champions.includes(champion.name)) {
+          champions.push(champion.name);
+        }
+        for (let trait of champion.traits) {
+          if (!traits.includes(trait)) {
+            traits.push(trait);
+          }
+        }
+      }
+    }
+    setAllChampions(champions);
+    setAllTraits(traits);
+  }, []);
+
+  const handleSearch = (searchInput) => {
+    const championSearchValue = searchInput.champion.toLowerCase();
+    const traitSearchValue = searchInput.trait.toLowerCase();
+
+    let newFilteredComps = comps;
+
+    // Filter by champion if the user entered a champion name
+    if (championSearchValue) {
+      newFilteredComps = newFilteredComps.filter((comp) =>
+        comp.champions.some((champion) =>
+          champion.name.toLowerCase().includes(championSearchValue)
+        )
+      );
+    }
+
+    // Filter by trait if the user entered a trait
+    if (traitSearchValue) {
+      newFilteredComps = newFilteredComps.filter((comp) =>
+        comp.champions.some((champion) =>
+          champion.traits.some((trait) =>
+            trait.toLowerCase().includes(traitSearchValue)
+          )
+        )
+      );
+    }
+
+    // Update the state with the newly filtered list of comps
+    setFilteredComps(newFilteredComps);
+  };
 
   return (
     <main className={classes.wrapper}>
@@ -16,9 +69,12 @@ const TeamComps = () => {
         saepe odit laboriosam? Laudantium explicabo aliquam velit commodi sint
         nemo id perferendis maxime voluptatibus.
       </p>
-      {/* .map function lets us manipulate the items in an array by iterating and accessing individual items. */}
-      {comps.map((comp) => (
-        // key helps React identify which items have changed
+      <CompSearchBar
+        onSearch={handleSearch}
+        allChampions={allChampions}
+        allTraits={allTraits}
+      />
+      {filteredComps.map((comp) => (
         <section className={classes.compsWrapper} key={comp.name}>
           <div className={classes.flexComp}>
             <div className={classes.compTitle}>
