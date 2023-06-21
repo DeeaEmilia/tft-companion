@@ -1,6 +1,6 @@
 @import url(../../styles/_colors.scss);
 
-$box-shadow: 0 0 2px #fff, 0 0 10px var(--accent), 0 0 15px var(--accent);
+$box-shadow: 0 0 5px var(--accent), 0 0 10px var(--accent);
 $border: 0.125rem solid var(--accent);
 
 .championsWrapper {
@@ -25,13 +25,16 @@ $border: 0.125rem solid var(--accent);
   width: 18rem;
   gap: 0.5rem;
   padding: 1rem;
+  border: $border;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .tooltipChamp {
   z-index: 10;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 3fr;
   align-items: center;
   justify-items: center;
+  font-size: 1rem;
 
   .tooltipChampIcon {
     grid-row: span 2;
@@ -43,16 +46,20 @@ $border: 0.125rem solid var(--accent);
   }
 
   &.visible {
-    opacity: 1;
     visibility: visible;
+    opacity: 1;
+  }
+
+  h3 {
+    font-size: 1.2rem;
   }
 }
 
 .details {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   justify-items: end;
-  gap: 2rem;
+  gap: 0.2rem;
   grid-row: span 2;
 
   .traitName {
@@ -91,15 +98,14 @@ $border: 0.125rem solid var(--accent);
 
 .tooltipComponent {
   z-index: 20;
-
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   align-items: start;
   text-align: center;
 
   &.visible {
-    opacity: 1;
     visibility: visible;
+    opacity: 1;
   }
 
   h4 {

@@ -21,7 +21,14 @@ const TeamComps = () => {
         // key helps React identify which items have changed
         <section className={classes.compsWrapper} key={comp.name}>
           <div className={classes.flexComp}>
-            <h3>{comp.name}</h3>
+            <div className={classes.compTitle}>
+              <img
+                src={comp.tierImage}
+                alt={`${comp.tier} tier`}
+                className={classes.tierImage}
+              />
+              <h3>{comp.name}</h3>
+            </div>
             <div>
               <p>
                 <strong>Playstyle: </strong> {comp.playstyle}

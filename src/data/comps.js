@@ -36,6 +36,8 @@ export default [
     notes: [""],
     conditions: ["AP Items"],
     legend: [""],
+    tier: ["S"],
+    tierImage: "/assets/tier/s-tier.svg",
   },
   {
     name: "7 Demacia Lux",
@@ -85,6 +87,8 @@ export default [
     notes: ["No demacia +1 -> drop Shen for Garen or play Bastion Sorc Lux"],
     conditions: ["Demacia +1"],
     legend: ["Veigar"],
+    tier: ["S"],
+    tierImage: "/assets/tier/s-tier.svg",
   },
 
   {
@@ -142,6 +146,8 @@ export default [
     ],
     conditions: ["AD items"],
     legend: ["Twisted Fate", "Master Yi"],
+    tier: ["S"],
+    tierImage: "/assets/tier/s-tier.svg",
   },
   {
     name: "Shurima Azir",
@@ -184,6 +190,8 @@ export default [
     notes: [""],
     conditions: ["Rageblade"],
     legend: [""],
+    tier: ["A"],
+    tierImage: "/assets/tier/a-tier.svg",
   },
   {
     name: "Freljord Aphelios",
@@ -222,6 +230,8 @@ export default [
     notes: [""],
     conditions: ["Rageblade"],
     legend: [""],
+    tier: ["S"],
+    tierImage: "/assets/tier/s-tier.svg",
   },
   {
     name: "Deadeye Aphelios + Urgot",
@@ -260,6 +270,8 @@ export default [
     notes: [""],
     conditions: ["Rageblade + BT"],
     legend: [""],
+    tier: ["S"],
+    tierImage: "/assets/tier/s-tier.svg",
   },
 
   // {
