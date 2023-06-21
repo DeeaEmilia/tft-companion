@@ -7,7 +7,7 @@ import CompSearchBar from "../CompSearchBar/CompSearchBar";
 const TeamComps = () => {
   const [hoveredChampion, setHoveredChampion] = useState(null);
   const [hoveredItem, setHoveredItem] = useState(null);
-  const [filteredComps, setFilteredComps] = useState(comps); // Initially show all comps
+  const [filteredComps, setFilteredComps] = useState(comps);
   const [allChampions, setAllChampions] = useState([]);
   const [allTraits, setAllTraits] = useState([]);
 
@@ -26,14 +26,11 @@ const TeamComps = () => {
         }
       }
     }
-    // Sort champions and traits
     champions.sort();
     traits.sort();
-
     setAllChampions(champions);
     setAllTraits(traits);
 
-    // Sort comps based on tier
     const tierValues = {
       S: 1,
       A: 2,
@@ -51,10 +48,8 @@ const TeamComps = () => {
   const handleSearch = (searchInput) => {
     const championSearchValue = searchInput.champion.toLowerCase();
     const traitSearchValue = searchInput.trait.toLowerCase();
-
     let newFilteredComps = comps;
 
-    // Filter by champion if the user entered a champion name
     if (championSearchValue) {
       newFilteredComps = newFilteredComps.filter((comp) =>
         comp.champions.some((champion) =>
@@ -63,7 +58,6 @@ const TeamComps = () => {
       );
     }
 
-    // Filter by trait if the user entered a trait
     if (traitSearchValue) {
       newFilteredComps = newFilteredComps.filter((comp) =>
         comp.champions.some((champion) =>
@@ -74,8 +68,23 @@ const TeamComps = () => {
       );
     }
 
-    // Update the state with the newly filtered list of comps
     setFilteredComps(newFilteredComps);
+  };
+
+  const countTraits = (champions) => {
+    const traitsCounts = {};
+
+    champions.forEach((champion) => {
+      champion.traits.forEach((trait) => {
+        if (!traitsCounts[trait]) {
+          traitsCounts[trait] = 1;
+        } else {
+          traitsCounts[trait] += 1;
+        }
+      });
+    });
+
+    return traitsCounts;
   };
 
   return (
@@ -92,37 +101,44 @@ const TeamComps = () => {
         allChampions={allChampions}
         allTraits={allTraits}
       />
-      {filteredComps.map((comp) => (
-        <section className={classes.compsWrapper} key={comp.name}>
-          <div className={classes.flexComp}>
-            <div className={classes.compTitle}>
-              <img
-                src={comp.tierImage}
-                alt={`${comp.tier} tier`}
-                className={classes.tierImage}
-              />
-
-              <h3>{comp.name}</h3>
+      {filteredComps.map((comp) => {
+        const traitCounts = countTraits(comp.champions);
+        return (
+          <section className={classes.compsWrapper} key={comp.name}>
+            <div className={classes.flexComp}>
+              <div className={classes.compTitle}>
+                <img
+                  src={comp.tierImage}
+                  alt={`${comp.tier} tier`}
+                  className={classes.tierImage}
+                />
+                <h3>{comp.name}</h3>
+                {Object.entries(traitCounts).map(([trait, count]) => (
+                  <p key={trait}>
+                    {trait}: {count}
+                  </p>
+                ))}
+              </div>
+              <div>
+                <p>
+                  <strong>Playstyle: </strong> {comp.playstyle}
+                </p>{" "}
+                <p>
+                  <strong>Condition:</strong> {comp.conditions}
+                </p>
+              </div>
             </div>
-            <div>
-              <p>
-                <strong>Playstyle: </strong> {comp.playstyle}
-              </p>{" "}
-              <p>
-                <strong>Condition:</strong> {comp.conditions}
-              </p>
-            </div>
-          </div>
 
-          <Champions
-            comp={comp}
-            hoveredChampion={hoveredChampion}
-            setHoveredChampion={setHoveredChampion}
-            hoveredItem={hoveredItem}
-            setHoveredItem={setHoveredItem}
-          />
-        </section>
-      ))}
+            <Champions
+              comp={comp}
+              hoveredChampion={hoveredChampion}
+              setHoveredChampion={setHoveredChampion}
+              hoveredItem={hoveredItem}
+              setHoveredItem={setHoveredItem}
+            />
+          </section>
+        );
+      })}
     </main>
   );
 };

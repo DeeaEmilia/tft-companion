@@ -86,6 +86,11 @@ const comps = [
         items: [],
         traits: ["Demacia", "Invoker"],
       },
+      {
+        name: "Poppy",
+        items: [],
+        traits: [],
+      },
     ],
     playstyle: "Fast 7/8",
     augments: [
