@@ -2,6 +2,7 @@
 import classes from "./Champions.module.scss";
 import champions from "../../data/champions";
 import ChampionCard from "../Champion/ChampionCard";
+import { Link } from "react-router-dom";
 
 const Champions = ({
   comp,
@@ -38,7 +39,9 @@ const Champions = ({
         })}
       </div>
       <div className={classes.btnContainer}>
-        <button id="builderButton">&rarr;</button>
+        <Link to={`/BuilderPage/${comp.name}`}>
+          <button id="builderButton">&rarr;</button>
+        </Link>
         <label htmlFor="builderButton">See in builder</label>
       </div>
     </div>
