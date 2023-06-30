@@ -3,4 +3,10 @@
 .navbar {
   background-color: var(--secondary);
   padding: 1rem;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

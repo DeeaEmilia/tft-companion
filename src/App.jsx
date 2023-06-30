@@ -11,7 +11,7 @@ function App() {
       <Route path="/" element={<Homepage />} />
       <Route path="/TeamPage/:name" element={<TeamPage />} />
       <Route path="/championPage/:name" element={<ChampionPage />} />
-      <Route path="/itemPage/:name" element={<ItemPage />} />
+      <Route path="/itemPage/:itemId" element={<ItemPage />} />
     </Routes>
   );
 }

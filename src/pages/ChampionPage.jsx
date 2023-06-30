@@ -1,9 +1,6 @@
 // Import the useParams hook from react-router-dom, which allows us to access route parameters
 import { useParams, useNavigate } from "react-router-dom";
-
-// Import the champions data
 import champions from "../data/champions";
-
 import classes from "./ChampionPage.module.scss";
 
 // Define the ChampionPage component

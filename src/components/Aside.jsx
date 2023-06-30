@@ -5,10 +5,9 @@ const Aside = () => {
     <div className={classes.container}>
       <ul>
         <li>Home</li>
-        <li>Profile</li>
         <li>Team Comps</li>
-        <li>Database</li>
-        <li>Tier List</li>
+        <li>Champions</li>
+        <li>Items</li>
       </ul>
     </div>
   );
