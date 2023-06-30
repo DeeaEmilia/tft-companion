@@ -48,11 +48,12 @@ $border: 0.125rem solid var(--accent);
   align-items: center;
   flex-wrap: wrap;
 
+  .emblem {
+    height: 1.25rem;
+    display: none;
+  }
   p {
     font-size: 1.25rem;
+    display: none;
   }
-}
-
-.emblem {
-  height: 1.25rem;
 }

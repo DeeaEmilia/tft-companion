@@ -11,6 +11,7 @@ const TeamComps = () => {
   const [hoveredItem, setHoveredItem] = useState(null);
   const [filteredComps, setFilteredComps] = useState(comps);
   const [allChampions, setAllChampions] = useState([]);
+  const [noCompsMessage, setNoCompsMessage] = useState("");
 
   const { allTraits, setAllTraits } = useContext(TraitContext);
 
@@ -88,6 +89,13 @@ const TeamComps = () => {
       );
     }
 
+    // Check if the comps list is empty after filtering. If it is, display the "No comps found" message
+    if (newFilteredComps.length === 0) {
+      setNoCompsMessage("No comps found with the selected champion or trait.");
+    } else {
+      setNoCompsMessage("");
+    }
+
     setFilteredComps(newFilteredComps);
   };
 
@@ -131,53 +139,57 @@ const TeamComps = () => {
         allChampions={allChampions}
         allTraits={allTraits}
       />
-      {filteredComps.map((comp) => {
-        const traitCounts = countTraits(comp.champions);
-        return (
-          <section className={classes.compsWrapper} key={comp.name}>
-            <div className={classes.flexComp}>
-              <div className={classes.flexWrapper}>
-                <img
-                  src={comp.tierImage}
-                  alt={`${comp.tier} tier`}
-                  className={classes.tierImage}
-                />
-                <h3>{comp.name}</h3>
-              </div>
-              <div className={classes.flexWrapper}>
+      {filteredComps.length === 0 ? (
+        <p>{noCompsMessage}</p>
+      ) : (
+        filteredComps.map((comp) => {
+          const traitCounts = countTraits(comp.champions);
+          return (
+            <section className={classes.compsWrapper} key={comp.name}>
+              <div className={classes.flexComp}>
                 <div className={classes.flexWrapper}>
-                  {Object.entries(traitCounts).map(([trait, count]) => {
-                    const traitData = traits.find((t) => t.name === trait);
-                    return (
-                      <div key={trait} className={classes.flexWrapper}>
-                        <img
-                          src={traitData.emblem}
-                          alt={`${trait} emblem`}
-                          className={classes.emblem}
-                        />
-                        <p>
-                          {trait}: {count}
-                        </p>
-                      </div>
-                    );
-                  })}
+                  <img
+                    src={comp.tierImage}
+                    alt={`${comp.tier} tier`}
+                    className={classes.tierImage}
+                  />
+                  <h3>{comp.name}</h3>
                 </div>
-                <p>
-                  <strong>Playstyle: </strong> {comp.playstyle}
-                </p>{" "}
+                <div className={classes.flexWrapper}>
+                  <div className={classes.flexWrapper}>
+                    {Object.entries(traitCounts).map(([trait, count]) => {
+                      const traitData = traits.find((t) => t.name === trait);
+                      return (
+                        <div key={trait} className={classes.flexWrapper}>
+                          <img
+                            src={traitData.emblem}
+                            alt={`${trait} emblem`}
+                            className={classes.emblem}
+                          />
+                          <p>
+                            {trait}: {count}
+                          </p>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <p>
+                    <strong>Playstyle: </strong> {comp.playstyle}
+                  </p>{" "}
+                </div>
               </div>
-            </div>
 
-            <Champions
-              comp={comp}
-              hoveredChampion={hoveredChampion}
-              setHoveredChampion={setHoveredChampion}
-              hoveredItem={hoveredItem}
-              setHoveredItem={setHoveredItem}
-            />
-          </section>
-        );
-      })}
+              <Champions
+                comp={comp}
+                hoveredChampion={hoveredChampion}
+                setHoveredChampion={setHoveredChampion}
+                hoveredItem={hoveredItem}
+                setHoveredItem={setHoveredItem}
+              />
+            </section>
+          );
+        })
+      )}
     </main>
   );
 };
