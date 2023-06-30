@@ -12,8 +12,10 @@ const champions = [
     range: "",
     mana: "0 / 60",
     skillName: "World Ender",
-    skillDescription:
-      "Aatrox transforms for 10 seconds, gaining X Omnivamp and converting all bonus Attack Speed to Attack Damage. While transformed, attacks deal X physical damage.",
+    skillDescription: [
+      "Aatrox transforms for 10 seconds, gaining X Omnivamp and converting all bonus Attack Speed to Attack Damage.",
+      " While transformed, attacks deal X physical damage.",
+    ],
     icon: "/assets/icons/aatrox.webp",
   },
   {
@@ -29,8 +31,11 @@ const champions = [
     range: "",
     mana: "0 / 50",
     skillName: "Essence Theft",
-    skillDescription:
-      "Ahri steals essence from enemies around her target, dealing X magic damage and 35% Mana Reaving them.Every X casts, instead, unleash a wave that deals X magic damage to all enemies hit. This deals 33% more damage to enemies whose essence has been stolen. Ionia Bonus: +2 Mana per secondMana Reave: Increase max Mana until the next cast",
+    skillDescription: [
+      "Ahri steals essence from enemies around her target, dealing X magic damage and 35% Mana Reaving them.",
+      "Every X casts, instead, unleash a wave that deals X magic damage to all enemies hit. This deals 33% more damage to enemies whose essence has been stolen.",
+      "Ionia Bonus: +2 Mana per secondMana Reave: Increase max Mana until the next cast",
+    ],
     icon: "/assets/icons/ahri.webp",
   },
   {
@@ -46,8 +51,10 @@ const champions = [
     range: "",
     mana: "0 / 100",
     skillName: "Comeuppance",
-    skillDescription:
-      "Akshan locks on to the farthest enemy and unleash a hail of 6 shots toward them. Each deals X physical damage to the first enemy hit.",
+    skillDescription: [
+      "Akshan locks on to the farthest enemy and unleash a hail of 6 shots toward them.",
+      "Each deals X physical damage to the first enemy hit.",
+    ],
     icon: "/assets/icons/akshan.webp",
   },
   {
@@ -63,8 +70,10 @@ const champions = [
     range: "",
     mana: "50 / 125",
     skillName: "Moonlight Vigil",
-    skillDescription:
-      "Fire a moon blast at the largest group of enemies that deals X physical damage to enemies within 2 hexes. Equip 4 Chakram, plus 1 more for each enemy hit by the moon blast.For 7 seconds, attacks deal X bonus physical damage for each Chakram equipped. X of damage dealt by Chakrams heals Aphelios.",
+    skillDescription: [
+      "Fire a moon blast at the largest group of enemies that deals X physical damage to enemies within 2 hexes.",
+      "Equip 4 Chakram, plus 1 more for each enemy hit by the moon blast.For 7 seconds, attacks deal X bonus physical damage for each Chakram equipped. X of damage dealt by Chakrams heals Aphelios.",
+    ],
     icon: "/assets/icons/aphelios.webp",
   },
   {
@@ -80,8 +89,10 @@ const champions = [
     range: "",
     mana: "30/60",
     skillName: "Volley",
-    skillDescription:
-      "Ashe fires 8 arrows in a cone, each dealing X physical damage to the first enemy hit and Chilling them for X seconds.Chill: Reduced Attack Speed by 30%",
+    skillDescription: [
+      "Ashe fires 8 arrows in a cone, each dealing X physical damage to the first enemy hit and Chilling them for X seconds.",
+      "Chill: Reduced Attack Speed by 30%",
+    ],
     icon: "/assets/icons/ashe.png",
   },
   {
@@ -97,8 +108,10 @@ const champions = [
     range: "",
     mana: "30 / 60",
     skillName: "Arise",
-    skillDescription:
-      "Passive: After every third attack from Azir, a Sand Soldier deals X magic damage to their target.Active: Summon a Sand Soldier to attack your target. If Azir already has 3 Soldiers, they all immediately deal X magic damage instead.",
+    skillDescription: [
+      "Passive: After every third attack from Azir, a Sand Soldier deals X magic damage to their target.",
+      "Active: Summon a Sand Soldier to attack your target. If Azir already has 3 Soldiers, they all immediately deal X magic damage instead.",
+    ],
     icon: "/assets/icons/azir.webp",
   },
   {
@@ -114,8 +127,10 @@ const champions = [
     range: "",
     mana: "70 / 70",
     skillName: "Royal Maelstrom",
-    skillDescription:
-      "Bel'Veth lashes out at the lowest Health enemy in range X times. Each lash deals X physical damage and 1% of the target's max Health as true damage.",
+    skillDescription: [
+      "Bel'Veth lashes out at the lowest Health enemy in range X times.",
+      "Each lash deals X physical damage and 1% of the target's max Health as true damage.",
+    ],
     icon: "/assets/icons/belveth.webp",
   },
   {
@@ -131,7 +146,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/cassiopeia.webp",
   },
   {
@@ -147,7 +162,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/chogath.png",
   },
   {
@@ -163,7 +178,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/darius.webp",
   },
   {
@@ -179,7 +194,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/ekko.webp",
   },
   {
@@ -195,7 +210,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/galio.webp",
   },
   {
@@ -211,7 +226,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/garen.webp",
   },
   {
@@ -227,7 +242,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/gwen.webp",
   },
   {
@@ -243,7 +258,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/heimerdinger.webp",
   },
   {
@@ -259,7 +274,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/irelia.webp",
   },
   {
@@ -275,7 +290,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/jarvan.png",
   },
   {
@@ -291,7 +306,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/jayce.webp",
   },
   {
@@ -307,7 +322,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/jhin.webp",
   },
 
@@ -324,7 +339,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/jinx.webp",
   },
   {
@@ -340,7 +355,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/kaisa.webp",
   },
   {
@@ -356,7 +371,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/kalista.webp",
   },
   {
@@ -372,7 +387,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/karma.webp",
   },
   {
@@ -388,7 +403,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/kassadin.webp",
   },
   {
@@ -404,7 +419,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/katarina.png",
   },
   {
@@ -420,7 +435,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/kayle.webp",
   },
   {
@@ -436,7 +451,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/kled.png",
   },
   {
@@ -452,7 +467,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/ksante.webp",
   },
   {
@@ -468,7 +483,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/lissandra.webp",
   },
   {
@@ -484,7 +499,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/lux.webp",
   },
   {
@@ -500,7 +515,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/malzahar.webp",
   },
   {
@@ -516,7 +531,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/maokai.webp",
   },
   {
@@ -532,7 +547,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/nasus.png",
   },
   {
@@ -548,7 +563,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/orianna.webp",
   },
   {
@@ -564,7 +579,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/poppy.webp",
   },
   {
@@ -580,7 +595,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/reksai.webp",
   },
   {
@@ -596,7 +611,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/renekton.png",
   },
   {
@@ -612,7 +627,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/ryze.webp",
   },
   {
@@ -628,7 +643,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/samira.webp",
   },
   {
@@ -644,7 +659,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/sejuani.png",
   },
   {
@@ -660,7 +675,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/senna.webp",
   },
   {
@@ -676,7 +691,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/sett.webp",
   },
   {
@@ -692,7 +707,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/shen.webp",
   },
   {
@@ -708,7 +723,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/sion.png",
   },
   {
@@ -724,7 +739,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/sona.webp",
   },
   {
@@ -740,7 +755,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/soraka.png",
   },
   {
@@ -756,7 +771,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/swain.webp",
   },
   {
@@ -772,7 +787,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/taliyah.webp",
   },
   {
@@ -788,7 +803,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/taric.webp",
   },
   {
@@ -804,7 +819,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/teemo.png",
   },
   {
@@ -820,7 +835,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/tristana.png",
   },
   {
@@ -836,7 +851,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/urgot.webp",
   },
   {
@@ -852,7 +867,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/velkoz.webp",
   },
   {
@@ -868,7 +883,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/vi.webp",
   },
   {
@@ -884,7 +899,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/viego.png",
   },
   {
@@ -900,7 +915,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/warwick.webp",
   },
   {
@@ -916,7 +931,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/yasuo.png",
   },
   {
@@ -932,7 +947,7 @@ const champions = [
     range: "",
     mana: "",
     skillName: "",
-    skillDescription: "...",
+    skillDescription: ["...", "..."],
     icon: "/assets/icons/zed.webp",
   },
   {
@@ -948,8 +963,10 @@ const champions = [
     range: "",
     mana: "0 / 50",
     skillName: "Surge",
-    skillDescription:
-      "Passive: Execute enemies below X Health. Kills reset the duration of Surge. Active: For the next 5 seconds, attacks chain lightning to additional enemies, dealing X physical damage.",
+    skillDescription: [
+      "Passive: Execute enemies below X Health. Kills reset the duration of Surge.",
+      " Active: For the next 5 seconds, attacks chain lightning to additional enemies, dealing X physical damage.",
+    ],
     icon: "/assets/icons/zeri.webp",
   },
 ];

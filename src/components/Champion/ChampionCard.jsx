@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { Link } from "react-router-dom";
 import classes from "./ChampionCard.module.scss";
 import traitsData from "../../data/traits";
 import items from "../../data/items";
@@ -64,31 +65,37 @@ const ChampionCard = ({
         </div>
       </div>
       <div className={classes.itemHolder}>
-        <img
-          src={champion.icon}
-          alt={champion.name}
-          className={classes.championIcon}
-          style={{ borderColor: costColors[champion.cost] }}
-          onMouseEnter={() =>
-            setHoveredChampion(`${comp.name}-${champion.name}`)
-          }
-          onMouseLeave={() => setHoveredChampion(null)}
-        />
+        <Link to={`/championPage/${champion.name}`}>
+          <img
+            src={champion.icon}
+            alt={champion.name}
+            className={classes.championIcon}
+            style={{ borderColor: costColors[champion.cost] }}
+            onMouseEnter={() =>
+              setHoveredChampion(`${comp.name}-${champion.name}`)
+            }
+            onMouseLeave={() => setHoveredChampion(null)}
+          />
+        </Link>
         <div className={classes.itemWrapper}>
           {championComp.items.map((itemId, index) => {
             const item = items.find((item) => item.id === itemId);
             if (item) {
               return (
                 <div key={itemId + index} className={classes.tooltipItemIcon}>
-                  <img
-                    src={item.icon}
-                    alt={item.name}
-                    className={classes.square}
-                    onMouseEnter={() =>
-                      setHoveredItem(`${comp.name}-${champion.name}-${itemId}`)
-                    }
-                    onMouseLeave={() => setHoveredItem(null)}
-                  />
+                  <Link to={`/itemPage/${itemId}`}>
+                    <img
+                      src={item.icon}
+                      alt={item.name}
+                      className={classes.square}
+                      onMouseEnter={() =>
+                        setHoveredItem(
+                          `${comp.name}-${champion.name}-${itemId}`
+                        )
+                      }
+                      onMouseLeave={() => setHoveredItem(null)}
+                    />
+                  </Link>
                   <div
                     className={`${classes.tooltipComponent} ${
                       hoveredItem === `${comp.name}-${champion.name}-${itemId}`
