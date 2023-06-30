@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { TraitContext } from "../../context/TraitContext";
 import comps from "../../data/comps";
 import traits from "../../data/traits";
 import Champions from "../Champions/Champions";
@@ -10,9 +11,26 @@ const TeamComps = () => {
   const [hoveredItem, setHoveredItem] = useState(null);
   const [filteredComps, setFilteredComps] = useState(comps);
   const [allChampions, setAllChampions] = useState([]);
-  const [allTraits, setAllTraits] = useState([]);
+
+  const { allTraits, setAllTraits } = useContext(TraitContext);
+
+  const updateTraits = () => {
+    let traits = [];
+    for (let comp of comps) {
+      for (let champion of comp.champions) {
+        for (let trait of champion.traits) {
+          if (!traits.includes(trait)) {
+            traits.push(trait);
+          }
+        }
+      }
+    }
+    traits.sort();
+    setAllTraits(traits);
+  };
 
   useEffect(() => {
+    updateTraits();
     let champions = [];
     let traits = [];
     for (let comp of comps) {
@@ -44,6 +62,7 @@ const TeamComps = () => {
       return tierValues[compA.tier] - tierValues[compB.tier];
     });
     setFilteredComps(sortedComps);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleSearch = (searchInput) => {
