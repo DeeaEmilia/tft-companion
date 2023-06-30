@@ -1,7 +1,8 @@
+import { useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { useState } from "react";
 import comps from "../data/comps";
 import Champions from "../components/Champions/Champions";
+import { HoveredContext } from "../context/HoveredContext";
 
 const BuilderPage = () => {
   // Getting the name parameter from the URL
@@ -13,13 +14,14 @@ const BuilderPage = () => {
   // Instantiate navigate
   const navigate = useNavigate();
 
+  // Get the state and setter from context
+  const { hoveredChampion, setHoveredChampion, hoveredItem, setHoveredItem } =
+    useContext(HoveredContext);
+
   // If there's no comp found, we return null or a "not found" message
   if (!comp) {
     return <h1>Comp not found</h1>;
   }
-
-  const [hoveredChampion, setHoveredChampion] = useState(null);
-  const [hoveredItem, setHoveredItem] = useState(null);
 
   // Display the comp data
   return (
