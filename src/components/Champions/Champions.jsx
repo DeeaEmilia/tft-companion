@@ -39,7 +39,7 @@ const Champions = ({
         })}
       </div>
       <div className={classes.btnContainer}>
-        <Link to={`/BuilderPage/${comp.name}`}>
+        <Link to={`/TeamPage/${comp.name}`}>
           <button id="builderButton">&rarr;</button>
         </Link>
         <label htmlFor="builderButton">See in builder</label>

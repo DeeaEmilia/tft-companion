@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { HoveredContext } from "../context/HoveredContext";
 import comps from "../data/comps";
 import Champions from "../components/Champions/Champions";
-import { HoveredContext } from "../context/HoveredContext";
+import classes from "./TeamPage.module.scss";
 
-const BuilderPage = () => {
+const TeamPage = () => {
   // Getting the name parameter from the URL
   const { name } = useParams();
 
@@ -41,4 +42,4 @@ const BuilderPage = () => {
   );
 };
 
-export default BuilderPage;
+export default TeamPage;
