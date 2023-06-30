@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.tierImage {
+  width: 100px;
+}
+
+.championsWrapper {
+  display: flex;
+
+  button {
+    display: none;
+  }
+}
+
+.btn {
+  font-size: 2rem;
+  font-weight: 700;
+  background-color: transparent;
+
+  &:hover {
+    cursor: pointer;
+    color: var(--primary);
+  }
+}

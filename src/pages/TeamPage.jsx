@@ -26,18 +26,25 @@ const TeamPage = () => {
 
   // Display the comp data
   return (
-    <div>
+    <div className={classes.container}>
       <h1>{comp.name}</h1>
-      <h2>Tier: {comp.tier}</h2>
-      <img src={comp.tierImage} alt={`${comp.tier} tier`} />
-      <Champions
-        comp={comp}
-        setHoveredChampion={setHoveredChampion}
-        setHoveredItem={setHoveredItem}
-        hoveredChampion={hoveredChampion}
-        hoveredItem={hoveredItem}
+      <img
+        src={comp.tierImage}
+        className={classes.tierImage}
+        alt={`${comp.tier} tier`}
       />
-      <button onClick={() => navigate(-1)}>Go back</button>
+      <div className={classes.championsWrapper}>
+        <Champions
+          comp={comp}
+          setHoveredChampion={setHoveredChampion}
+          setHoveredItem={setHoveredItem}
+          hoveredChampion={hoveredChampion}
+          hoveredItem={hoveredItem}
+        />
+      </div>
+      <button className={classes.btn} onClick={() => navigate(-1)}>
+        Go back
+      </button>
     </div>
   );
 };
