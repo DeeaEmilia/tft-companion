@@ -4,6 +4,8 @@ import Champions from "../components/Champions/Champions";
 import comps from "../data/comps";
 import traits from "../data/traits";
 import classes from "./TeamPage.module.scss";
+import Aside from "../components/Aside";
+import Navbar from "../components/Navbar";
 
 const TeamPage = () => {
   // Getting the name parameter from the URL
@@ -54,57 +56,63 @@ const TeamPage = () => {
 
   // Display the comp data
   return (
-    <div className={classes.container}>
-      <div className={classes.titleWrapper}>
-        <div className={classes.title}>
-          <img
-            src={comp.tierImage}
-            className={classes.tierImage}
-            alt={`${comp.tier} tier`}
-          />
-          <h2>{comp.name}</h2>
-        </div>
-        <button className={classes.btn} onClick={() => navigate(-1)}>
-          Go back
-        </button>
-      </div>
-
-      <div className={classes.traitWrapper}>
-        <h3> Traits:</h3>
-        {Object.entries(filteredTraits).map(([traitName, count]) => {
-          const traitData = traits.find((t) => t.name === traitName);
-          return (
-            <div key={traitName} className={classes.traitName}>
-              <img src={traitData?.emblem} alt={`${traitName} emblem`} />
-              <p>
-                {traitName}: {count}
-              </p>
+    <div>
+      <Navbar></Navbar>
+      <main className="mainWrapper">
+        <Aside></Aside>
+        <div className={classes.contentWrapper}>
+          <div className={classes.titleWrapper}>
+            <div className={classes.title}>
+              <img
+                src={comp.tierImage}
+                className={classes.tierImage}
+                alt={`${comp.tier} tier`}
+              />
+              <h2>{comp.name}</h2>
             </div>
-          );
-        })}
-      </div>
+            <button className={classes.btn} onClick={() => navigate(-1)}>
+              Go back
+            </button>
+          </div>
 
-      <div>
-        <h3>Recommended Legend</h3>
-      </div>
+          <div className={classes.traitWrapper}>
+            <h3> Traits:</h3>
+            {Object.entries(filteredTraits).map(([traitName, count]) => {
+              const traitData = traits.find((t) => t.name === traitName);
+              return (
+                <div key={traitName} className={classes.traitName}>
+                  <img src={traitData?.emblem} alt={`${traitName} emblem`} />
+                  <p>
+                    {traitName}: {count}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
 
-      <div>
-        <h3>Carousel Priority</h3>
-      </div>
+          <div>
+            <h3>Recommended Legend</h3>
+          </div>
 
-      <div>
-        <h3>Recommended Augments</h3>
-      </div>
+          <div>
+            <h3>Carousel Priority</h3>
+          </div>
 
-      <div className={classes.championsWrapper}>
-        <Champions
-          comp={comp}
-          hoveredChampion={hoveredChampion}
-          setHoveredChampion={setHoveredChampion}
-          hoveredItem={hoveredItem}
-          setHoveredItem={setHoveredItem}
-        />
-      </div>
+          <div>
+            <h3>Recommended Augments</h3>
+          </div>
+
+          <div className={classes.championsWrapper}>
+            <Champions
+              comp={comp}
+              hoveredChampion={hoveredChampion}
+              setHoveredChampion={setHoveredChampion}
+              hoveredItem={hoveredItem}
+              setHoveredItem={setHoveredItem}
+            />
+          </div>
+        </div>
+      </main>
     </div>
   );
 };
