@@ -3,12 +3,32 @@
   justify-items: center;
   flex-direction: column;
   gap: 1rem;
+  padding: 1rem 3rem;
+}
+
+.titleWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+
+  .btn {
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+
+    &:hover {
+      cursor: pointer;
+      color: var(--primary);
+    }
+  }
 }
 
 .title {
   display: flex;
-  gap: 1rem;
-  justify-content: center;
   align-items: center;
 }
 
@@ -16,6 +36,11 @@
   width: 50px;
 }
 
+.traitWrapper {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
 .traitName {
   display: flex;
   align-items: center;
@@ -33,13 +58,7 @@
   }
 }
 
-.btn {
-  font-size: 2rem;
-  font-weight: 700;
-  background-color: transparent;
-
-  &:hover {
-    cursor: pointer;
-    color: var(--primary);
-  }
+.visible {
+  visibility: visible;
+  opacity: 1;
 }

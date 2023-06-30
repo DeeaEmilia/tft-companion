@@ -1,6 +1,5 @@
-import { useContext } from "react";
+import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { HoveredContext } from "../context/HoveredContext";
 import Champions from "../components/Champions/Champions";
 import comps from "../data/comps";
 import traits from "../data/traits";
@@ -17,7 +16,8 @@ const TeamPage = () => {
   const navigate = useNavigate();
 
   // Get the state and setter from context
-  const { setHoveredChampion, setHoveredItem } = useContext(HoveredContext);
+  const [hoveredChampion, setHoveredChampion] = useState(null);
+  const [hoveredItem, setHoveredItem] = useState(null);
 
   // If there's no comp found, we return null or a "not found" message
   if (!comp) {
@@ -55,14 +55,22 @@ const TeamPage = () => {
   // Display the comp data
   return (
     <div className={classes.container}>
-      <div className={classes.title}>
-        <img
-          src={comp.tierImage}
-          className={classes.tierImage}
-          alt={`${comp.tier} tier`}
-        />
-        <h1>{comp.name}</h1>
+      <div className={classes.titleWrapper}>
+        <div className={classes.title}>
+          <img
+            src={comp.tierImage}
+            className={classes.tierImage}
+            alt={`${comp.tier} tier`}
+          />
+          <h2>{comp.name}</h2>
+        </div>
+        <button className={classes.btn} onClick={() => navigate(-1)}>
+          Go back
+        </button>
+      </div>
 
+      <div className={classes.traitWrapper}>
+        <h3> Traits:</h3>
         {Object.entries(filteredTraits).map(([traitName, count]) => {
           const traitData = traits.find((t) => t.name === traitName);
           return (
@@ -76,16 +84,27 @@ const TeamPage = () => {
         })}
       </div>
 
+      <div>
+        <h3>Recommended Legend</h3>
+      </div>
+
+      <div>
+        <h3>Carousel Priority</h3>
+      </div>
+
+      <div>
+        <h3>Recommended Augments</h3>
+      </div>
+
       <div className={classes.championsWrapper}>
         <Champions
           comp={comp}
+          hoveredChampion={hoveredChampion}
           setHoveredChampion={setHoveredChampion}
+          hoveredItem={hoveredItem}
           setHoveredItem={setHoveredItem}
         />
       </div>
-      <button className={classes.btn} onClick={() => navigate(-1)}>
-        Go back
-      </button>
     </div>
   );
 };
