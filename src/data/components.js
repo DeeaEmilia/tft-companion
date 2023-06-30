@@ -50,7 +50,7 @@ const components = [
   {
     id: "tear",
     name: "Tear of the Goddess",
-    icon: "./assets/items/tear-of-the-goddess.png",
+    icon: "/assets/items/tear-of-the-goddess.png",
     description: "+15 Mana",
   },
 ];
