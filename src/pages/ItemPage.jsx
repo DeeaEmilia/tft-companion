@@ -1,6 +1,8 @@
 import { useParams, useNavigate } from "react-router-dom";
 import items from "../data/items";
 import classes from "./ItemPage.module.scss";
+import Navbar from "../components/Navbar";
+import Aside from "../components/Aside";
 
 const ItemPage = () => {
   const { itemId } = useParams();
@@ -14,14 +16,19 @@ const ItemPage = () => {
 
   return (
     <div>
-      ItemPage
-      <button className={classes.btn} onClick={() => navigate(-1)}>
-        Go back
-      </button>
-      <p>{item.name}</p>
-      <img src={item.icon} alt={`${item.name} icon`} />
-      <p>Components: {item.components.join(" + ")}</p>
-      <p>Description: {item.description}</p>
+      <Navbar></Navbar>
+      <div className="mainWrapper">
+        <Aside></Aside>
+        <div>
+          <button className={classes.btn} onClick={() => navigate(-1)}>
+            Go back
+          </button>
+          <p>{item.name}</p>
+          <img src={item.icon} alt={`${item.name} icon`} />
+          <p>Components: {item.components.join(" + ")}</p>
+          <p>Description: {item.description}</p>
+        </div>
+      </div>
     </div>
   );
 };

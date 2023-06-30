@@ -2,6 +2,8 @@
 import { useParams, useNavigate } from "react-router-dom";
 import champions from "../data/champions";
 import classes from "./ChampionPage.module.scss";
+import Navbar from "../components/Navbar";
+import Aside from "../components/Aside";
 
 // Define the ChampionPage component
 const ChampionPage = () => {
@@ -20,25 +22,32 @@ const ChampionPage = () => {
 
   // If a champion is found, return a component displaying the champion's name and icon
   return (
-    <div className={classes.mainWrapper}>
-      <h2>{champion.name}</h2>
-      <button className={classes.btn} onClick={() => navigate(-1)}>
-        Go back
-      </button>
-      <p>Cost: {champion.cost}</p>
-      <div>Traits: {champion.traits.join(", ")}</div>
-      <img src={champion.icon} alt={`${champion.name} icon`} />
-      <p> Health: {champion.health} </p>
-      <p> Damage: {champion.damage} </p>
-      <p> DPS: {champion.dps} </p>
-      <p> Aromor: {champion.armor}</p>
-      <p>Range: {champion.range} </p>
-      <p>Skill name: {champion.skillName}</p>
-      <div>
-        Skill Description:
-        {champion.skillDescription.map((desc, index) => (
-          <p key={index}>{desc}</p>
-        ))}
+    <div>
+      <Navbar></Navbar>
+      <div className="mainWrapper">
+        <Aside></Aside>
+        <div className={classes.contentWrapper}>
+          <div className={classes.titleWrapper}>
+            <h2>{champion.name}</h2>
+            <button className={classes.btn} onClick={() => navigate(-1)}>
+              Go back
+            </button>
+          </div>
+          <p>Cost: {champion.cost}</p>
+          <div>Traits: {champion.traits.join(", ")}</div>
+          <img src={champion.icon} alt={`${champion.name} icon`} />
+          <p>Health: {champion.health} </p>
+          <p>Damage: {champion.damage} </p>
+          <p>DPS: {champion.dps} </p>
+          <p>Aromor: {champion.armor}</p>
+          <p>Range: {champion.range} </p>
+          <p>{champion.skillName}</p>
+          <div>
+            {champion.skillDescription.map((desc, index) => (
+              <p key={index}>{desc}</p>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

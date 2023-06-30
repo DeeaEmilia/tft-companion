@@ -1,4 +1,4 @@
-.mainWrapper {
+.contentWrapper {
   padding: 1rem 3rem;
   display: flex;
   flex-direction: column;
@@ -8,12 +8,18 @@
     width: 300px;
   }
 }
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .btn {
   font-size: 1rem;
   font-weight: 700;
   background-color: transparent;
   display: flex;
-  justify-content: flex-end;
 
   &:hover {
     cursor: pointer;
