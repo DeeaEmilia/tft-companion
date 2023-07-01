@@ -1,9 +1,7 @@
-import classes from "./Navbar.module.scss";
-
 const Navbar = () => {
   return (
     <div>
-      <nav className={classes.navbar}>
+      <nav className="navbar">
         <ul>
           <li>Tft Companion</li>
           <li>Profile</li>

@@ -1,10 +1,10 @@
-.container {
+.itemListContainer {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
 }
 
-.header {
+.itemListHeader {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
@@ -13,16 +13,14 @@
   padding: 1rem 0;
 }
 
-@import url(../styles/_colors.scss);
-
-.itemContainer {
+.itemListItemContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-content: center;
 }
 
-.item {
+.itemListItem {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,19 +31,19 @@
   }
 }
 
-.itemImg {
+.itemListItemImg {
   height: 70px;
   width: 70px;
   border: 3px solid rgb(255, 165, 0);
 }
 
-.components {
+.itemListComponents {
   display: flex;
   gap: 1rem;
   justify-content: center;
 }
 
-.component {
+.itemListComponent {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -60,12 +58,12 @@
   }
 }
 
-.componentImg {
+.itemListComponentImg {
   height: 50px;
   width: 50px;
 }
 
-.componentDetails {
+.itemListComponentDetails {
   position: absolute;
   bottom: 2.5rem;
   display: none;

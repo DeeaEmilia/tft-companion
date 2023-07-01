@@ -1,19 +1,18 @@
 import { Link } from "react-router-dom";
-import classes from "./Aside.module.scss";
 
 const Aside = () => {
   return (
-    <div className={classes.container}>
+    <div className="aside__container">
       <ul>
-        <li>Home</li>
+        <li className="aside__link">Home</li>
         <Link to="/TeamComps">
-          <li>Team Comps</li>
+          <li className="aside__link">Team Comps</li>
         </Link>
         <Link to="/ChampionsList">
-          <li>Champions</li>
+          <li className="aside__link">Champions</li>
         </Link>
         <Link to="/ItemsList">
-          <li>Items</li>
+          <li className="aside__link">Items</li>
         </Link>
       </ul>
     </div>

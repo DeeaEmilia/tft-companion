@@ -1,8 +1,8 @@
-.container {
+.aside__container {
   padding: 1rem 3rem;
   position: sticky;
 }
-li {
+.aside__link {
   &:hover {
     cursor: pointer;
   }
