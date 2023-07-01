@@ -57,14 +57,14 @@ const TeamPage = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <main className="p-main-wrapper">
+      <main className="main-wrapper">
         <Aside></Aside>
-        <div className="p-content-wrapper">
-          <div className="p-title-wrapper">
-            <div className="p-title">
+        <div className="content-wrapper">
+          <div className="page-title-wrapper">
+            <div className="page-title">
               <img
                 src={comp.tierImage}
-                className="p-tier-img"
+                className="tier-icon"
                 alt={`${comp.tier} tier`}
               />
               <h2>{comp.name}</h2>
@@ -74,12 +74,12 @@ const TeamPage = () => {
             </button>
           </div>
 
-          <div className="p-trait-wrapper">
+          <div className="info-card-wrapper flex-display">
             <h3> Traits:</h3>
             {Object.entries(filteredTraits).map(([traitName, count]) => {
               const traitData = traits.find((t) => t.name === traitName);
               return (
-                <div key={traitName} className="traitName">
+                <div key={traitName} className="trait-wrapper flex-display">
                   <img src={traitData?.emblem} alt={`${traitName} emblem`} />
                   <p>
                     {traitName}: {count}
@@ -89,16 +89,16 @@ const TeamPage = () => {
             })}
           </div>
 
-          <div>
-            <h3>Recommended Legend</h3>
+          <div className="info-card-wrapper flex-display">
+            <h3>Recommended Legends:</h3>
           </div>
 
-          <div>
-            <h3>Carousel Priority</h3>
+          <div className="info-card-wrapper flex-display">
+            <h3>Carousel Priority:</h3>
           </div>
 
-          <div>
-            <h3>Recommended Augments</h3>
+          <div className="info-card-wrapper flex-display">
+            <h3>Recommended Augments:</h3>
           </div>
 
           <div className="p-champions-wrapper">

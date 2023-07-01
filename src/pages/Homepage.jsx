@@ -6,7 +6,7 @@ const Homepage = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <main className="p-main-wrapper">
+      <main className="main-wrapper">
         <Aside></Aside>
         <TeamComps></TeamComps>
       </main>

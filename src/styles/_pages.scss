@@ -1,19 +1,12 @@
-.p-main-wrapper {
-  display: grid;
-  @media screen and (min-width: $screen-xl) {
-    grid-template-columns: 1fr 8fr;
-  }
-}
-
-.p-content-wrapper {
+.content-wrapper {
   display: flex;
   justify-items: center;
   flex-direction: column;
   gap: 1rem;
-  padding: 1rem 5rem;
+  padding: 1rem 3rem;
 }
 
-.p-title-wrapper {
+.page-title-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
@@ -33,19 +26,23 @@
     }
   }
 }
-.p-title {
+.page-title {
   display: flex;
   align-items: center;
 }
 
-.p-tier-img {
-  width: 50px;
-}
-
-.p-trait-wrapper {
-  display: flex;
+.info-card-wrapper {
   gap: 1rem;
-  justify-content: flex-end;
+  align-items: center;
+  background-color: rgb(62, 62, 62);
+
+  .trait-wrapper {
+    align-items: center;
+    flex-direction: column;
+    img {
+      height: 2rem;
+    }
+  }
 }
 
 .p-trait-name {
@@ -63,9 +60,4 @@
   button {
     display: none;
   }
-}
-
-.visible {
-  visibility: visible;
-  opacity: 1;
 }

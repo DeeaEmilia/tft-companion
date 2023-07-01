@@ -6,7 +6,7 @@ const ChampionsListPage = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <main className="p-main-wrapper">
+      <main className="main-wrapper">
         <Aside></Aside>
         <ChampionsList></ChampionsList>
       </main>

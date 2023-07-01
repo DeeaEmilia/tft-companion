@@ -1,9 +1,5 @@
 $border: 0.125rem solid var(--accent);
 
-.tc-wrapper {
-  padding: 1rem 3rem;
-}
-
 .tc-comps-wrapper {
   padding: 1rem;
   margin: 1rem 0;
@@ -17,10 +13,8 @@ $border: 0.125rem solid var(--accent);
   }
 }
 
-.tc-flex-comp {
-  display: flex;
+.tc-info {
   justify-content: space-between;
-  flex-wrap: wrap;
   align-items: center;
 
   strong {
@@ -38,21 +32,6 @@ $border: 0.125rem solid var(--accent);
   }
 }
 
-.tc-tier-img {
-  height: 2rem;
-}
-
-.tc-flex-wrapper {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-
-  .tc-emblem {
-    height: 1.25rem;
-    display: none;
-  }
-  p {
-    font-size: 1.25rem;
-    display: none;
-  }
+.tc-traits {
+  display: none;
 }

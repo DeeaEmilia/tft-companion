@@ -125,7 +125,7 @@ const TeamComps = () => {
   };
 
   return (
-    <main className="tc-wrapper">
+    <main className="padding">
       <h1>TFT Companion</h1>
       <h2>Meta Team Comps </h2>
       <p>
@@ -145,37 +145,29 @@ const TeamComps = () => {
           const traitCounts = countTraits(comp.champions);
           return (
             <section className="tc-comps-wrapper" key={comp.name}>
-              <div className="tc-flex-comp ">
-                <div className="tc-flex-wrapper">
+              <div className="tc-info flex-wrap">
+                <div className="flex-wrap">
                   <img
                     src={comp.tierImage}
                     alt={`${comp.tier} tier`}
-                    className="tc-tier-img"
+                    className="tier-icon"
                   />
                   <h3>{comp.name}</h3>
                 </div>
-                <div className="tc-flex-wrapper">
-                  <div className="tc-flex-wrapper">
-                    {Object.entries(traitCounts).map(([trait, count]) => {
-                      const traitData = traits.find((t) => t.name === trait);
-                      return (
-                        <div key={trait} className="tc-flex-wrapper">
-                          <img
-                            src={traitData.emblem}
-                            alt={`${trait} emblem`}
-                            className="tc-emblem"
-                          />
-                          <p>
-                            {trait}: {count}
-                          </p>
-                        </div>
-                      );
-                    })}
-                  </div>
-                  <p>
-                    <strong>Playstyle: </strong> {comp.playstyle}
-                  </p>{" "}
+                <div className="tc-traits">
+                  {Object.entries(traitCounts).map(([trait, count]) => {
+                    return (
+                      <div key={trait}>
+                        <p>
+                          {trait}: {count}
+                        </p>
+                      </div>
+                    );
+                  })}
                 </div>
+                <p>
+                  <strong>Playstyle: </strong> {comp.playstyle}
+                </p>{" "}
               </div>
 
               <Champions

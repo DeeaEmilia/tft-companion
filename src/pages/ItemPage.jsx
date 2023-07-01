@@ -16,7 +16,7 @@ const ItemPage = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <div className="p-main-wrapper">
+      <div className="main-wrapper">
         <Aside></Aside>
         <div>
           <button className="btn" onClick={() => navigate(-1)}>

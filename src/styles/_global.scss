@@ -1,0 +1,36 @@
+.flex-display {
+  display: flex;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.padding {
+  padding: 1rem 3rem;
+}
+
+.main-wrapper {
+  display: grid;
+
+  @media screen and (min-width: $screen-xl) {
+    grid-template-columns: 1fr 8fr;
+  }
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tier-icon {
+  height: 2rem;
+}

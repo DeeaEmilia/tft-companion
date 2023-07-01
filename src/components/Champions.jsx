@@ -11,8 +11,8 @@ const Champions = ({
   hoveredItem,
 }) => {
   return (
-    <div className="c-flex-wrapper">
-      <div className="c-comps-fig-wrapper">
+    <div className="c-wrapper flex-wrap">
+      <div className="flex-wrap">
         {comp.champions.map((championComp) => {
           const champion = champions.find(
             (ch) => ch.name === championComp.name
@@ -37,11 +37,15 @@ const Champions = ({
           );
         })}
       </div>
-      <div className="c-btn-wrapper">
+      <div>
         <Link to={`/TeamPage/${comp.name}`}>
-          <button id="builderButton">&rarr;</button>
+          <button className="btn" id="builderButton">
+            &rarr;
+          </button>
         </Link>
-        <label htmlFor="builderButton">See in builder</label>
+        <label className="btn-label" htmlFor="builderButton">
+          See in builder
+        </label>
       </div>
     </div>
   );

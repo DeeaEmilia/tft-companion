@@ -16,11 +16,11 @@ const ItemsList = () => (
       // Each item is represented as a div
       <div key={item.id} className="il-item-container">
         {/* Display item name and icon */}
-        <div className="il-item ">
+        <div className="il-item flex-wrapper">
           <img
             src={item.icon}
             alt={`${item.name} icon`}
-            className="il-itemImg"
+            className="il-item-img"
           />
           <h4>{item.name}</h4>
         </div>
@@ -39,7 +39,9 @@ const ItemsList = () => (
 
             // If the component exists, we return a div displaying the component details
             return component ? (
-              <div key={componentId + index} className="il-component">
+              <div
+                key={componentId + index}
+                className="il-component flex-wrapper">
                 {/* Display component icon */}
                 <img
                   src={component.icon}

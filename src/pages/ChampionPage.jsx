@@ -23,7 +23,7 @@ const ChampionPage = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <div className="p-main-wrapper">
+      <div className="main-wrapper">
         <Aside></Aside>
         <div className="p-content-wrapper">
           <div className="p-title-wrapper">

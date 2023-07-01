@@ -16,7 +16,7 @@ const ChampionCard = ({
 }) => {
   return (
     <figure
-      className="cc-champs-wrapper"
+      className="cc-champs-wrapper flex-center"
       key={
         champion.name
           ? `${comp.name}-${champion.name}`
@@ -40,7 +40,7 @@ const ChampionCard = ({
                 (traitItem) => traitItem.name === traitName
               );
               return (
-                <span className="cc-trait-name " key={traitName}>
+                <span className="cc-trait-name flex-display" key={traitName}>
                   <img
                     src={trait.emblem}
                     alt={traitName}
@@ -51,7 +51,7 @@ const ChampionCard = ({
               );
             })}
           </div>
-          <div className="cc-cost-wrapper">
+          <div className="cc-cost-wrapper flex-display">
             <img
               src="/assets/icon-gold.svg"
               alt="gold icon"
@@ -61,7 +61,7 @@ const ChampionCard = ({
           </div>
         </div>
       </div>
-      <div className="cc-item-holder">
+      <div className="cc-item-holder flex-display">
         <Link to={`/championPage/${champion.name}`}>
           <img
             src={champion.icon}
@@ -74,7 +74,7 @@ const ChampionCard = ({
             onMouseLeave={() => setHoveredChampion(null)}
           />
         </Link>
-        <div className="cc-item-wrapper">
+        <div className="cc-item-wrapper flex-display">
           {championComp.items.map((itemId, index) => {
             const item = items.find((item) => item.id === itemId);
             if (item) {
@@ -112,7 +112,7 @@ const ChampionCard = ({
                         return (
                           <div
                             key={component.id + "-" + index}
-                            className="cc-components-holder">
+                            className="cc-components-holder flex-display">
                             <img
                               src={component.icon}
                               alt={component.name}

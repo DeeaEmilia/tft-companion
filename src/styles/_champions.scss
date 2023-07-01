@@ -1,32 +1,8 @@
-.c-flex-wrapper {
-  display: flex;
+.c-wrapper {
   justify-content: space-between;
-  flex-wrap: wrap;
   align-items: center;
 }
 
-.c-comps-fig-wrapper {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.c-btn-wrapper {
-  display: flex;
-  flex-direction: column;
-
-  button {
-    font-size: 2rem;
-    font-weight: 700;
-    background-color: transparent;
-
-    &:hover {
-      cursor: pointer;
-      color: var(--primary);
-    }
-  }
-
-  label {
-    visibility: hidden;
-  }
+.btn-label {
+  visibility: hidden;
 }

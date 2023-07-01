@@ -6,7 +6,7 @@ const ItemsListPage = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <main className="p-main-wrapper">
+      <main className="main-wrapper">
         <Aside></Aside>
         <ItemList></ItemList>
       </main>
