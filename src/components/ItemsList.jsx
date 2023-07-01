@@ -4,11 +4,8 @@ import components from "../data/components";
 
 // Defining the ItemsList functional component
 const ItemsList = () => (
-  // Top level section for the entire component
   <section className="il-container">
-    {/* Header Section */}
     <header className="il-header">
-      {/* These are the column p-titles for each of the item properties */}
       <h3>Item</h3>
       <h3>Description</h3>
       <h3>Recipe</h3>
@@ -63,5 +60,4 @@ const ItemsList = () => (
   </section>
 );
 
-// Exporting the component so it can be used elsewhere
 export default ItemsList;

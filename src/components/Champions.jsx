@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
+import { Link } from "react-router-dom";
 import champions from "../data/champions";
 import ChampionCard from "./ChampionCard";
-import { Link } from "react-router-dom";
 
 const Champions = ({
   comp,

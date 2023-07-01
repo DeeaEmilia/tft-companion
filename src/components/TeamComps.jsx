@@ -1,9 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import { TraitContext } from "../context/TraitContext";
-import comps from "../data/comps";
-import traits from "../data/traits";
 import Champions from "./Champions";
 import CompSearchBar from "./CompSearchBar";
+import comps from "../data/comps";
+import traits from "../data/traits";
 
 const TeamComps = () => {
   const [hoveredChampion, setHoveredChampion] = useState(null);
