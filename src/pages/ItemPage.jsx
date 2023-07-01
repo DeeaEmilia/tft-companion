@@ -1,6 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
 import items from "../data/items";
-import classes from "./ItemPage.module.scss";
 import Navbar from "../components/Navbar";
 import Aside from "../components/Aside";
 
@@ -20,7 +19,7 @@ const ItemPage = () => {
       <div className="mainWrapper">
         <Aside></Aside>
         <div>
-          <button className={classes.btn} onClick={() => navigate(-1)}>
+          <button className="btn" onClick={() => navigate(-1)}>
             Go back
           </button>
           <p>{item.name}</p>

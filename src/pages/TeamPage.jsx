@@ -3,7 +3,6 @@ import { useParams, useNavigate } from "react-router-dom";
 import Champions from "../components/Champions/Champions";
 import comps from "../data/comps";
 import traits from "../data/traits";
-import classes from "./TeamPage.module.scss";
 import Aside from "../components/Aside";
 import Navbar from "../components/Navbar";
 
@@ -60,27 +59,27 @@ const TeamPage = () => {
       <Navbar></Navbar>
       <main className="mainWrapper">
         <Aside></Aside>
-        <div className={classes.contentWrapper}>
-          <div className={classes.titleWrapper}>
-            <div className={classes.title}>
+        <div className="contentWrapper">
+          <div className="titleWrapper">
+            <div className="title">
               <img
                 src={comp.tierImage}
-                className={classes.tierImage}
+                className="tierImage"
                 alt={`${comp.tier} tier`}
               />
               <h2>{comp.name}</h2>
             </div>
-            <button className={classes.btn} onClick={() => navigate(-1)}>
+            <button className="btn" onClick={() => navigate(-1)}>
               Go back
             </button>
           </div>
 
-          <div className={classes.traitWrapper}>
+          <div className="traitWrapper">
             <h3> Traits:</h3>
             {Object.entries(filteredTraits).map(([traitName, count]) => {
               const traitData = traits.find((t) => t.name === traitName);
               return (
-                <div key={traitName} className={classes.traitName}>
+                <div key={traitName} className="traitName">
                   <img src={traitData?.emblem} alt={`${traitName} emblem`} />
                   <p>
                     {traitName}: {count}
@@ -102,7 +101,7 @@ const TeamPage = () => {
             <h3>Recommended Augments</h3>
           </div>
 
-          <div className={classes.championsWrapper}>
+          <div className="championsWrapper">
             <Champions
               comp={comp}
               hoveredChampion={hoveredChampion}

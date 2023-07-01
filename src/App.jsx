@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
-import { Homepage } from "./pages";
+import Homepage from "./pages/Homepage";
 import TeamPage from "./pages/TeamPage";
 import ChampionPage from "./pages/ChampionPage";
 import ItemPage from "./pages/ItemPage";
 import TeamComps from "./pages/TeamCompsPage";
-import ChampionsList from "./components/ChampionsList";
-import ItemList from "./components/ItemList";
+import ItemsList from "./pages/ItemsListPage";
+import ChampionsList from "./pages/ChampionsListPage";
 
 import "./styles/index.scss";
 
@@ -18,7 +18,7 @@ function App() {
       <Route path="/itemPage/:itemId" element={<ItemPage />} />
       <Route path="/TeamComps" element={<TeamComps />} />
       <Route path="/ChampionsList" element={<ChampionsList />} />
-      <Route path="/ItemList" element={<ItemList />} />
+      <Route path="/ItemsList" element={<ItemsList />} />
     </Routes>
   );
 }

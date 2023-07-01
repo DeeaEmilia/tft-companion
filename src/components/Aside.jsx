@@ -12,7 +12,7 @@ const Aside = () => {
         <Link to="/ChampionsList">
           <li>Champions</li>
         </Link>
-        <Link to="/ItemList">
+        <Link to="/ItemsList">
           <li>Items</li>
         </Link>
       </ul>

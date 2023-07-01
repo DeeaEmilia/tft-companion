@@ -1,7 +1,6 @@
 // Import the useParams hook from react-router-dom, which allows us to access route parameters
 import { useParams, useNavigate } from "react-router-dom";
 import champions from "../data/champions";
-import classes from "./ChampionPage.module.scss";
 import Navbar from "../components/Navbar";
 import Aside from "../components/Aside";
 
@@ -26,10 +25,10 @@ const ChampionPage = () => {
       <Navbar></Navbar>
       <div className="mainWrapper">
         <Aside></Aside>
-        <div className={classes.contentWrapper}>
-          <div className={classes.titleWrapper}>
+        <div className="contentWrapper">
+          <div className="titleWrapper">
             <h2>{champion.name}</h2>
-            <button className={classes.btn} onClick={() => navigate(-1)}>
+            <button className="btn" onClick={() => navigate(-1)}>
               Go back
             </button>
           </div>

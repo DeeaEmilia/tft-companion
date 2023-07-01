@@ -1,19 +1,13 @@
 @import "reset";
 @import "colors";
 @import "breakpoints";
+@import "pages";
 @import "btn";
 
 body {
   background-color: var(--background);
   color: var(--text);
   font-family: "Raleway", sans-serif;
-}
-
-.mainWrapper {
-  display: grid;
-  @media screen and (min-width: $screen-xl) {
-    grid-template-columns: 1fr 8fr;
-  }
 }
 
 h1 {
