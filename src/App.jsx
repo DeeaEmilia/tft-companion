@@ -12,13 +12,13 @@ import "./styles/index.scss";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Homepage />} />
-      <Route path="/TeamPage/:name" element={<TeamPage />} />
-      <Route path="/championPage/:name" element={<ChampionPage />} />
-      <Route path="/itemPage/:itemId" element={<ItemPage />} />
-      <Route path="/TeamComps" element={<TeamComps />} />
-      <Route path="/ChampionsList" element={<ChampionsList />} />
-      <Route path="/ItemsList" element={<ItemsList />} />
+      <Route index element={<Homepage />} />
+      <Route path="TeamPage/:name" element={<TeamPage />} />
+      <Route path="ChampionPage/:name" element={<ChampionPage />} />
+      <Route path="ItemPage/:itemId" element={<ItemPage />} />
+      <Route path="TeamComps" element={<TeamComps />} />
+      <Route path="ChampionsList" element={<ChampionsList />} />
+      <Route path="ItemsList" element={<ItemsList />} />
     </Routes>
   );
 }

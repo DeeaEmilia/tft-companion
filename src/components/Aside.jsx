@@ -4,7 +4,9 @@ const Aside = () => {
   return (
     <div className="as-container">
       <ul>
-        <li className="as-link">Home</li>
+        <Link to="/">
+          <li className="as-link">Home</li>
+        </Link>
         <Link to="/TeamComps">
           <li className="as-link">Team Comps</li>
         </Link>
