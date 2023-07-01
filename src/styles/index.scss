@@ -1,11 +1,16 @@
 @import "reset";
 @import "colors";
 @import "breakpoints";
+@import "btn";
 @import "navbar";
 @import "aside";
+@import "searchBar";
+@import "championsCard";
+@import "champions";
 @import "itemList";
 @import "pages";
-@import "btn";
+@import "itemPage";
+@import "teamComps";
 
 body {
   background-color: var(--background);

@@ -1,11 +1,10 @@
-@import url(../../styles/_colors.scss);
 $border: 0.125rem solid var(--accent);
 
-.wrapper {
+.tc-wrapper {
   padding: 1rem 3rem;
 }
 
-.compsWrapper {
+.tc-comps-wrapper {
   padding: 1rem;
   margin: 1rem 0;
   border-radius: 0.5rem;
@@ -18,7 +17,7 @@ $border: 0.125rem solid var(--accent);
   }
 }
 
-.flexComp {
+.tc-flex-comp {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -39,16 +38,16 @@ $border: 0.125rem solid var(--accent);
   }
 }
 
-.tierImage {
+.tc-tier-img {
   height: 2rem;
 }
 
-.flexWrapper {
+.tc-flex-wrapper {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 
-  .emblem {
+  .tc-emblem {
     height: 1.25rem;
     display: none;
   }

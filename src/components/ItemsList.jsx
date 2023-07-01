@@ -5,10 +5,10 @@ import components from "../data/components";
 // Defining the ItemsList functional component
 const ItemsList = () => (
   // Top level section for the entire component
-  <section className="itemListContainer">
+  <section className="il-container">
     {/* Header Section */}
-    <header className="itemListHeader">
-      {/* These are the column titles for each of the item properties */}
+    <header className="il-header">
+      {/* These are the column p-titles for each of the item properties */}
       <h3>Item</h3>
       <h3>Description</h3>
       <h3>Recipe</h3>
@@ -17,13 +17,13 @@ const ItemsList = () => (
     {/* Using map to iterate over all items */}
     {items.map((item) => (
       // Each item is represented as a div
-      <div key={item.id} className="itemListItemContainer">
+      <div key={item.id} className="il-item-container">
         {/* Display item name and icon */}
-        <div className="itemListItem ">
+        <div className="il-item ">
           <img
             src={item.icon}
             alt={`${item.name} icon`}
-            className="itemListItemImg"
+            className="il-itemImg"
           />
           <h4>{item.name}</h4>
         </div>
@@ -32,7 +32,7 @@ const ItemsList = () => (
         <div className="itemListDescription">{item.description}</div>
 
         {/* Display components used to make the item */}
-        <div className="itemListComponents">
+        <div className="il-components-container">
           {/* Again using map to iterate over all components */}
           {item.components.map((componentId, index) => {
             // Find the details of each component using the component ID
@@ -42,15 +42,15 @@ const ItemsList = () => (
 
             // If the component exists, we return a div displaying the component details
             return component ? (
-              <div key={componentId + index} className="itemListComponent">
+              <div key={componentId + index} className="il-component">
                 {/* Display component icon */}
                 <img
                   src={component.icon}
                   alt={`${component.name} icon`}
-                  className="itemListComponentImg"
+                  className="il-component-img"
                 />
                 {/* Display component name and description */}
-                <div className="itemListComponentDetails">
+                <div className="il-component-details">
                   <p>{component.name}</p>
                   <span>{component.description}</span>
                 </div>

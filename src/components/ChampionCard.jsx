@@ -1,10 +1,9 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
-import classes from "./ChampionCard.module.scss";
-import traitsData from "../../data/traits";
-import items from "../../data/items";
-import componentsData from "../../data/components";
-import costColors from "../../data/costColors";
+import traitsData from "../data/traits";
+import items from "../data/items";
+import componentsData from "../data/components";
+import costColors from "../data/costColors";
 
 const ChampionCard = ({
   champion,
@@ -17,33 +16,31 @@ const ChampionCard = ({
 }) => {
   return (
     <figure
-      className={classes.championsWrapper}
+      className="cc-champs-wrapper"
       key={
         champion.name
           ? `${comp.name}-${champion.name}`
           : `${comp.name}-${Math.random().toString()}`
       }>
       <div
-        className={`${classes.tooltipChamp} ${
-          hoveredChampion === `${comp.name}-${champion.name}`
-            ? classes.visible
-            : ""
+        className={`cc-tooltip-champ ${
+          hoveredChampion === `${comp.name}-${champion.name}` ? "visible" : ""
         }`}>
         <h3>{champion.name}</h3>
         <img
-          className={classes.tooltipChampIcon}
+          className="cc-tooltip-champ-icon"
           src={champion.icon}
           alt={`${champion.name} icon`}
         />
 
-        <div className={classes.details}>
+        <div className="cc-details">
           <div>
             {champion.traits.map((traitName) => {
               const trait = traitsData.find(
                 (traitItem) => traitItem.name === traitName
               );
               return (
-                <span className={classes.traitName} key={traitName}>
+                <span className="cc-trait-name " key={traitName}>
                   <img
                     src={trait.emblem}
                     alt={traitName}
@@ -54,22 +51,22 @@ const ChampionCard = ({
               );
             })}
           </div>
-          <div className={classes.costWrapper}>
+          <div className="cc-cost-wrapper">
             <img
               src="/assets/icon-gold.svg"
               alt="gold icon"
-              className={classes.goldIcon}
+              className="cc-gold-icon"
             />
             {champion.cost}
           </div>
         </div>
       </div>
-      <div className={classes.itemHolder}>
+      <div className="cc-item-holder">
         <Link to={`/championPage/${champion.name}`}>
           <img
             src={champion.icon}
             alt={champion.name}
-            className={classes.championIcon}
+            className="cc-champion-icon"
             style={{ borderColor: costColors[champion.cost] }}
             onMouseEnter={() =>
               setHoveredChampion(`${comp.name}-${champion.name}`)
@@ -77,17 +74,17 @@ const ChampionCard = ({
             onMouseLeave={() => setHoveredChampion(null)}
           />
         </Link>
-        <div className={classes.itemWrapper}>
+        <div className="cc-item-wrapper">
           {championComp.items.map((itemId, index) => {
             const item = items.find((item) => item.id === itemId);
             if (item) {
               return (
-                <div key={itemId + index} className={classes.tooltipItemIcon}>
+                <div key={itemId + index}>
                   <Link to={`/itemPage/${itemId}`}>
                     <img
                       src={item.icon}
                       alt={item.name}
-                      className={classes.square}
+                      className="cc-square"
                       onMouseEnter={() =>
                         setHoveredItem(
                           `${comp.name}-${champion.name}-${itemId}`
@@ -97,9 +94,9 @@ const ChampionCard = ({
                     />
                   </Link>
                   <div
-                    className={`${classes.tooltipComponent} ${
+                    className={`cc-tooltip-component ${
                       hoveredItem === `${comp.name}-${champion.name}-${itemId}`
-                        ? classes.visible
+                        ? "visible"
                         : ""
                     }`}>
                     <h4>{item.name}</h4>
@@ -115,11 +112,11 @@ const ChampionCard = ({
                         return (
                           <div
                             key={component.id + "-" + index}
-                            className={classes.componentsHolder}>
+                            className="cc-components-holder">
                             <img
                               src={component.icon}
                               alt={component.name}
-                              className={classes.componentBorder}
+                              className="cc-border"
                             />
                             <h5>{component.name}</h5>
                             <p>{component.description}</p>
@@ -140,7 +137,7 @@ const ChampionCard = ({
           })}
         </div>
       </div>
-      <figcaption className={classes.championName}>{champion.name}</figcaption>
+      <figcaption className="cc-champ-name">{champion.name}</figcaption>
     </figure>
   );
 };

@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
-import classes from "./Champions.module.scss";
-import champions from "../../data/champions";
-import ChampionCard from "../Champion/ChampionCard";
+import champions from "../data/champions";
+import ChampionCard from "./ChampionCard";
 import { Link } from "react-router-dom";
 
 const Champions = ({
@@ -12,8 +11,8 @@ const Champions = ({
   hoveredItem,
 }) => {
   return (
-    <div className={classes.flexComp}>
-      <div className={classes.compsFigureContainer}>
+    <div className="c-flex-wrapper">
+      <div className="c-comps-fig-wrapper">
         {comp.champions.map((championComp) => {
           const champion = champions.find(
             (ch) => ch.name === championComp.name
@@ -38,7 +37,7 @@ const Champions = ({
           );
         })}
       </div>
-      <div className={classes.btnContainer}>
+      <div className="c-btn-wrapper">
         <Link to={`/TeamPage/${comp.name}`}>
           <button id="builderButton">&rarr;</button>
         </Link>

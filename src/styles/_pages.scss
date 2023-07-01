@@ -1,11 +1,11 @@
-.mainWrapper {
+.p-main-wrapper {
   display: grid;
   @media screen and (min-width: $screen-xl) {
     grid-template-columns: 1fr 8fr;
   }
 }
 
-.contentWrapper {
+.p-content-wrapper {
   display: flex;
   justify-items: center;
   flex-direction: column;
@@ -13,7 +13,7 @@
   padding: 1rem 5rem;
 }
 
-.titleWrapper {
+.p-title-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
@@ -33,21 +33,22 @@
     }
   }
 }
-.title {
+.p-title {
   display: flex;
   align-items: center;
 }
 
-.tierImage {
+.p-tier-img {
   width: 50px;
 }
 
-.traitWrapper {
+.p-trait-wrapper {
   display: flex;
   gap: 1rem;
   justify-content: flex-end;
 }
-.traitName {
+
+.p-trait-name {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -56,7 +57,7 @@
     width: 25px;
   }
 }
-.championsWrapper {
+.p-champions-wrapper {
   display: flex;
 
   button {

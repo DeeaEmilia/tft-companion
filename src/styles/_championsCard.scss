@@ -1,17 +1,15 @@
-@import url(../../styles/_colors.scss);
-
 $box-shadow: 0 0 5px var(--accent), 0 0 10px var(--accent);
 $border: 0.125rem solid var(--accent);
 
-.championsWrapper {
+.cc-champs-wrapper {
   position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.tooltipChamp,
-.tooltipComponent {
+.cc-tooltip-champ,
+.cc-tooltip-component {
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
@@ -29,14 +27,14 @@ $border: 0.125rem solid var(--accent);
   transition: opacity 0.3s ease-in-out;
 }
 
-.tooltipChamp {
+.cc-tooltip-champ {
   z-index: 10;
   grid-template-columns: 1fr 3fr;
   align-items: center;
   justify-items: center;
   font-size: 1rem;
 
-  .tooltipChampIcon {
+  .cc-tooltip-champ-icon {
     grid-row: span 2;
     grid-column: 1;
     display: flex;
@@ -55,48 +53,36 @@ $border: 0.125rem solid var(--accent);
   }
 }
 
-.details {
+.cc-details {
   display: grid;
   grid-template-columns: 2fr 1fr;
   justify-items: end;
   gap: 0.2rem;
   grid-row: span 2;
 
-  .traitName {
+  .cc-trait-name {
     display: flex;
     gap: 0.5rem;
   }
 
-  .costWrapper {
+  .cc-cost-wrapper {
     display: flex;
     align-items: center;
     gap: 0.25rem;
 
-    .goldIcon {
+    .cc-gold-icon {
       width: 1em;
       height: auto;
     }
   }
 }
 
-.tooltipItem {
-  display: flex;
-  grid-column: 1;
-}
-.square {
-  height: 25px;
-  width: 25px;
-  border: $border;
+.cc-item-holder {
   position: relative;
-  z-index: 10;
-
-  &:hover {
-    box-shadow: $box-shadow;
-    cursor: pointer;
-  }
+  display: flex;
 }
 
-.tooltipComponent {
+.cc-tooltip-component {
   z-index: 20;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
@@ -118,12 +104,7 @@ $border: 0.125rem solid var(--accent);
   }
 }
 
-.itemHolder {
-  position: relative;
-  display: flex;
-}
-
-.championIcon {
+.cc-champion-icon {
   margin: 1rem;
   border-radius: 50%;
   height: 6.25rem;
@@ -135,7 +116,7 @@ $border: 0.125rem solid var(--accent);
   }
 }
 
-.itemWrapper {
+.cc-item-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -146,8 +127,20 @@ $border: 0.125rem solid var(--accent);
   bottom: 10%;
   transform: translateX(-50%);
 }
+.cc-square {
+  height: 25px;
+  width: 25px;
+  border: $border;
+  position: relative;
+  z-index: 10;
 
-.componentsHolder {
+  &:hover {
+    box-shadow: $box-shadow;
+    cursor: pointer;
+  }
+}
+
+.cc-components-holder {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -167,29 +160,9 @@ $border: 0.125rem solid var(--accent);
   }
 }
 
-.championName {
-  text-align: center;
-}
-
-.btnContainer {
-  display: flex;
-  flex-direction: column;
-
-  button {
-    font-size: 2rem;
-    font-weight: 700;
-    background-color: transparent;
-
-    &:hover {
-      cursor: pointer;
-      color: var(--primary);
-    }
-  }
-
-  label {
-    visibility: hidden;
-  }
-}
-.componentBorder {
+.cc-border {
   border: $border;
+}
+.cc-champ-name {
+  text-align: center;
 }

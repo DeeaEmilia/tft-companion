@@ -2,17 +2,17 @@ import { Link } from "react-router-dom";
 
 const Aside = () => {
   return (
-    <div className="aside__container">
+    <div className="as-container">
       <ul>
-        <li className="aside__link">Home</li>
+        <li className="as-link">Home</li>
         <Link to="/TeamComps">
-          <li className="aside__link">Team Comps</li>
+          <li className="as-link">Team Comps</li>
         </Link>
         <Link to="/ChampionsList">
-          <li className="aside__link">Champions</li>
+          <li className="as-link">Champions</li>
         </Link>
         <Link to="/ItemsList">
-          <li className="aside__link">Items</li>
+          <li className="as-link">Items</li>
         </Link>
       </ul>
     </div>

@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import classes from "./CompSearchBar.module.scss";
 
 function CompSearchBar({ onSearch, allChampions, allTraits }) {
   const [searchInput, setSearchInput] = useState({
@@ -30,8 +29,8 @@ function CompSearchBar({ onSearch, allChampions, allTraits }) {
   };
 
   return (
-    <form className={classes.searchForm} onSubmit={handleFormSubmit}>
-      <div className={classes.inputContainer}>
+    <form className="sb-search-form" onSubmit={handleFormSubmit}>
+      <div className="sb-input-wrapper">
         <input
           list="champions"
           name="champion"
@@ -46,7 +45,7 @@ function CompSearchBar({ onSearch, allChampions, allTraits }) {
         </datalist>
       </div>
 
-      <div className={classes.inputContainer}>
+      <div className="sb-input-wrapper">
         <input
           list="traits"
           name="trait"
@@ -61,10 +60,10 @@ function CompSearchBar({ onSearch, allChampions, allTraits }) {
         </datalist>
       </div>
 
-      <button type="submit" className={classes.searchButton}>
+      <button type="submit" className="sb-search-btn ">
         Search
       </button>
-      <button onClick={handleReset} className={classes.searchButton}>
+      <button onClick={handleReset} className="sb-search-btn ">
         {" "}
         Reset{" "}
       </button>

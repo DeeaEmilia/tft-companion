@@ -1,9 +1,6 @@
-@import url(../../styles/_colors.scss);
-
 $border: 0.125rem solid var(--accent);
-$screen-xl: 1200px;
 
-.searchForm {
+.sb-search-form {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -16,7 +13,7 @@ $screen-xl: 1200px;
   }
 }
 
-.inputContainer {
+.sb-input-wrapper {
   position: relative;
   width: 47%;
 
@@ -25,7 +22,7 @@ $screen-xl: 1200px;
   }
 }
 
-.searchButton {
+.sb-search-btn {
   width: 47%;
   height: 3rem;
   background-color: var(--secondary);

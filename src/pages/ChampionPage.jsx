@@ -23,10 +23,10 @@ const ChampionPage = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <div className="mainWrapper">
+      <div className="p-main-wrapper">
         <Aside></Aside>
-        <div className="contentWrapper">
-          <div className="titleWrapper">
+        <div className="p-content-wrapper">
+          <div className="p-title-wrapper">
             <h2>{champion.name}</h2>
             <button className="btn" onClick={() => navigate(-1)}>
               Go back

@@ -1,12 +1,12 @@
 import Navbar from "../components/Navbar";
 import Aside from "../components/Aside";
-import TeamComps from "../components/TeamComps/TeamComps";
+import TeamComps from "../components/TeamComps";
 
 const Homepage = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <main className="mainWrapper">
+      <main className="p-main-wrapper">
         <Aside></Aside>
         <TeamComps></TeamComps>
       </main>

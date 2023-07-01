@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import Champions from "../components/Champions/Champions";
-import comps from "../data/comps";
-import traits from "../data/traits";
+import Champions from "../components/Champions";
 import Aside from "../components/Aside";
 import Navbar from "../components/Navbar";
+import comps from "../data/comps";
+import traits from "../data/traits";
 
 const TeamPage = () => {
   // Getting the name parameter from the URL
@@ -57,14 +57,14 @@ const TeamPage = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <main className="mainWrapper">
+      <main className="p-main-wrapper">
         <Aside></Aside>
-        <div className="contentWrapper">
-          <div className="titleWrapper">
-            <div className="title">
+        <div className="p-content-wrapper">
+          <div className="p-title-wrapper">
+            <div className="p-title">
               <img
                 src={comp.tierImage}
-                className="tierImage"
+                className="p-tier-img"
                 alt={`${comp.tier} tier`}
               />
               <h2>{comp.name}</h2>
@@ -74,7 +74,7 @@ const TeamPage = () => {
             </button>
           </div>
 
-          <div className="traitWrapper">
+          <div className="p-trait-wrapper">
             <h3> Traits:</h3>
             {Object.entries(filteredTraits).map(([traitName, count]) => {
               const traitData = traits.find((t) => t.name === traitName);
@@ -101,7 +101,7 @@ const TeamPage = () => {
             <h3>Recommended Augments</h3>
           </div>
 
-          <div className="championsWrapper">
+          <div className="p-champions-wrapper">
             <Champions
               comp={comp}
               hoveredChampion={hoveredChampion}

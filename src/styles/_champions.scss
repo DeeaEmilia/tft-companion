@@ -1,20 +1,17 @@
-@import url(../../styles/_colors.scss);
-// @import url(../../styles/_colors.scss)
-
-.flexComp {
+.c-flex-wrapper {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
 }
 
-.compsFigureContainer {
+.c-comps-fig-wrapper {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.btnContainer {
+.c-btn-wrapper {
   display: flex;
   flex-direction: column;
 
