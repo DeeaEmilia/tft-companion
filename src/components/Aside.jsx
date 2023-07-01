@@ -6,9 +6,9 @@ const Aside = () => {
     <div className={classes.container}>
       <ul>
         <li>Home</li>
-        {/* <Link to="/TeamComps">
+        <Link to="/TeamComps">
           <li>Team Comps</li>
-        </Link> */}
+        </Link>
         <Link to="/ChampionsList">
           <li>Champions</li>
         </Link>
