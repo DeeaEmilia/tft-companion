@@ -6,7 +6,7 @@ const ChampionsList = () => (
     {champions.map((champion) => (
       <div key={champion.name}>
         <h2>{champion.name}</h2>
-        <Link to={`/champion/${champion.name}`}>
+        <Link to={`/ChampionPage/${champion.name}`}>
           <img src={champion.icon} alt={`${champion.name} icon`} />
           <p>Classes: {champion.traits.join(", ")}</p>
           <p>

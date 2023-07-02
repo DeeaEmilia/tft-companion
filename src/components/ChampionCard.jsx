@@ -62,7 +62,7 @@ const ChampionCard = ({
         </div>
       </div>
       <div className="cc-item-holder flex-display">
-        <Link to={`/championPage/${champion.name}`}>
+        <Link to={`/ChampionPage/${champion.name}`}>
           <img
             src={champion.icon}
             alt={champion.name}
