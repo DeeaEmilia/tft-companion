@@ -1,9 +1,9 @@
 import withImages from "next-images";
 
-module.exports = {
+const nextConfig = {
   images: {
     unoptimized: true,
   },
 };
 
-export default withImages({});
+export default withImages(nextConfig);
