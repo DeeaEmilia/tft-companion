@@ -22,7 +22,7 @@
   display: grid;
 
   @media screen and (min-width: $screen-xl) {
-    grid-template-columns: 1fr 8fr;
+    grid-template-columns: 1fr;
   }
 }
 
