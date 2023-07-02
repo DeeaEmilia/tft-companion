@@ -1,7 +1,5 @@
 import { useRouter } from "next/router";
 import champions from "../../data/champions";
-import Navbar from "../../components/Navbar";
-import Aside from "../../components/Aside";
 
 // Define the ChampionPage component
 const ChampionPage = () => {
@@ -19,9 +17,7 @@ const ChampionPage = () => {
   // If a champion is found, return a component displaying the champion's name and icon
   return (
     <div>
-      <Navbar></Navbar>
       <div className="main-wrapper">
-        <Aside></Aside>
         <div className="p-content-wrapper">
           <div className="p-title-wrapper">
             <h2>{champion.name}</h2>

@@ -1,8 +1,6 @@
 import { useRouter } from "next/router";
 import items from "../../data/items";
 
-import Aside from "../../components/Aside";
-
 const ItemPage = () => {
   // Getting the name parameter from the URL
   const router = useRouter();
@@ -15,7 +13,6 @@ const ItemPage = () => {
   return (
     <div>
       <div className="main-wrapper">
-        <Aside></Aside>
         <div>
           <button className="btn" onClick={() => router.back()}>
             Go back

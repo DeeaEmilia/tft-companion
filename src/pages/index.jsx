@@ -1,10 +1,8 @@
-import Aside from "../components/Aside";
-
 const Homepage = () => {
   return (
     <div>
       <main className="main-wrapper">
-        <Aside></Aside>
+        <h1>Tft Companion</h1>
       </main>
     </div>
   );

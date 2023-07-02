@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 import Champions from "../../components/Champions";
-import Aside from "../../components/Aside";
-import Navbar from "../../components/Navbar";
+
 import comps from "../../data/comps";
 import traits from "../../data/traits";
 
@@ -54,9 +53,7 @@ const TeamPage = () => {
   // Display the comp data
   return (
     <div>
-      <Navbar></Navbar>
       <main className="main-wrapper">
-        <Aside></Aside>
         <div className="content-wrapper">
           <div className="page-title-wrapper">
             <div className="page-title">
