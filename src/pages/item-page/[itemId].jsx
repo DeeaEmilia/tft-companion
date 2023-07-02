@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import Image from "next/image";
 import items from "../../data/items";
 
 const ItemPage = () => {
@@ -18,7 +19,12 @@ const ItemPage = () => {
             Go back
           </button>
           <p>{item.name}</p>
-          <img src={item.icon} alt={`${item.name} icon`} />
+          <Image
+            src={item.icon}
+            alt={`${item.name} icon`}
+            width={50}
+            height={50}
+          />
           <p>Components: {item.components.join(" + ")}</p>
           <p>Description: {item.description}</p>
         </div>

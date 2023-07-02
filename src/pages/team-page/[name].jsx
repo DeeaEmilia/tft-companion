@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
+import Image from "next/image";
 import Champions from "../../components/Champions";
 
 import comps from "../../data/comps";
@@ -57,10 +58,12 @@ const TeamPage = () => {
         <div className="content-wrapper">
           <div className="page-title-wrapper">
             <div className="page-title">
-              <img
+              <Image
                 src={comp.tierImage}
                 className="tier-icon"
                 alt={`${comp.tier} tier`}
+                width={16}
+                height={16}
               />
               <h2>{comp.name}</h2>
             </div>
@@ -75,7 +78,12 @@ const TeamPage = () => {
               const traitData = traits.find((t) => t.name === traitName);
               return (
                 <div key={traitName} className="trait-wrapper flex-display">
-                  <img src={traitData?.emblem} alt={`${traitName} emblem`} />
+                  <Image
+                    src={traitData?.emblem}
+                    alt={`${traitName} emblem`}
+                    width={16}
+                    height={16}
+                  />
                   <p>
                     {traitName}: {count}
                   </p>

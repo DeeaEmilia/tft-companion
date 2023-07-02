@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import Image from "next/image";
 import champions from "../../data/champions";
 
 // Define the ChampionPage component
@@ -27,7 +28,12 @@ const ChampionPage = () => {
           </div>
           <p>Cost: {champion.cost}</p>
           <div>Traits: {champion.traits.join(", ")}</div>
-          <img src={champion.icon} alt={`${champion.name} icon`} />
+          <Image
+            src={champion.icon}
+            alt={`${champion.name} icon`}
+            width={100}
+            height={75}
+          />
           <p>Health: {champion.health} </p>
           <p>Damage: {champion.damage} </p>
           <p>DPS: {champion.dps} </p>

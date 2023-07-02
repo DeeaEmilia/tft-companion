@@ -4,6 +4,7 @@ import traitsData from "../data/traits";
 import items from "../data/items";
 import componentsData from "../data/components";
 import costColors from "../data/costColors";
+import Image from "next/image";
 
 const ChampionCard = ({
   champion,
@@ -27,10 +28,12 @@ const ChampionCard = ({
           hoveredChampion === `${comp.name}-${champion.name}` ? "visible" : ""
         }`}>
         <h3>{champion.name}</h3>
-        <img
+        <Image
           className="cc-tooltip-champ-icon"
           src={champion.icon}
           alt={`${champion.name} icon`}
+          width={50}
+          height={50}
         />
 
         <div className="cc-details">
@@ -41,10 +44,12 @@ const ChampionCard = ({
               );
               return (
                 <span className="cc-trait-name flex-display" key={traitName}>
-                  <img
+                  <Image
                     src={trait.emblem}
                     alt={traitName}
                     style={{ height: "1em" }}
+                    width={50}
+                    height={50}
                   />{" "}
                   {traitName}
                 </span>
@@ -52,10 +57,12 @@ const ChampionCard = ({
             })}
           </div>
           <div className="cc-cost-wrapper flex-display">
-            <img
+            <Image
               src="/assets/icon-gold.svg"
               alt="gold icon"
               className="cc-gold-icon"
+              width={50}
+              height={50}
             />
             {champion.cost}
           </div>
@@ -63,10 +70,12 @@ const ChampionCard = ({
       </div>
       <div className="cc-item-holder flex-display">
         <Link href={`/champion-page/${champion.name}`}>
-          <img
+          <Image
             src={champion.icon}
             alt={champion.name}
             className="cc-champion-icon"
+            width={100}
+            height={75}
             style={{ borderColor: costColors[champion.cost] }}
             onMouseEnter={() =>
               setHoveredChampion(`${comp.name}-${champion.name}`)
@@ -81,10 +90,12 @@ const ChampionCard = ({
               return (
                 <div key={itemId + index}>
                   <Link href={`/item-page/${itemId}`}>
-                    <img
+                    <Image
                       src={item.icon}
                       alt={item.name}
                       className="cc-square"
+                      width={50}
+                      height={50}
                       onMouseEnter={() =>
                         setHoveredItem(
                           `${comp.name}-${champion.name}-${itemId}`
@@ -113,10 +124,12 @@ const ChampionCard = ({
                           <div
                             key={component.id + "-" + index}
                             className="cc-components-holder flex-display">
-                            <img
+                            <Image
                               src={component.icon}
                               alt={component.name}
                               className="cc-border"
+                              width={50}
+                              height={50}
                             />
                             <h5>{component.name}</h5>
                             <p>{component.description}</p>
