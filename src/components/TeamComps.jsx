@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { TraitContext } from "../context/TraitContext";
+import Image from "next/image";
 import Champions from "./Champions";
 import CompSearchBar from "./CompSearchBar";
 import comps from "../data/comps";
@@ -147,10 +148,12 @@ const TeamComps = () => {
             <section className="tc-comps-wrapper" key={comp.name}>
               <div className="tc-info flex-wrap">
                 <div className="flex-wrap">
-                  <img
+                  <Image
                     src={comp.tierImage}
                     alt={`${comp.tier} tier`}
                     className="tier-icon"
+                    width={16}
+                    height={16}
                   />
                   <h3>{comp.name}</h3>
                 </div>

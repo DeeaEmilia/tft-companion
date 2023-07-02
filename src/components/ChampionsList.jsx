@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import champions from "../data/champions";
 
 const ChampionsList = () => (
@@ -7,7 +8,12 @@ const ChampionsList = () => (
       <div key={champion.name}>
         <h2>{champion.name}</h2>
         <Link href={`/champion-page/${champion.name}`}>
-          <img src={champion.icon} alt={`${champion.name} icon`} />
+          <Image
+            src={champion.icon}
+            alt={`${champion.name} icon`}
+            width={100}
+            height={75}
+          />
           <p>Classes: {champion.traits.join(", ")}</p>
           <p>
             Cost:{" "}

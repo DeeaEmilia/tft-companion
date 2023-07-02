@@ -1,4 +1,5 @@
 // Importing necessary items from local files and styling
+import Image from "next/image";
 import items from "../data/items";
 import components from "../data/components";
 
@@ -17,10 +18,12 @@ const ItemsList = () => (
       <div key={item.id} className="il-item-container">
         {/* Display item name and icon */}
         <div className="il-item flex-wrapper">
-          <img
+          <Image
             src={item.icon}
             alt={`${item.name} icon`}
             className="il-item-img"
+            width={50}
+            height={50}
           />
           <h4>{item.name}</h4>
         </div>
@@ -43,10 +46,12 @@ const ItemsList = () => (
                 key={componentId + index}
                 className="il-component flex-wrapper">
                 {/* Display component icon */}
-                <img
+                <Image
                   src={component.icon}
                   alt={`${component.name} icon`}
                   className="il-component-img"
+                  width={50}
+                  height={50}
                 />
                 {/* Display component name and description */}
                 <div className="il-component-details">
