@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import traitsData from "../data/traits";
 import items from "../data/items";
 import componentsData from "../data/components";
@@ -62,7 +62,7 @@ const ChampionCard = ({
         </div>
       </div>
       <div className="cc-item-holder flex-display">
-        <Link to={`/ChampionPage/${champion.name}`}>
+        <Link href={`/champion-page/${champion.name}`}>
           <img
             src={champion.icon}
             alt={champion.name}
@@ -80,7 +80,7 @@ const ChampionCard = ({
             if (item) {
               return (
                 <div key={itemId + index}>
-                  <Link to={`/itemPage/${itemId}`}>
+                  <Link href={`/item-page/${itemId}`}>
                     <img
                       src={item.icon}
                       alt={item.name}

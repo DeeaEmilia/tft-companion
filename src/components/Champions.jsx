@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import champions from "../data/champions";
 import ChampionCard from "./ChampionCard";
 
@@ -38,7 +38,7 @@ const Champions = ({
         })}
       </div>
       <div>
-        <Link to={`/TeamPage/${comp.name}`}>
+        <Link href={`/team-page/${comp.name}`}>
           <button className="btn" id="builderButton">
             &rarr;
           </button>

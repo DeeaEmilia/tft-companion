@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import champions from "../data/champions";
 
 const ChampionsList = () => (
@@ -6,7 +6,7 @@ const ChampionsList = () => (
     {champions.map((champion) => (
       <div key={champion.name}>
         <h2>{champion.name}</h2>
-        <Link to={`/ChampionPage/${champion.name}`}>
+        <Link href={`/champion-page/${champion.name}`}>
           <img src={champion.icon} alt={`${champion.name} icon`} />
           <p>Classes: {champion.traits.join(", ")}</p>
           <p>

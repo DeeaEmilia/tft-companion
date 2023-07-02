@@ -1,21 +1,21 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const Aside = () => {
   return (
     <div className="as-container">
       <ul>
-        <Link to="/">
-          <li className="as-link">Home</li>
-        </Link>
-        <Link to="/TeamComps">
-          <li className="as-link">Team Comps</li>
-        </Link>
-        <Link to="/ChampionsList">
-          <li className="as-link">Champions</li>
-        </Link>
-        <Link to="/ItemsList">
-          <li className="as-link">Items</li>
-        </Link>
+        <li className="as-link">
+          <Link href="/">Home</Link>
+        </li>
+        <li className="as-link">
+          <Link href="/team-comps">Team Comps</Link>
+        </li>
+        <li className="as-link">
+          <Link href="/champions-list">Champions</Link>
+        </li>
+        <li className="as-link">
+          <Link href="/items-list">Items</Link>
+        </li>
       </ul>
     </div>
   );
