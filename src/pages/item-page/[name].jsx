@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import items from "../../data/items";
-import Navbar from "../../components/Navbar";
+
 import Aside from "../../components/Aside";
 
 const ItemPage = () => {
@@ -14,7 +14,6 @@ const ItemPage = () => {
 
   return (
     <div>
-      <Navbar></Navbar>
       <div className="main-wrapper">
         <Aside></Aside>
         <div>

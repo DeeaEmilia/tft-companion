@@ -8,13 +8,13 @@ const Aside = () => {
           <Link href="/">Home</Link>
         </li>
         <li className="as-link">
-          <Link href="/team-comps">Team Comps</Link>
+          <Link href="team-comps-page">Team Comps</Link>
         </li>
         <li className="as-link">
-          <Link href="/champions-list">Champions</Link>
+          <Link href="champions-list-page">Champions</Link>
         </li>
         <li className="as-link">
-          <Link href="/items-list">Items</Link>
+          <Link href="items-list-page">Items</Link>
         </li>
       </ul>
     </div>
