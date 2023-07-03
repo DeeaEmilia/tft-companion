@@ -33,4 +33,17 @@ const ItemPage = () => {
   );
 };
 
+// export async function getStaticPaths() {
+//   const paths = items.map((item) => ({
+//     params: { itemId: item.id.toString() },
+//   }));
+
+//   return { paths, fallback: false };
+// }
+
+// export async function getStaticProps({ params }) {
+//   const item = items.find((item) => item.id.toString() === params.itemId);
+//   return { props: { item } };
+// }
+
 export default ItemPage;
