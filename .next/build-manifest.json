@@ -27,10 +27,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/items-list-page": [
+    "/team-comps-page": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/items-list-page.js"
+      "static/chunks/pages/team-comps-page.js"
     ]
   },
   "ampFirstPages": []
