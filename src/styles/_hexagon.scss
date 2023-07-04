@@ -1,0 +1,34 @@
+.builder-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 10rem;
+}
+
+.hexagon-wrapper {
+  &:hover {
+    fill: var(--primary);
+    cursor: pointer;
+
+    .hexagon {
+      fill: rgba(51, 51, 51, 0.194);
+    }
+  }
+
+  .hexagon {
+    fill: var(--secondary);
+  }
+}
+
+.hexagon-row {
+  display: flex;
+}
+
+.hexagon-row:nth-of-type(2n) {
+  margin-left: 48px;
+}
+
+.builder-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
