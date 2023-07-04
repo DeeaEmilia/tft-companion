@@ -57,7 +57,7 @@ const items = [
     id: "demacia",
     name: "Demacia Emblem",
     components: ["spatula", "cloak"],
-    icon: "/assets/items/demaciaemblem.png",
+    icon: "/assets/items/demaciaemblem.webp",
     description: "The holder gains the Demacia trait.",
   },
   {
@@ -111,7 +111,7 @@ const items = [
     id: "hoj",
     name: "Hand of Justice",
     components: ["glove", "tear"],
-    icon: "/assets/items/hand-of-justice.png",
+    icon: "/assets/items/hand-of-justice.webp",
     description:
       "Grant 2 effects: +15% Attack Damage and 15 Ability Power, Attacks and Abilities heal for 15% of damage dealt. Each round, randomly increase 1 of these effects by 30%.",
   },
@@ -135,7 +135,7 @@ const items = [
     id: "ionia",
     name: "Ionia Emblem",
     components: ["spatula", "sword"],
-    icon: "/assets/items/ioniaemblem.png",
+    icon: "/assets/items/ioniaemblem.webp",
     description: "The holder gains the Ionia trait",
   },
   {
@@ -158,7 +158,7 @@ const items = [
     id: "juggernaut",
     name: "Juggernaut Emblem",
     components: ["spatula", "vest"],
-    icon: "/assets/items/juggernautemblem.png",
+    icon: "/assets/items/juggernautemblem.webp",
     description: "The holder gains the Juggernaut trait.",
   },
   {
@@ -189,7 +189,7 @@ const items = [
     id: "noxus",
     name: "Noxus Emblem",
     components: ["spatula", "belt"],
-    icon: "/assets/items/noxusemblem.png",
+    icon: "/assets/items/noxusemblem.webp",
     description: "The holder gains the Noxus Emblem trait.",
   },
   {
@@ -251,21 +251,21 @@ const items = [
     id: "shurima",
     name: "Shurima Emblem",
     components: ["spatula", "rod"],
-    icon: "/assets/items/shurimaemblem.png",
+    icon: "/assets/items/shurimaemblem.webp",
     description: "The holder gains the Shurima trait.",
   },
   {
     id: "slayer",
     name: "Slayer Emblem",
     components: ["spatula", "glove"],
-    icon: "/assets/items/slayeremblem.png",
+    icon: "/assets/items/slayeremblem.webp",
     description: "The holder gains the Shurima trait.",
   },
   {
     id: "sorcerer",
     name: "Sorcerer Emblem",
     components: ["spatula", "tear"],
-    icon: "/assets/items/sorcereremblem.png",
+    icon: "/assets/items/sorcereremblem.webp",
     description: "The holder gains the Shurima trait.",
   },
   {

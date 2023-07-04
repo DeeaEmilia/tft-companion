@@ -93,7 +93,7 @@ const champions = [
       "Ashe fires 8 arrows in a cone, each dealing X physical damage to the first enemy hit and Chilling them for X seconds.",
       "Chill: Reduced Attack Speed by 30%",
     ],
-    icon: "/assets/icons/ashe.png",
+    icon: "/assets/icons/ashe.webp",
   },
   {
     name: "Azir",
@@ -163,7 +163,7 @@ const champions = [
     mana: "",
     skillName: "",
     skillDescription: ["...", "..."],
-    icon: "/assets/icons/chogath.png",
+    icon: "/assets/icons/chogath.webp",
   },
   {
     name: "Darius",
@@ -291,7 +291,7 @@ const champions = [
     mana: "",
     skillName: "",
     skillDescription: ["...", "..."],
-    icon: "/assets/icons/jarvan.png",
+    icon: "/assets/icons/jarvan.webp",
   },
   {
     name: "Jayce",
@@ -420,7 +420,7 @@ const champions = [
     mana: "",
     skillName: "",
     skillDescription: ["...", "..."],
-    icon: "/assets/icons/katarina.png",
+    icon: "/assets/icons/katarina.webp",
   },
   {
     name: "Kayle",
@@ -452,7 +452,7 @@ const champions = [
     mana: "",
     skillName: "",
     skillDescription: ["...", "..."],
-    icon: "/assets/icons/kled.png",
+    icon: "/assets/icons/kled.webp",
   },
   {
     name: "K'Sante",
@@ -548,7 +548,7 @@ const champions = [
     mana: "",
     skillName: "",
     skillDescription: ["...", "..."],
-    icon: "/assets/icons/nasus.png",
+    icon: "/assets/icons/nasus.webp",
   },
   {
     name: "Orianna",
@@ -612,7 +612,7 @@ const champions = [
     mana: "",
     skillName: "",
     skillDescription: ["...", "..."],
-    icon: "/assets/icons/renekton.png",
+    icon: "/assets/icons/renekton.webp",
   },
   {
     name: "Ryze",
@@ -660,7 +660,7 @@ const champions = [
     mana: "",
     skillName: "",
     skillDescription: ["...", "..."],
-    icon: "/assets/icons/sejuani.png",
+    icon: "/assets/icons/sejuani.webp",
   },
   {
     name: "Senna",
@@ -724,7 +724,7 @@ const champions = [
     mana: "",
     skillName: "",
     skillDescription: ["...", "..."],
-    icon: "/assets/icons/sion.png",
+    icon: "/assets/icons/sion.webp",
   },
   {
     name: "Sona",
@@ -756,7 +756,7 @@ const champions = [
     mana: "",
     skillName: "",
     skillDescription: ["...", "..."],
-    icon: "/assets/icons/soraka.png",
+    icon: "/assets/icons/soraka.webp",
   },
   {
     name: "Swain",
@@ -820,7 +820,7 @@ const champions = [
     mana: "",
     skillName: "",
     skillDescription: ["...", "..."],
-    icon: "/assets/icons/teemo.png",
+    icon: "/assets/icons/teemo.webp",
   },
   {
     name: "Tristana",
@@ -836,7 +836,7 @@ const champions = [
     mana: "",
     skillName: "",
     skillDescription: ["...", "..."],
-    icon: "/assets/icons/tristana.png",
+    icon: "/assets/icons/tristana.webp",
   },
   {
     name: "Urgot",
@@ -900,7 +900,7 @@ const champions = [
     mana: "",
     skillName: "",
     skillDescription: ["...", "..."],
-    icon: "/assets/icons/viego.png",
+    icon: "/assets/icons/viego.webp",
   },
   {
     name: "Warwick",
@@ -932,7 +932,7 @@ const champions = [
     mana: "",
     skillName: "",
     skillDescription: ["...", "..."],
-    icon: "/assets/icons/yasuo.png",
+    icon: "/assets/icons/yasuo.webp",
   },
   {
     name: "Zed",

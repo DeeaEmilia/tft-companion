@@ -2,7 +2,9 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+  "/": "pages/index.js",
   "/team-comps-page": "pages/team-comps-page.js",
   "/champion-page/[name]": "pages/champion-page/[name].js",
-  "/": "pages/index.js"
+  "/team-page/[name]": "pages/team-page/[name].js",
+  "/item-page/[itemId]": "pages/item-page/[itemId].js"
 }
