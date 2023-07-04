@@ -21,7 +21,8 @@ const Hexagon = () => {
           clipPath:
             "polygon(50% 0, 100% 23%, 100% 74%, 50% 100%, 0 75%, 0 24%)",
           boxSizing: "border-box",
-        }}>
+        }}
+        onDoubleClick={() => setBackgroundImage(null)}>
         <svg
           width="100%"
           height="100%"

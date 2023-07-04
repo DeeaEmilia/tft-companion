@@ -6,12 +6,9 @@ const Builder = () => {
     <div className="builder-wrapper">
       <div>
         <HexGrid />
-        <HexGrid />
-        <HexGrid />
-        <HexGrid />
       </div>
       <div>
-        <ChampionIcons></ChampionIcons>
+        <ChampionIcons />
       </div>
     </div>
   );

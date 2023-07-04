@@ -2,7 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/team-comps-page": "pages/team-comps-page.js",
-  "/champions-list-page": "pages/champions-list-page.js",
-  "/": "pages/index.js"
+  "/": "pages/index.js",
+  "/team-comps-page": "pages/team-comps-page.js"
 }
