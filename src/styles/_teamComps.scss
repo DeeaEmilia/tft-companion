@@ -1,6 +1,6 @@
 $border: 0.125rem solid var(--accent);
 
-.tc-comps-wrapper {
+.comps-wrapper {
   padding: 1rem;
   margin: 1rem 0;
   border-radius: 0.5rem;
@@ -13,9 +13,13 @@ $border: 0.125rem solid var(--accent);
   }
 }
 
-.tc-info {
+.comps-info {
   justify-content: space-between;
   align-items: center;
+
+  .comps-title {
+    align-items: center;
+  }
 
   strong {
     color: var(--accent);
@@ -32,6 +36,6 @@ $border: 0.125rem solid var(--accent);
   }
 }
 
-.tc-traits {
+.comps-traits {
   display: none;
 }

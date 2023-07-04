@@ -17,33 +17,33 @@ const ChampionCard = ({
 }) => {
   return (
     <figure
-      className="cc-champs-wrapper flex-center"
+      className="champs-wrapper flex-center"
       key={
         champion.name
           ? `${comp.name}-${champion.name}`
           : `${comp.name}-${Math.random().toString()}`
       }>
       <div
-        className={`cc-tooltip-champ ${
+        className={`tooltip-champ ${
           hoveredChampion === `${comp.name}-${champion.name}` ? "visible" : ""
         }`}>
         <h3>{champion.name}</h3>
         <Image
-          className="cc-tooltip-champ-icon"
+          className="tooltip-champ-icon"
           src={champion.icon}
           alt={`${champion.name} icon`}
-          width={50}
-          height={50}
+          width={170}
+          height={170}
         />
 
-        <div className="cc-details">
+        <div className="champion-details">
           <div>
             {champion.traits.map((traitName) => {
               const trait = traitsData.find(
                 (traitItem) => traitItem.name === traitName
               );
               return (
-                <span className="cc-trait-name flex-display" key={traitName}>
+                <span className="trait-name flex-display" key={traitName}>
                   <Image
                     src={trait.emblem}
                     alt={traitName}
@@ -56,11 +56,11 @@ const ChampionCard = ({
               );
             })}
           </div>
-          <div className="cc-cost-wrapper flex-display">
+          <div className="cost-wrapper flex-display">
             <Image
               src="/assets/icon-gold.svg"
               alt="gold icon"
-              className="cc-gold-icon"
+              className="gold-icon"
               width={50}
               height={50}
             />
@@ -68,12 +68,12 @@ const ChampionCard = ({
           </div>
         </div>
       </div>
-      <div className="cc-item-holder flex-display">
+      <div className="item-holder flex-display">
         <Link href={`/champion-page/${champion.name}`}>
           <Image
             src={champion.icon}
             alt={champion.name}
-            className="cc-champion-icon"
+            className="champion-icon"
             width={100}
             height={75}
             style={{ borderColor: costColors[champion.cost] }}
@@ -83,7 +83,7 @@ const ChampionCard = ({
             onMouseLeave={() => setHoveredChampion(null)}
           />
         </Link>
-        <div className="cc-item-wrapper flex-display">
+        <div className="item-wrapper flex-display">
           {championComp.items.map((itemId, index) => {
             const item = items.find((item) => item.id === itemId);
             if (item) {
@@ -93,7 +93,7 @@ const ChampionCard = ({
                     <Image
                       src={item.icon}
                       alt={item.name}
-                      className="cc-square"
+                      className="item-icon"
                       width={50}
                       height={50}
                       onMouseEnter={() =>
@@ -105,7 +105,7 @@ const ChampionCard = ({
                     />
                   </Link>
                   <div
-                    className={`cc-tooltip-component ${
+                    className={`tooltip-component ${
                       hoveredItem === `${comp.name}-${champion.name}-${itemId}`
                         ? "visible"
                         : ""
@@ -123,13 +123,13 @@ const ChampionCard = ({
                         return (
                           <div
                             key={component.id + "-" + index}
-                            className="cc-components-holder flex-display">
+                            className="components-wrapper flex-display">
                             <Image
                               src={component.icon}
                               alt={component.name}
-                              className="cc-border"
-                              width={50}
-                              height={50}
+                              className="component-image"
+                              width={64}
+                              height={64}
                             />
                             <h5>{component.name}</h5>
                             <p>{component.description}</p>
@@ -150,7 +150,7 @@ const ChampionCard = ({
           })}
         </div>
       </div>
-      <figcaption className="cc-champ-name">{champion.name}</figcaption>
+      <figcaption className="champ-name">{champion.name}</figcaption>
     </figure>
   );
 };

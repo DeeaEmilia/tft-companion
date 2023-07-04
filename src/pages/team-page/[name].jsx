@@ -62,8 +62,8 @@ const TeamPage = () => {
                 src={comp.tierImage}
                 className="tier-icon"
                 alt={`${comp.tier} tier`}
-                width={16}
-                height={16}
+                width={32}
+                height={32}
               />
               <h2>{comp.name}</h2>
             </div>
@@ -81,8 +81,8 @@ const TeamPage = () => {
                   <Image
                     src={traitData?.emblem}
                     alt={`${traitName} emblem`}
-                    width={16}
-                    height={16}
+                    width={32}
+                    height={32}
                   />
                   <p>
                     {traitName}: {count}

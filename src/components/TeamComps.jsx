@@ -145,19 +145,19 @@ const TeamComps = () => {
         filteredComps.map((comp) => {
           const traitCounts = countTraits(comp.champions);
           return (
-            <section className="tc-comps-wrapper" key={comp.name}>
-              <div className="tc-info flex-wrap">
-                <div className="flex-wrap">
+            <section className="comps-wrapper" key={comp.name}>
+              <div className="comps-info flex-wrap">
+                <div className="comps-title flex-wrap">
                   <Image
                     src={comp.tierImage}
                     alt={`${comp.tier} tier`}
                     className="tier-icon"
-                    width={16}
-                    height={16}
+                    width={32}
+                    height={32}
                   />
                   <h3>{comp.name}</h3>
                 </div>
-                <div className="tc-traits">
+                <div className="comps-traits">
                   {Object.entries(traitCounts).map(([trait, count]) => {
                     return (
                       <div key={trait}>

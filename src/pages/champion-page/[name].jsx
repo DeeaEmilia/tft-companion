@@ -31,8 +31,8 @@ const ChampionPage = () => {
           <Image
             src={champion.icon}
             alt={`${champion.name} icon`}
-            width={100}
-            height={75}
+            width={170}
+            height={170}
           />
           <p>Health: {champion.health} </p>
           <p>Damage: {champion.damage} </p>
