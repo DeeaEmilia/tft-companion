@@ -3,7 +3,7 @@ import Image from "next/image";
 import champions from "../data/champions";
 
 const ChampionsList = () => (
-  <div>
+  <section className="padding">
     {champions.map((champion) => (
       <div key={champion.name}>
         <h2>{champion.name}</h2>
@@ -23,7 +23,7 @@ const ChampionsList = () => (
         </Link>
       </div>
     ))}
-  </div>
+  </section>
 );
 
 export default ChampionsList;

@@ -1,10 +1,14 @@
 .navbar {
   background-color: var(--secondary);
-  padding: 1rem 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
   ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 }

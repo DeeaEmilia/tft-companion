@@ -15,7 +15,7 @@
 }
 
 .padding {
-  padding: 1rem 3rem;
+  padding: 1rem 10rem;
 }
 
 .main-wrapper {
@@ -23,6 +23,15 @@
 
   @media screen and (min-width: $screen-xl) {
     grid-template-columns: 1fr;
+  }
+}
+
+.link {
+  color: var(--text);
+
+  &:hover {
+    color: var(--primary);
+    cursor: pointer;
   }
 }
 

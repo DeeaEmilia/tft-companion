@@ -127,7 +127,6 @@ const TeamComps = () => {
 
   return (
     <main className="padding">
-      <h1>TFT Companion</h1>
       <h2>Meta Team Comps </h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Et aut aliquid
