@@ -11,7 +11,7 @@ const ChampionsList = () => (
           <Image
             src={champion.icon}
             alt={`${champion.name} icon`}
-            width={100}
+            width={75}
             height={75}
           />
           <p>Classes: {champion.traits.join(", ")}</p>

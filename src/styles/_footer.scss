@@ -1,13 +1,25 @@
 .footer {
   display: grid;
   grid-template-columns: 1fr;
-  background-color: var(--secondary);
+  background-color: var(--background);
+
+  @media screen and (min-width: $screen-md) {
+    margin-top: 5rem;
+    box-shadow: rgba(0, 0, 0, 0.382) 0px 2px 18px;
+  }
 }
+
 .footer-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  margin: 0 auto;
+
+  @media screen and (min-width: $screen-md) {
+    max-width: 80vw;
+    gap: 10rem;
+    padding: 2rem 0;
+  }
 }
 
 .footer-contact {

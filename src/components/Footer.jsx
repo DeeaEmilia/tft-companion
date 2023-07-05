@@ -34,7 +34,7 @@ const Footer = () => {
         </div>
 
         <div className="project">
-          <p>See more projects here:</p>
+          <p>Check out my</p>
           <Link
             href="https://andreea-emilia-duta.netlify.app/"
             className="link">

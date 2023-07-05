@@ -1,9 +1,11 @@
 .navbar-wrapper {
-  padding: 1rem 0;
+  padding: 2rem 0;
   display: flex;
 
   @media screen and (min-width: $screen-xl) {
-    background-color: var(--secondary);
+    background-color: var(--background);
+    box-shadow: rgba(0, 0, 0, 0.382) 0px 2px 18px;
+    margin-bottom: 2rem;
   }
 }
 
@@ -76,6 +78,14 @@
 
     li {
       font-size: 1.5rem;
+
+      a {
+        color: var(--text);
+
+        &:hover {
+          color: var(--accent);
+        }
+      }
     }
 
     @media (min-width: $screen-xl) {
