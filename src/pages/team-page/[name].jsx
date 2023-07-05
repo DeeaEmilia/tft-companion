@@ -63,7 +63,7 @@ const TeamPage = () => {
               width={32}
               height={32}
             />
-            <h2>{comp.name}</h2>
+            <h3>{comp.name}</h3>
           </div>
           <button className="btn" onClick={() => router.back()}>
             Go back

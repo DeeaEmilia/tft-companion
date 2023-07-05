@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Homepage = () => {
   return (
@@ -31,7 +32,7 @@ const Homepage = () => {
       </header>
       <main>
         <div className="navigation-options">
-          <div className="home-cards">
+          <Link href="/team-comps-page" className="home-cards">
             <h3>Meta Team Comps</h3>
             <Image
               src="./assets/images/arena.webp"
@@ -40,8 +41,8 @@ const Homepage = () => {
               width={1000}
               height={563}
             />
-          </div>
-          <div className="home-cards">
+          </Link>
+          <Link href="/builder-page" className="home-cards">
             <h3>Team Builder</h3>
             <Image
               src="./assets/images/carousel.webp"
@@ -50,8 +51,8 @@ const Homepage = () => {
               width={1000}
               height={563}
             />
-          </div>
-          <div className="home-cards">
+          </Link>
+          <Link href="/champions-list-page" className="home-cards">
             <h3>Current Champions List</h3>
             <Image
               src="./assets/images/champions.webp"
@@ -60,8 +61,8 @@ const Homepage = () => {
               width={1000}
               height={563}
             />
-          </div>
-          <div className="home-cards">
+          </Link>
+          <Link href="/items-list-page" className="home-cards">
             <h3>Current Items List</h3>
             <Image
               src="./assets/images/carousel.webp"
@@ -70,7 +71,7 @@ const Homepage = () => {
               width={1000}
               height={563}
             />
-          </div>
+          </Link>
         </div>
 
         <div className="about-page">

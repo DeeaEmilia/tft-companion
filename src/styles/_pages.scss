@@ -1,16 +1,21 @@
 .content-wrapper {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+
   gap: 2rem;
+  @media screen and (min-width: $screen-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .page-title-wrapper {
-  grid-column: span 2;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  align-items: center;
-  justify-content: space-between;
+  @media screen and (min-width: $screen-md) {
+    grid-column: span 2;
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   .btn {
     font-size: 1rem;
@@ -28,7 +33,10 @@
 
 .p-champions-wrapper {
   display: flex;
-  grid-column: span 2;
+
+  @media screen and (min-width: $screen-md) {
+    grid-column: span 2;
+  }
 
   button {
     display: none;
@@ -48,6 +56,7 @@
   .trait-wrapper {
     align-items: center;
     flex-direction: column;
+
     img {
       height: 2rem;
     }

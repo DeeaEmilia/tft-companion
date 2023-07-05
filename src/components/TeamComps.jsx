@@ -127,7 +127,6 @@ const TeamComps = () => {
 
   return (
     <section>
-      <h2>Meta Team Comps </h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Et aut aliquid
         saepe odit laboriosam? Laudantium explicabo aliquam velit commodi sint

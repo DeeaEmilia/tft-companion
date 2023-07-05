@@ -1,3 +1,9 @@
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: "Raleway", sans-serif;
+}
+
 .flex-display {
   display: flex;
 }
@@ -14,15 +20,15 @@
   justify-content: center;
 }
 
-.padding {
-  padding: 1rem 10rem;
-}
-
 .main-wrapper {
   display: flex;
   flex-direction: column;
   gap: 5rem;
-  padding: 1rem 10rem;
+  padding: 1rem;
+
+  @media screen and (min-width: $screen-md) {
+    padding: 1rem 10rem;
+  }
 }
 
 .link {
@@ -41,4 +47,8 @@
 
 .tier-icon {
   height: 2rem;
+}
+
+.sr-only {
+  visibility: hidden;
 }
