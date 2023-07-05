@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Builder from "../components/Builder";
 
 const Homepage = () => {
   return (
@@ -7,7 +6,7 @@ const Homepage = () => {
       <main className="main-wrapper padding">
         <div className="introduction">
           <h1>Tft Companion</h1>
-          <Builder></Builder>
+
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
             tempora facilis voluptatum quibusdam ipsum dicta asperiores

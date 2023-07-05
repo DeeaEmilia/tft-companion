@@ -17,6 +17,11 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
+            <Link href="/builder-page" className="link">
+              Team Builder
+            </Link>
+          </li>
+          <li>
             <Link href="/champions-list-page" className="link">
               Champions
             </Link>
