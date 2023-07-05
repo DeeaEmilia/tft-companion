@@ -3,7 +3,8 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="footer padding">
+    <footer className="footer">
+      {/* <p className="signature">Deea-Emilia</p> */}
       <div className="footer-wrapper">
         <div className="footer-contact">
           <h3>Wanna know more?</h3>
@@ -11,7 +12,7 @@ const Footer = () => {
           <div className="social">
             <Link href="https://www.linkedin.com/in/deea-emilia-duta/">
               <Image
-                src="assets/images/linkedin.svg"
+                src="./assets/images/linkedin.svg"
                 alt="linkedin logo"
                 width={32}
                 height={32}
@@ -19,7 +20,7 @@ const Footer = () => {
             </Link>
             <Link href="https://github.com/DeeaEmilia">
               <Image
-                src="assets/images/github.svg"
+                src="./assets/images/github.svg"
                 alt="github logo"
                 width={32}
                 height={32}
@@ -41,7 +42,6 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      <p className="signature">Deea-Emilia</p>
     </footer>
   );
 };

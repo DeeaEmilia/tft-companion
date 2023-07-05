@@ -14,17 +14,17 @@ const Homepage = () => {
           ducimus excepturi ut quam alias? Unde fuga voluptate rerum est, ipsum
           enim animi?
         </p>
-        <h2>Something</h2>
+        <h3>Something</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit,
           rerum!
         </p>
-        <h2>Something</h2>
+        <h3>Something</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit,
           rerum!
         </p>
-        <h2>Something</h2>
+        <h3>Something</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit,
           rerum!

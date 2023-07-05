@@ -3,7 +3,6 @@
   display: flex;
 
   @media screen and (min-width: $screen-xl) {
-    padding: 1rem 10rem;
     background-color: var(--secondary);
   }
 }

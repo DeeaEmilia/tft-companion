@@ -1,14 +1,13 @@
 .footer {
   display: grid;
   grid-template-columns: 1fr;
-  background-color: rgba(0, 0, 0, 0.27);
-  margin-top: 10rem;
+  background-color: var(--secondary);
 }
 .footer-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1rem;
 }
 
 .footer-contact {
@@ -34,11 +33,6 @@
 .social {
   display: flex;
   gap: 0.5rem;
-
-  img {
-    width: 24px;
-    height: 24px;
-  }
 }
 
 .copyright {
@@ -50,9 +44,11 @@
 }
 
 .signature {
+  margin-top: 1rem;
   font-family: "Calligraphy", sans-serif;
   text-align: center;
-  color: rgba(255, 255, 255, 0.292);
+  color: rgba(255, 255, 255, 0.12);
+  font-size: 1.5rem;
 }
 
 .project {
