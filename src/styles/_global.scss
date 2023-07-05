@@ -19,18 +19,17 @@
 }
 
 .main-wrapper {
-  display: grid;
-
-  @media screen and (min-width: $screen-xl) {
-    grid-template-columns: 1fr;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 1rem 10rem;
 }
 
 .link {
   color: var(--text);
 
   &:hover {
-    color: var(--primary);
+    color: var(--accent);
     cursor: pointer;
   }
 }

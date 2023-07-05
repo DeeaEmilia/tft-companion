@@ -11,7 +11,7 @@ const Champions = ({
   hoveredItem,
 }) => {
   return (
-    <div className="c-wrapper flex-wrap">
+    <section className="c-wrapper flex-wrap">
       <div className="flex-wrap">
         {comp.champions.map((championComp) => {
           const champion = champions.find(
@@ -47,7 +47,7 @@ const Champions = ({
           See in builder
         </label>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,12 +1,11 @@
 .content-wrapper {
-  display: flex;
-  justify-items: center;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 1rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
 }
 
 .page-title-wrapper {
+  grid-column: span 2;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
@@ -26,6 +25,16 @@
     }
   }
 }
+
+.p-champions-wrapper {
+  display: flex;
+  grid-column: span 2;
+
+  button {
+    display: none;
+  }
+}
+
 .page-title {
   display: flex;
   align-items: center;
@@ -42,13 +51,5 @@
     img {
       height: 2rem;
     }
-  }
-}
-
-.p-champions-wrapper {
-  display: flex;
-
-  button {
-    display: none;
   }
 }

@@ -2,10 +2,10 @@ import Builder from "../components/Builder";
 
 const BuilderPage = () => {
   return (
-    <section className="padding">
+    <main className="main-wrapper">
       <h2>Build your own team</h2>
       <Builder></Builder>
-    </section>
+    </main>
   );
 };
 

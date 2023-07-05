@@ -13,7 +13,7 @@ const ChampionIcon = ({ champion }) => {
   }));
 
   return (
-    <div ref={drag}>
+    <section ref={drag}>
       <Image
         src={champion.icon}
         alt={`${champion.name} icon`}
@@ -21,16 +21,16 @@ const ChampionIcon = ({ champion }) => {
         height={70}
         style={{ border: isDragging ? "5px solid pink" : "0px" }}
       />
-    </div>
+    </section>
   );
 };
 
 const ChampionsIcons = () => (
-  <div className="builder-icons">
+  <section className="builder-icons">
     {champions.map((champion) => (
       <ChampionIcon key={champion.name} champion={champion} />
     ))}
-  </div>
+  </section>
 );
 
 export default ChampionsIcons;

@@ -2,35 +2,34 @@ import Image from "next/image";
 
 const Homepage = () => {
   return (
-    <div>
-      <main className="main-wrapper padding">
-        <div className="introduction">
-          <h1>Tft Companion</h1>
-
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
-            tempora facilis voluptatum quibusdam ipsum dicta asperiores
-            excepturi. Similique sunt perferendis doloremque obcaecati ipsa
-            deleniti autem at dolorum temporibus veniam, harum quae, assumenda a
-            et quod eum beatae ducimus excepturi ut quam alias? Unde fuga
-            voluptate rerum est, ipsum enim animi?
-          </p>
-          <h2>Something</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit,
-            rerum!
-          </p>
-          <h2>Something</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit,
-            rerum!
-          </p>
-          <h2>Something</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit,
-            rerum!
-          </p>
-        </div>
+    <div className="main-wrapper">
+      <header className="introduction">
+        <h1>TFT Companion</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
+          tempora facilis voluptatum quibusdam ipsum dicta asperiores excepturi.
+          Similique sunt perferendis doloremque obcaecati ipsa deleniti autem at
+          dolorum temporibus veniam, harum quae, assumenda a et quod eum beatae
+          ducimus excepturi ut quam alias? Unde fuga voluptate rerum est, ipsum
+          enim animi?
+        </p>
+        <h2>Something</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit,
+          rerum!
+        </p>
+        <h2>Something</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit,
+          rerum!
+        </p>
+        <h2>Something</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit,
+          rerum!
+        </p>
+      </header>
+      <main>
         <div className="navigation-options">
           <div className="home-cards">
             <h3>Meta Team Comps</h3>
@@ -72,6 +71,27 @@ const Homepage = () => {
               height={563}
             />
           </div>
+        </div>
+
+        <div className="about-page">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero aut
+            tenetur officia eius porro quis provident exercitationem, iusto non
+            nesciunt eos vitae totam repellendus! Placeat provident quis rem hic
+            nemo!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero aut
+            tenetur officia eius porro quis provident exercitationem, iusto non
+            nesciunt eos vitae totam repellendus! Placeat provident quis rem hic
+            nemo!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero aut
+            tenetur officia eius porro quis provident exercitationem, iusto non
+            nesciunt eos vitae totam repellendus! Placeat provident quis rem hic
+            nemo!
+          </p>
         </div>
       </main>
     </div>

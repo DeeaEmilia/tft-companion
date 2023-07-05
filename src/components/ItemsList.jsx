@@ -5,7 +5,7 @@ import components from "../data/components";
 
 // Defining the ItemsList functional component
 const ItemsList = () => (
-  <section className="il-container padding">
+  <section className="il-container">
     <header className="il-header">
       <h3>Item</h3>
       <h3>Description</h3>

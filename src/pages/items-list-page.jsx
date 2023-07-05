@@ -2,11 +2,10 @@ import ItemList from "../components/ItemsList";
 
 const ItemsListPage = () => {
   return (
-    <div>
-      <main className="main-wrapper">
-        <ItemList></ItemList>
-      </main>
-    </div>
+    <main className="main-wrapper">
+      <h2>Items List</h2>
+      <ItemList></ItemList>
+    </main>
   );
 };
 

@@ -30,7 +30,7 @@ function CompSearchBar({ onSearch, allChampions, allTraits }) {
 
   return (
     <form className="sb-search-form" onSubmit={handleFormSubmit}>
-      <div className="sb-input-wrapper">
+      <fieldset className="sb-input-wrapper">
         <input
           list="champions"
           name="champion"
@@ -43,9 +43,9 @@ function CompSearchBar({ onSearch, allChampions, allTraits }) {
             <option key={index} value={champion} />
           ))}
         </datalist>
-      </div>
+      </fieldset>
 
-      <div className="sb-input-wrapper">
+      <fieldset className="sb-input-wrapper">
         <input
           list="traits"
           name="trait"
@@ -58,7 +58,7 @@ function CompSearchBar({ onSearch, allChampions, allTraits }) {
             <option key={index} value={trait} />
           ))}
         </datalist>
-      </div>
+      </fieldset>
 
       <button type="submit" className="sb-search-btn ">
         Search

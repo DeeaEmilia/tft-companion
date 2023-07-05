@@ -3,14 +3,14 @@ import ChampionIcons from "./ChampionIcons";
 
 const Builder = () => {
   return (
-    <div className="builder-wrapper">
+    <section className="builder-wrapper">
       <div>
         <HexGrid />
       </div>
       <div>
         <ChampionIcons />
       </div>
-    </div>
+    </section>
   );
 };
 

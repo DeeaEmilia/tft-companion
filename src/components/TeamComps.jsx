@@ -126,7 +126,7 @@ const TeamComps = () => {
   };
 
   return (
-    <main className="padding">
+    <section>
       <h2>Meta Team Comps </h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Et aut aliquid
@@ -183,7 +183,7 @@ const TeamComps = () => {
           );
         })
       )}
-    </main>
+    </section>
   );
 };
 

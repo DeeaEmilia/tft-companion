@@ -12,24 +12,22 @@ const ItemPage = () => {
   if (!item) return <p>Item not found</p>;
 
   return (
-    <div>
-      <div className="main-wrapper">
-        <div>
-          <button className="btn" onClick={() => router.back()}>
-            Go back
-          </button>
-          <p>{item.name}</p>
-          <Image
-            src={item.icon}
-            alt={`${item.name} icon`}
-            width={50}
-            height={50}
-          />
-          <p>Components: {item.components.join(" + ")}</p>
-          <p>Description: {item.description}</p>
-        </div>
+    <main className="main-wrapper">
+      <div>
+        <button className="btn" onClick={() => router.back()}>
+          Go back
+        </button>
+        <p>{item.name}</p>
+        <Image
+          src={item.icon}
+          alt={`${item.name} icon`}
+          width={50}
+          height={50}
+        />
+        <p>Components: {item.components.join(" + ")}</p>
+        <p>Description: {item.description}</p>
       </div>
-    </div>
+    </main>
   );
 };
 

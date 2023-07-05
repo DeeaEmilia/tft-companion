@@ -4,7 +4,6 @@ const Navbar = () => {
   return (
     <div>
       <nav className="navbar padding">
-        <p>Logo Placeholder</p>
         <ul>
           <li>
             <Link href="/" className="link">
@@ -13,7 +12,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link href="/team-comps-page" className="link">
-              Team Comps
+              Meta Team Comps
             </Link>
           </li>
           <li>
@@ -32,7 +31,7 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-        <p>Profile</p>
+        <p>Logo Placeholder</p>
       </nav>
     </div>
   );

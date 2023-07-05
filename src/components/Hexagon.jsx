@@ -10,7 +10,7 @@ const Hexagon = () => {
   }));
 
   return (
-    <div className="hexagon-border">
+    <section className="hexagon-border">
       <div
         ref={drop}
         style={{
@@ -37,7 +37,7 @@ const Hexagon = () => {
           </g>
         </svg>
       </div>
-    </div>
+    </section>
   );
 };
 

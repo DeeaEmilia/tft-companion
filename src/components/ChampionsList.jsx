@@ -3,10 +3,10 @@ import Image from "next/image";
 import champions from "../data/champions";
 
 const ChampionsList = () => (
-  <section className="padding">
+  <section>
     {champions.map((champion) => (
       <div key={champion.name}>
-        <h2>{champion.name}</h2>
+        <h3>{champion.name}</h3>
         <Link href={`/champion-page/${champion.name}`}>
           <Image
             src={champion.icon}
