@@ -31,6 +31,21 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/builder-page.js"
+    ],
+    "/champions-list-page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/champions-list-page.js"
+    ],
+    "/items-list-page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/items-list-page.js"
+    ],
+    "/team-comps-page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/team-comps-page.js"
     ]
   },
   "ampFirstPages": []
