@@ -31,11 +31,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/builder-page.js"
-    ],
-    "/items-list-page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/items-list-page.js"
     ]
   },
   "ampFirstPages": []
