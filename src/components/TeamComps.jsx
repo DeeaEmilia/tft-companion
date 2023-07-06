@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { TraitContext } from "../context/TraitContext";
 import Image from "next/image";
+import Link from "next/link";
 import Champions from "./Champions";
 import CompSearchBar from "./CompSearchBar";
 import comps from "../data/comps";
@@ -143,42 +144,41 @@ const TeamComps = () => {
         filteredComps.map((comp) => {
           const traitCounts = countTraits(comp.champions);
           return (
-            <section className="comps-wrapper" key={comp.name}>
-              <div className="comps-info flex-wrap">
-                <div className="comps-title flex-wrap">
-                  <Image
-                    src={comp.tierImage}
-                    alt={`${comp.tier} tier`}
-                    className="tier-icon"
-                    width={32}
-                    height={32}
-                  />
-                  <h3>{comp.name}</h3>
-                </div>
-                <div className="comps-traits">
-                  {Object.entries(traitCounts).map(([trait, count]) => {
-                    return (
-                      <div key={trait}>
-                        <p>
+            <div className="comps-wrapper" key={comp.name}>
+              <Link href={`/team-page/${comp.name}`}>
+                <div className="comps-info flex-wrap">
+                  <div className="comps-title flex-wrap">
+                    <Image
+                      src={comp.tierImage}
+                      alt={`${comp.tier} tier`}
+                      className="tier-icon"
+                      width={32}
+                      height={32}
+                    />
+                    <h3>{comp.name}</h3>
+                  </div>
+                  <div className="comps-traits">
+                    {Object.entries(traitCounts).map(([trait, count]) => {
+                      return (
+                        <div key={trait}>
                           {trait}: {count}
-                        </p>
-                      </div>
-                    );
-                  })}
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <p>
+                    <strong>Playstyle: </strong> {comp.playstyle}
+                  </p>{" "}
                 </div>
-                <p>
-                  <strong>Playstyle: </strong> {comp.playstyle}
-                </p>{" "}
-              </div>
-
-              <Champions
-                comp={comp}
-                hoveredChampion={hoveredChampion}
-                setHoveredChampion={setHoveredChampion}
-                hoveredItem={hoveredItem}
-                setHoveredItem={setHoveredItem}
-              />
-            </section>
+                <Champions
+                  comp={comp}
+                  hoveredChampion={hoveredChampion}
+                  setHoveredChampion={setHoveredChampion}
+                  hoveredItem={hoveredItem}
+                  setHoveredItem={setHoveredItem}
+                />
+              </Link>
+            </div>
           );
         })
       )}

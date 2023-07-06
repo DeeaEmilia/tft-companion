@@ -5,6 +5,10 @@
   transition: all 0.3s;
   padding: 0.5rem;
 
+  a {
+    color: var(--text);
+  }
+
   @media screen and (min-width: $screen-md) {
     padding: 1rem;
     margin: 1rem 0;

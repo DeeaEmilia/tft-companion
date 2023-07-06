@@ -1,23 +1,38 @@
 .navigation-options {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  height: 15rem;
+  margin: 0 1rem;
 }
+
 .introduction {
   margin-bottom: 3rem;
 }
 
+.card-dots {
+  height: auto;
+  width: auto;
+}
+
+.slick-dots.slick-thumb {
+  bottom: -50px;
+
+  @media screen and (min-width: $screen-xs) {
+    li {
+      width: 50px;
+    }
+  }
+}
+
 .home-cards {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
+  h3 {
+    color: var(--text);
+    text-align: center;
+    margin-bottom: 1rem;
+  }
 
   .card-image {
     width: 33rem;
     height: auto;
+    padding: 0 0.25rem;
     filter: grayscale(60%);
-    transform: skewX(-5deg);
   }
 
   &:hover {
@@ -27,10 +42,7 @@
     }
 
     .card-image {
-      border: 3px solid var(--accent);
-      box-shadow: 0 0 5px var(--accent), 0 0 10px var(--accent);
       filter: grayscale(0%);
-      transform: skewX(-5deg) translateY(-1.5rem);
     }
   }
 }

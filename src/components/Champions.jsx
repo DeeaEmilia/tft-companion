@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import Link from "next/link";
 import champions from "../data/champions";
 import ChampionCard from "./ChampionCard";
 
@@ -36,16 +35,6 @@ const Champions = ({
             />
           );
         })}
-      </div>
-      <div>
-        <Link href={`/team-page/${comp.name}`}>
-          <button className="btn" id="builderButton">
-            &rarr;
-          </button>
-        </Link>
-        <label className="btn-label" htmlFor="builderButton">
-          See in builder
-        </label>
       </div>
     </section>
   );
