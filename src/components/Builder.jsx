@@ -1,15 +1,13 @@
 import HexGrid from "./HexGrid";
 import ChampionIcons from "./ChampionIcons";
+import ActiveTraits from "../components/ActiveTraits";
 
 const Builder = () => {
   return (
     <section className="builder-wrapper">
-      <div>
-        <HexGrid />
-      </div>
-      <div>
-        <ChampionIcons />
-      </div>
+      <ActiveTraits />
+      <HexGrid />
+      <ChampionIcons />
     </section>
   );
 };

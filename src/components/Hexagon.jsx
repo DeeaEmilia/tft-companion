@@ -1,12 +1,25 @@
+/* eslint-disable react/prop-types */
+import { useContext, useState } from "react";
 import { useDrop } from "react-dnd";
-import { useState } from "react";
+import { TraitContext } from "../context/TraitContext";
+import { ChampionContext } from "../context/ChampionContext";
 
-const Hexagon = () => {
-  const [backgroundImage, setBackgroundImage] = useState(null);
+const Hexagon = ({ position }) => {
+  const [champion, setChampion] = useState(null);
+  const { dispatch } = useContext(TraitContext);
+  const { setChampions } = useContext(ChampionContext);
 
   const [, drop] = useDrop(() => ({
     accept: "champion",
-    drop: (item) => setBackgroundImage(item.icon),
+    drop: (item) => {
+      dispatch({ type: "ADD_CHAMPION", champion: item });
+      setChampion(item);
+      setChampions((prevChamps) =>
+        prevChamps.map((champ) =>
+          champ.name === item.name ? { ...champ, position } : champ
+        )
+      );
+    },
   }));
 
   return (
@@ -14,7 +27,7 @@ const Hexagon = () => {
       <div
         ref={drop}
         style={{
-          backgroundImage: `url(${backgroundImage})`,
+          backgroundImage: `url(${champion?.icon || ""})`,
           backgroundSize: "contain",
           width: "100%",
           height: "100%",
@@ -22,7 +35,21 @@ const Hexagon = () => {
             "polygon(50% 0, 100% 23%, 100% 74%, 50% 100%, 0 75%, 0 24%)",
           boxSizing: "border-box",
         }}
-        onDoubleClick={() => setBackgroundImage(null)}>
+        onDoubleClick={() => {
+          dispatch({
+            type: "REMOVE_CHAMPION",
+            champion: champion,
+          });
+          dispatch({ type: "RESET_ALL" });
+          setChampion(null);
+          setChampions((prevChamps) =>
+            prevChamps.map((champ) =>
+              champ.name === champion.name
+                ? { ...champ, position: null }
+                : champ
+            )
+          );
+        }}>
         <svg
           width="100%"
           height="100%"

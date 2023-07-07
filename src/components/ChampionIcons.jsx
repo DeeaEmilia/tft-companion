@@ -1,15 +1,24 @@
 /* eslint-disable react/prop-types */
+import { useContext } from "react";
+import { useDrag } from "react-dnd";
+import { TraitContext } from "../context/TraitContext";
 import Image from "next/image";
 import champions from "../data/champions";
-import { useDrag } from "react-dnd";
 
 const ChampionIcon = ({ champion }) => {
+  const { dispatch } = useContext(TraitContext);
+
   const [{ isDragging }, drag] = useDrag(() => ({
     type: "champion",
     item: { id: champion.name, icon: champion.icon },
     collect: (monitor) => ({
       isDragging: !!monitor.isDragging(),
     }),
+    end: (item, monitor) => {
+      if (monitor.didDrop()) {
+        dispatch({ type: "ADD_CHAMPION", champion });
+      }
+    },
   }));
 
   return (

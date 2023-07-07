@@ -6,17 +6,24 @@ import Footer from "../components/Footer.jsx";
 
 import "../styles/index.scss";
 
+import { ChampionProvider } from "../context/ChampionContext";
+
+// New component to handle the loading of champion data
+
+// eslint-disable-next-line react/prop-types
 // eslint-disable-next-line react/prop-types
 function App({ Component, pageProps }) {
   return (
     <>
-      <DndProvider backend={HTML5Backend}>
-        <TraitProvider>
-          <Navbar />
-          <Component {...pageProps} />
-          <Footer />
-        </TraitProvider>
-      </DndProvider>
+      <ChampionProvider>
+        <DndProvider backend={HTML5Backend}>
+          <TraitProvider>
+            <Navbar />
+            <Component {...pageProps} />
+            <Footer />
+          </TraitProvider>
+        </DndProvider>
+      </ChampionProvider>
     </>
   );
 }
