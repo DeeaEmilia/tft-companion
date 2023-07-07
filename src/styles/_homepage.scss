@@ -7,21 +7,6 @@
   line-height: 1.5;
 }
 
-.card-dots {
-  height: auto;
-  width: auto;
-}
-
-.slick-dots.slick-thumb {
-  bottom: -50px;
-
-  @media screen and (min-width: $screen-xs) {
-    li {
-      width: 50px;
-    }
-  }
-}
-
 .home-cards {
   h3 {
     color: var(--text);

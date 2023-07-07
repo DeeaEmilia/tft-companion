@@ -1,51 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import Carousel from "../components/Carousel";
 
 const Homepage = () => {
-  const settings = {
-    customPaging: function (i) {
-      return (
-        <Link href={`/page${i + 1}`}>
-          <Image
-            src={`/assets/images/abstract0${i + 1}.webp`}
-            width={100}
-            height={56}
-            alt={`Page ${i + 1}`}
-            className="card-dots"
-          />
-        </Link>
-      );
-    },
-    className: "center",
-    centerMode: true,
-    dots: true,
-    dotsClass: "slick-dots slick-thumb",
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    swipeToSlide: true,
-    arrows: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  };
-
   return (
     <div className="main-wrapper">
       <header className="introduction">
@@ -75,7 +32,7 @@ const Homepage = () => {
         </p>
       </header>
       <main>
-        <Slider {...settings} className="navigation-options">
+        <Carousel className="navigation-options">
           <Link href="/team-comps-page" className="home-cards">
             <h3>Meta Team Comps</h3>
             <Image
@@ -116,7 +73,7 @@ const Homepage = () => {
               height={563}
             />
           </Link>
-        </Slider>
+        </Carousel>
 
         <div className="about-page">
           <p>
