@@ -6,7 +6,12 @@ import champions from "../data/champions";
 const ChampionIcon = ({ champion }) => {
   const [{ isDragging }, drag] = useDrag(() => ({
     type: "champion",
-    item: { id: champion.name, icon: champion.icon, traits: champion.traits },
+    item: {
+      id: champion.name,
+      icon: champion.icon,
+      traits: champion.traits,
+      cost: champion.cost,
+    },
     collect: (monitor) => ({
       isDragging: !!monitor.isDragging(),
     }),
@@ -25,7 +30,7 @@ const ChampionIcon = ({ champion }) => {
   );
 };
 
-const ChampionsIcons = () => (
+const ChampionsIcons = ({ champions }) => (
   <section className="builder-icons">
     {champions.map((champion) => (
       <ChampionIcon key={champion.name} champion={champion} />
@@ -33,4 +38,5 @@ const ChampionsIcons = () => (
   </section>
 );
 
+export const championsData = champions;
 export default ChampionsIcons;
