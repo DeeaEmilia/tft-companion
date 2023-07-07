@@ -12,8 +12,11 @@ const Hexagon = ({ position }) => {
   const [, drop] = useDrop(() => ({
     accept: "champion",
     drop: (item) => {
-      dispatch({ type: "ADD_CHAMPION", champion: item });
-      setChampion(item);
+      // Generate a unique id
+      const newChampion = { ...item, id: Math.random() };
+
+      dispatch({ type: "ADD_CHAMPION", champion: newChampion });
+      setChampion(newChampion);
       setChampions((prevChamps) =>
         prevChamps.map((champ) =>
           champ.name === item.name ? { ...champ, position } : champ
@@ -36,19 +39,26 @@ const Hexagon = ({ position }) => {
           boxSizing: "border-box",
         }}
         onDoubleClick={() => {
-          dispatch({
-            type: "REMOVE_CHAMPION",
-            champion: champion,
-          });
-          dispatch({ type: "RESET_ALL" });
-          setChampion(null);
-          setChampions((prevChamps) =>
-            prevChamps.map((champ) =>
-              champ.name === champion.name
-                ? { ...champ, position: null }
-                : champ
-            )
-          );
+          if (champion) {
+            // Check if champion exists
+            dispatch({
+              type: "REMOVE_CHAMPION",
+              champion: {
+                id: champion.id,
+                name: champion.name,
+                icon: champion.icon,
+                traits: champion.traits,
+              },
+            });
+            setChampion(null);
+            setChampions((prevChamps) =>
+              prevChamps.map((champ) =>
+                champ.name === champion.name
+                  ? { ...champ, position: null }
+                  : champ
+              )
+            );
+          }
         }}>
         <svg
           width="100%"

@@ -10,7 +10,11 @@ export const ChampionProvider = ({ children }) => {
   // Load champions data into state when the component mounts
   useEffect(() => {
     setChampions(
-      championsData.map((champion) => ({ ...champion, position: null }))
+      championsData.map((champion, index) => ({
+        ...champion,
+        position: null,
+        id: index,
+      }))
     );
   }, []);
 

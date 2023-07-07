@@ -5,8 +5,10 @@ import ActiveTraits from "../components/ActiveTraits";
 const Builder = () => {
   return (
     <section className="builder-wrapper">
-      <ActiveTraits />
-      <HexGrid />
+      <div className="builder">
+        <ActiveTraits />
+        <HexGrid />
+      </div>
       <ChampionIcons />
     </section>
   );

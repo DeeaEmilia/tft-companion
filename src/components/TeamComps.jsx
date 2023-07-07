@@ -145,39 +145,39 @@ const TeamComps = () => {
           const traitCounts = countTraits(comp.champions);
           return (
             <div className="comps-wrapper" key={comp.name}>
-              <Link href={`/team-page/${comp.name}`}>
-                <div className="comps-info flex-wrap">
-                  <div className="comps-title flex-wrap">
-                    <Image
-                      src={comp.tierImage}
-                      alt={`${comp.tier} tier`}
-                      className="tier-icon"
-                      width={32}
-                      height={32}
-                    />
+              <div className="comps-info flex-wrap">
+                <div className="comps-title flex-wrap">
+                  <Image
+                    src={comp.tierImage}
+                    alt={`${comp.tier} tier`}
+                    className="tier-icon"
+                    width={32}
+                    height={32}
+                  />
+                  <Link href={`/team-page/${comp.name}`}>
                     <h3>{comp.name}</h3>
-                  </div>
-                  <div className="comps-traits">
-                    {Object.entries(traitCounts).map(([trait, count]) => {
-                      return (
-                        <div key={trait}>
-                          {trait}: {count}
-                        </div>
-                      );
-                    })}
-                  </div>
-                  <p>
-                    <strong>Playstyle: </strong> {comp.playstyle}
-                  </p>{" "}
+                  </Link>
                 </div>
-                <Champions
-                  comp={comp}
-                  hoveredChampion={hoveredChampion}
-                  setHoveredChampion={setHoveredChampion}
-                  hoveredItem={hoveredItem}
-                  setHoveredItem={setHoveredItem}
-                />
-              </Link>
+                <div className="comps-traits">
+                  {Object.entries(traitCounts).map(([trait, count]) => {
+                    return (
+                      <div key={trait}>
+                        {trait}: {count}
+                      </div>
+                    );
+                  })}
+                </div>
+                <p>
+                  <strong>Playstyle: </strong> {comp.playstyle}
+                </p>{" "}
+              </div>
+              <Champions
+                comp={comp}
+                hoveredChampion={hoveredChampion}
+                setHoveredChampion={setHoveredChampion}
+                hoveredItem={hoveredItem}
+                setHoveredItem={setHoveredItem}
+              />
             </div>
           );
         })

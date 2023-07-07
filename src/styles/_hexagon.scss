@@ -1,6 +1,13 @@
 .builder-wrapper {
   display: grid;
   gap: 2rem;
+  line-height: 1.5;
+
+  .builder {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 2fr;
+  }
 }
 
 .hexagon-wrapper {
