@@ -19,7 +19,7 @@ const Hexagon = ({ position }) => {
     drop: (item) => {
       // Generate a unique id
       const newChampion = { ...item, id: Math.random() };
-
+      // if id exista fac remove si apoi add
       // Dispatch an action to add a champion to the traits context
       dispatch({ type: "ADD_CHAMPION", champion: newChampion });
 
@@ -50,6 +50,7 @@ const Hexagon = ({ position }) => {
           boxSizing: "border-box",
         }}
         onDoubleClick={() => {
+          //click dreapta
           if (champion) {
             // Check if a champion exists in the hexagon, if so, remove it
             dispatch({

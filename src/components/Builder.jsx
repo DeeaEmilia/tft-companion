@@ -1,16 +1,10 @@
-// Import useState hook from "react"
 import { useState } from "react";
-
-// Import the custom components
 import HexGrid from "./HexGrid";
 import ChampionIcons from "./ChampionIcons";
 import ActiveTraits from "../components/ActiveTraits";
 import ChampionSearchBar from "./ChampionSearchBar";
-
-// Import champions data from ChampionIcons component
 import { championsData } from "./ChampionIcons";
 
-// Define Builder component
 const Builder = () => {
   // Initialize searchInput state with useState hook
   const [searchInput, setSearchInput] = useState({
