@@ -1,5 +1,5 @@
 import { DndProvider } from "react-dnd";
-import { HTML5Backend } from "react-dnd-html5-backend";
+import { TouchBackend } from "react-dnd-touch-backend";
 import { TraitProvider } from "../context/TraitContext.jsx";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer.jsx";
@@ -16,7 +16,7 @@ function App({ Component, pageProps }) {
   return (
     <>
       <ChampionProvider>
-        <DndProvider backend={HTML5Backend}>
+        <DndProvider backend={TouchBackend}>
           <TraitProvider>
             <Navbar />
             <Component {...pageProps} />

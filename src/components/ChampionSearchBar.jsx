@@ -2,14 +2,16 @@
 import { useState } from "react";
 import { championsData } from "./ChampionIcons";
 
+// Define ChampionSearchBar functional component
 function ChampionSearchBar({ onSearch }) {
+  // Initialize searchInput state with useState hook
   const [searchInput, setSearchInput] = useState({
     name: "",
     trait: "",
     cost: "",
   });
 
-  // Extract unique traits and costs directly within the component
+  // Prepare unique traits and costs data from the imported champions data
   const allChampions = championsData;
   const allTraits = Array.from(
     new Set(championsData.flatMap((champion) => champion.traits))
@@ -18,6 +20,7 @@ function ChampionSearchBar({ onSearch }) {
     new Set(championsData.map((champion) => champion.cost))
   );
 
+  // Handle input change event, update the corresponding search field in the state
   const handleInputChange = (event) => {
     setSearchInput({
       ...searchInput,
@@ -25,11 +28,13 @@ function ChampionSearchBar({ onSearch }) {
     });
   };
 
+  // Handle form submission event, prevent default form submission behaviour, and call onSearch callback with searchInput
   const handleFormSubmit = (event) => {
     event.preventDefault();
     onSearch(searchInput);
   };
 
+  // Handle form reset event, reset the searchInput state and call onSearch callback with initial state
   const handleReset = (event) => {
     event.preventDefault();
     setSearchInput({
@@ -40,6 +45,7 @@ function ChampionSearchBar({ onSearch }) {
     onSearch({ name: "", trait: "", cost: "" });
   };
 
+  // Render a loading message if any of the data lists (allChampions, allTraits, allCosts) are empty
   if (!allChampions || !allTraits || !allCosts) {
     return <p>Loading...</p>;
   }

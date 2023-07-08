@@ -4,19 +4,29 @@ import { useDrop } from "react-dnd";
 import { TraitContext } from "../context/TraitContext";
 import { ChampionContext } from "../context/ChampionContext";
 
+// Hexagon component
 const Hexagon = ({ position }) => {
+  // Use React useState to store the current champion in the hexagon
   const [champion, setChampion] = useState(null);
+
+  // Use React useContext to fetch the context for traits and champions
   const { dispatch } = useContext(TraitContext);
   const { setChampions } = useContext(ChampionContext);
 
+  // Use react-dnd's useDrop hook to make the hexagon a drop target
   const [, drop] = useDrop(() => ({
     accept: "champion",
     drop: (item) => {
       // Generate a unique id
       const newChampion = { ...item, id: Math.random() };
 
+      // Dispatch an action to add a champion to the traits context
       dispatch({ type: "ADD_CHAMPION", champion: newChampion });
+
+      // Set the current champion in the hexagon
       setChampion(newChampion);
+
+      // Update the position of the dropped champion in the champions context
       setChampions((prevChamps) =>
         prevChamps.map((champ) =>
           champ.name === item.name ? { ...champ, position } : champ
@@ -25,10 +35,11 @@ const Hexagon = ({ position }) => {
     },
   }));
 
+  // Return the JSX for the Hexagon component
   return (
     <section className="hexagon-border">
       <div
-        ref={drop}
+        ref={drop} // Attach the react-dnd drop ref
         style={{
           backgroundImage: `url(${champion?.icon || ""})`,
           backgroundSize: "contain",
@@ -40,7 +51,7 @@ const Hexagon = ({ position }) => {
         }}
         onDoubleClick={() => {
           if (champion) {
-            // Check if champion exists
+            // Check if a champion exists in the hexagon, if so, remove it
             dispatch({
               type: "REMOVE_CHAMPION",
               champion: {
