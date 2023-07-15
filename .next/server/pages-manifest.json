@@ -2,5 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+  "/champions-list-page": "pages/champions-list-page.js",
+  "/builder-page": "pages/builder-page.js",
   "/": "pages/index.js"
 }
