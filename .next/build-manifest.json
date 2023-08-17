@@ -32,10 +32,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/builder-page.js"
     ],
-    "/champions-list-page": [
+    "/team-page/[name]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/champions-list-page.js"
+      "static/chunks/pages/team-page/[name].js"
     ]
   },
   "ampFirstPages": []

@@ -5,6 +5,7 @@ import Image from "next/image";
 import champions from "../data/champions";
 import traitsData from "../data/traits";
 import costColors from "../data/costColors";
+//add button on champion icons to remove them both on mobile and desktop
 
 const ChampionIcon = ({ champion }) => {
   const [{ isDragging }, drag] = useDrag(() => ({

@@ -1,5 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, createContext, useReducer, useState } from "react";
+// import championsData from "../data/champions";
+// import Hexagon from "../components/Hexagon";
 
 export const TraitContext = createContext();
 
@@ -13,10 +15,12 @@ const traitReducer = (state, action) => {
       const newTraits = [...state.activeTraits];
       action.champion.traits?.forEach((trait) => {
         const existingTrait = newTraits.find((t) => t.name === trait);
-        if (existingTrait) {
-          existingTrait.count += 1;
-        } else {
+
+        if (!existingTrait) {
           newTraits.push({ name: trait, count: 1 });
+        } else if (existingTrait) {
+          // and the champion does not exsit on the board, I add plus one on the existingTrait
+          existingTrait.count += 1;
         }
       });
       return { activeTraits: newTraits, champions: newChampions };
