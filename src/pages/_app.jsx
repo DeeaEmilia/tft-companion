@@ -10,8 +10,6 @@ import Footer from "../components/Footer.jsx";
 
 import "../styles/index.scss";
 
-// New component to handle the loading of champion data
-
 // eslint-disable-next-line react/prop-types
 function App({ Component, pageProps }) {
   return (
