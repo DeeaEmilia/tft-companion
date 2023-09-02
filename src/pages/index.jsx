@@ -6,30 +6,63 @@ const Homepage = () => {
   return (
     <div className="main-wrapper">
       <header className="introduction">
-        <h1>TFT Companion</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
-          tempora facilis voluptatum quibusdam ipsum dicta asperiores excepturi.
-          Similique sunt perferendis doloremque obcaecati ipsa deleniti autem at
-          dolorum temporibus veniam, harum quae, assumenda a et quod eum beatae
-          ducimus excepturi ut quam alias? Unde fuga voluptate rerum est, ipsum
-          enim animi?
-        </p>
-        <h3>Something</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit,
-          rerum!
-        </p>
-        <h3>Something</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit,
-          rerum!
-        </p>
-        <h3>Something</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit,
-          rerum!
-        </p>
+        <h1>TFT COMPANION</h1>
+
+        <div className="intro text-wrapper">
+          <h2>WIN MORE IN TEAMFIGHT TACTICS</h2>
+          <p>
+            TFT Companion is your indispensable gaming ally, designed to elevate
+            your Teamfight Tactics TFT experience and empower you to conquer the
+            ladder with confidence. Whether you&apos;re a seasoned TFT veteran
+            or just starting your journey, TFT Companion is packed with features
+            that will give you the competitive edge you need.
+          </p>
+        </div>
+
+        <div className="text-wrapper">
+          <h3>Community Comps</h3>
+          <p>
+            Our platform boasts a diverse collection of meticulously crafted
+            team compositions, carefully curated by TFT enthusiasts from around
+            the world. These comps span the entire spectrum, from hilarious meme
+            builds that will leave your opponents bewildered, to highly
+            optimized competitive strategies that can propel you to the highest
+            ranks. No matter your playstyle or preferred approach, you&apos;ll
+            find a comp that suits you.
+          </p>
+        </div>
+
+        <div className="text-wrapper">
+          <h3>Strategic Insights</h3>
+          <p>
+            In addition to community-created comps, TFT Companion provides you
+            with invaluable strategic insights and analysis. Discover in-depth
+            guides, tips, and tricks that will help you understand the
+            intricacies of the game. Uncover the secrets of econ management,
+            positioning, itemization, and more. With this knowledge at your
+            fingertips, you&apos;ll make informed decisions that can turn the
+            tide of battle in your favor.
+          </p>
+        </div>
+
+        <div className="text-wrapper">
+          <h3>Real-time Updates</h3>
+          <p>
+            Stay in the loop with real-time updates on the TFT meta, patch
+            notes, and balance changes. As the game evolves, TFT Companion
+            ensures you&apos;re always up to date. Adapt swiftly to the
+            ever-shifting landscape of TFT and adapt your strategies
+            accordingly.
+          </p>
+        </div>
+
+        <div className="text-wrapper">
+          <h3>Something</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit,
+            rerum!
+          </p>
+        </div>
       </header>
       <main>
         <Carousel className="navigation-options">

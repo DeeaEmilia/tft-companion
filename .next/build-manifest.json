@@ -31,11 +31,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/builder-page.js"
-    ],
-    "/team-page/[name]": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/team-page/[name].js"
     ]
   },
   "ampFirstPages": []

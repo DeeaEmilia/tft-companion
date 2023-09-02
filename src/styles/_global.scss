@@ -58,8 +58,10 @@ body {
 h1 {
   text-align: center;
   padding: 2rem 0;
-  color: var(--accent);
+  color: var(--text);
   font-size: 4rem;
+  font-family: "Monster";
+  letter-spacing: 5px;
 }
 
 h2 {
