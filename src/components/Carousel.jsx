@@ -16,7 +16,7 @@ const Carousel = ({ children }) => {
   return (
     <section className="carousel">
       <button className="slide-btn" onClick={prevSlide}>
-        &larr;
+        ◀︎
       </button>
       {children.map((child, index) => {
         return (
@@ -28,7 +28,7 @@ const Carousel = ({ children }) => {
         );
       })}
       <button className="slide-btn" onClick={nextSlide}>
-        &rarr;
+        ▶
       </button>
     </section>
   );
