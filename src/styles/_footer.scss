@@ -1,11 +1,9 @@
 .footer {
   display: grid;
   grid-template-columns: 1fr;
-  background-color: var(--background);
 
   @media screen and (min-width: $screen-md) {
     margin-top: 5rem;
-    box-shadow: rgba(0, 0, 0, 0.382) 0px 2px 18px;
   }
 }
 

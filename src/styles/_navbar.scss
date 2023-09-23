@@ -3,8 +3,6 @@
   display: flex;
 
   @media screen and (min-width: $screen-xl) {
-    background-color: var(--background);
-    box-shadow: rgba(0, 0, 0, 0.382) 0px 2px 18px;
     margin-bottom: 2rem;
   }
 }
