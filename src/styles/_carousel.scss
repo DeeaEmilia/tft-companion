@@ -9,7 +9,6 @@
   transition-duration: 1s ease;
 
   img {
-    box-shadow: rgba(0, 0, 0, 0.382) 0px 2px 18px, 0px 2px 5px;
     border-radius: 0.5rem;
     text-shadow: 0 -1px 0 #000;
   }
@@ -29,7 +28,7 @@
   border: 0 none;
   border-radius: 0.5rem;
   text-shadow: 0 -1px 0 #000;
-  box-shadow: rgba(0, 0, 0, 0.382) 0px 2px 18px, 0px 2px 5px;
+  box-shadow: rgba(0, 0, 0, 0.382) 0px 2px 5px;
   cursor: pointer;
   -webkit-transition: all 150ms ease;
   transition: all 150ms ease;
