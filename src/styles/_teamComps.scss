@@ -1,3 +1,19 @@
+.comps-intro {
+  h3 {
+    margin-top: 1rem;
+  }
+  ol {
+    margin: 1rem 0;
+
+    li {
+      margin: 0.5rem 0;
+    }
+    h4 {
+      color: var(--primary);
+    }
+  }
+}
+
 .comps-wrapper {
   border-radius: 0.5rem;
   background-color: var(--secondary);
@@ -16,6 +32,7 @@
 
   &:hover {
     border: 0.125rem solid var(--accent);
+    cursor: pointer;
   }
 }
 

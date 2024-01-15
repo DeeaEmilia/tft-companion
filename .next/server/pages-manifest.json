@@ -3,7 +3,10 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
+  "/champion-page/[name]": "pages/champion-page/[name].js",
+  "/team-page/[name]": "pages/team-page/[name].js",
   "/team-comps-page": "pages/team-comps-page.js",
+  "/champions-list-page": "pages/champions-list-page.js",
   "/items-list-page": "pages/items-list-page.js",
-  "/champions-list-page": "pages/champions-list-page.js"
+  "/builder-page": "pages/builder-page.js"
 }

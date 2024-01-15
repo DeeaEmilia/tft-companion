@@ -127,12 +127,40 @@ const TeamComps = () => {
   };
 
   return (
-    <section>
+    <section className="comps-intro">
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et aut aliquid
-        saepe odit laboriosam? Laudantium explicabo aliquam velit commodi sint
-        nemo id perferendis maxime voluptatibus.
+        Welcome to the Team Compositions page of TFT Companion! Finding the
+        perfect team composition in Teamfight Tactics can be the key to victory.
       </p>
+      <p>
+        Use our intuitive search feature to discover champions based on specific
+        traits or simply browse through popular compositions. Whether
+        you`&#39;`re a seasoned player looking to stay ahead of the meta or a
+        beginner seeking guidance, TFT Companion is here to help.
+      </p>
+      <h3>How to Use</h3>
+      <ol>
+        <li>
+          <h4>Search by Champion or Trait:</h4> Use the search bar to find
+          champions or filter compositions based on specific traits.
+        </li>
+        <li>
+          <h4>Explore Compositions:</h4> Click on the team comp card to view
+          details such as champion lineup, positioning, and key synergies.
+        </li>
+        <li>
+          <h4>Optimize Your Strategy:</h4> Stay informed about the current meta
+          and elevate your gameplay with the best team compositions for success
+          in Teamfight Tactics.
+        </li>
+      </ol>
+      <p>Ready to enhance your TFT experience?</p>
+      <p>
+        Click on the teams or the arrow onthe right to dive into the details and
+        elevate your gameplay.
+      </p>
+      <p>Happy strategizing!</p>
+
       <CompSearchBar
         onSearch={handleSearch}
         allChampions={allChampions}
