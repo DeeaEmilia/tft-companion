@@ -19,10 +19,27 @@ Database: Utilizes JSON files as a lightweight and easily maintainable database 
 * /components: React components used to build the application.
 * /pages: Next.js pages that define the app's routes.
 * /styles: Stylesheets, including Sass files for styling.
-Credits
+### Credits
 Data Inspiration: TFTactics and Mobalytics
 Contributing
 Contributions are welcome! Please follow our contribution guidelines.
+
+
+## Functionalities
+
+### Build your own team
+
+![image](https://github.com/DeeaEmilia/tft-companion/assets/113769418/155feace-beca-4594-9e96-d8b5acae6f40)
+
+
+### Hover to see more details
+![image](https://github.com/DeeaEmilia/tft-companion/assets/113769418/218de0c0-1a4c-49ed-83a1-b781c8e1db18)
+
+### Search based on Traits or Champion name
+
+![image](https://github.com/DeeaEmilia/tft-companion/assets/113769418/ba317e10-e52f-46d8-a5a1-844259894037)
+
+
 
 ## License
 This project is licensed under the MIT License.
